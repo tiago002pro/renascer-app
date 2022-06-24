@@ -1,0 +1,41 @@
+.home-module {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    color: #121212;
+
+    .top {
+        height: 5%;
+        background-color: #121212;
+        color: #FFF;
+    }
+
+    .content {
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .title {
+            font-size: 70px;
+            font-family: 'open-sans-hebrew-bold';
+            text-transform: uppercase;
+        }
+    }
+
+    .footer {
+        height: 25%;
+        background-color: #121212;
+        color: #FFF;
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+
+            .item {
+                padding: 10px;
+            }
+        }
+    }
+}
