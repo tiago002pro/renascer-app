@@ -1,0 +1,18 @@
+<div class="navbar-component">
+    <header>
+        <nav>
+            <a class="logo" href="/">Renascer Logo</a>
+            <div class="mobile-menu" (click)="addClickEvent()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-links" [@navLinkFade]="showMenu ? 'to': 'from'"><a href="/">Início</a></li>
+                <li class="nav-links" [@navLinkFade]="showMenu ? 'to': 'from'"><a href="/">Sobre</a></li>
+                <li class="nav-links" [@navLinkFade]="showMenu ? 'to': 'from'"><a href="/">Projetos</a></li>
+                <li class="nav-links" [@navLinkFade]="showMenu ? 'to': 'from'"><a href="/">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
