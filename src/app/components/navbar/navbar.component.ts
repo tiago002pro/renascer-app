@@ -16,7 +16,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 })
 
 export class NavbarComponent implements OnInit {
-  showMenu = true
+  showMobileMenu = false
   activeClass = "active"
 
   constructor(
@@ -24,15 +24,16 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.showMobileMenu = false
   }
 
   addClickEvent() {
-    const navList = (<HTMLElement>this.ElByClassName.nativeElement).querySelector('.nav-list')
+    const navList = (<HTMLElement>this.ElByClassName.nativeElement).querySelector('.nav-list-mobile')
     const mobileMenu = (<HTMLElement>this.ElByClassName.nativeElement).querySelector('.mobile-menu')
 
     navList?.classList.toggle(this.activeClass)
     mobileMenu?.classList.toggle(this.activeClass)
 
-    this.showMenu = !this.showMenu
+    this.showMobileMenu = !this.showMobileMenu
   }
 }
