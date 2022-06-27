@@ -4,10 +4,8 @@
     color: #FFF;
     justify-content: center;
 
-    .content {
+    .container {
         top: 10vh;
-        width: 80%;
-        padding: 5vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -29,7 +27,7 @@
         }
 
         .title {
-            font-size: 80px;
+            font-size: 7rem;
             font-family: 'open-sans-hebrew-bold';
             text-transform: uppercase;
         }
@@ -71,6 +69,32 @@
                 }
             }
         }
+
+        .where-we-are {
+            
+            .bnt {
+                padding: 10px;
+                letter-spacing: 3px;
+                font-size: 1rem;
+                text-transform: uppercase;
+                background: #f0f8ff00;
+                border: 2px solid #FFF;
+                color: #FFF;
+                font-weight: 400;
+                cursor: pointer;
+
+                i {
+                    margin-left: 5px;
+                }
+
+                &:hover {
+                    background-color: #FFF;
+                    font-weight: 400;
+                    color: #121212;
+                }
+            }
+
+        }
     }
 
     @media (max-width: 480px){
@@ -86,7 +110,6 @@
             .social-media {
                 padding: 50px;
             }
-
         }
     }
 }
