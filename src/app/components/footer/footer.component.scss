@@ -1,81 +1,64 @@
-.footer {
-    position: absolute;
+.footer-component {
     bottom: 0;
     left: 0;
     right: 0;
+    background: #FFF;
 
     footer {
-        background: #111;
-        height: auto;
         width: 100vw;
-        padding-top: 2vh;
-        color: #FFF;
-    }
+        display: contents;
 
-    .footer-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
+        .container {
+            display: flex;
+            flex-direction: column;
+            
+            .social-media {
+                border-top: solid 1px rgb(148, 148, 148);;
 
-        h3 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            text-transform: capitalize;
-            line-height: 3rem;
-        }
-    
-        p {
-            max-width: 500px;
-            margin: 10px auto;
-            line-height: 28px;
-            font-size: 14px;
-        }
-    }
+                ul {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 1rem;
+                }
+        
+                li {
+                    margin: 0 10px;
+                }
+                
+                a i {
+                    font-size: 1.1rem;
+                    transition: color .4a ease;
+                    color: rgb(148, 148, 148);
+                }
+        
+                a:hover i {
+                    color: #131313;
+                }
+            }
+        
+            .bottom {
+                height: 10vh;
+                font-weight: 700;
+                color: rgb(148, 148, 148);;
 
-    .social-media {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 1rem 0 3rem 0;
-
-        li {
-            margin: 0 10px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a i {
-            font-size: 1.1rem;
-            transition: color .4a ease;
-            color: rgb(148, 148, 148);
-        }
-
-        a:hover i {
-            color: #FFF;
-        }
-    }
-
-    .footer-bottom {
-        background: #000;
-        width: 100vw;
-        padding: 2vh 0;
-        text-align: center;
-
-        p {
-            font-size: 14px;
-            word-spacing: 2px;
-            text-transform: capitalize;
-        }
-
-        span {
-            text-transform: uppercase;
-            opacity: .4;
-            font-weight: 200;
+                p {
+                    margin: 0;
+                    line-height: 10vh;
+                    font-size: 14px;
+                    word-spacing: 2px;
+                    text-transform: capitalize;
+                    text-align: left;
+                    font-size: 1rem;
+                }
+        
+                span {
+                    text-transform: uppercase;
+                    opacity: .4;
+                    font-weight: 200;
+                }
+            }
         }
     }
 }
