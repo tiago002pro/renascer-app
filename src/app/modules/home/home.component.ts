@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private ElByClassName: ElementRef
+  ) { }
 
   ngOnInit(): void {
-  }
+    const teste = (<HTMLElement>this.ElByClassName.nativeElement).querySelector('.progress-bar')
+    teste?.classList.toggle('progress-bar--1')
 
+    setTimeout(() => {
+      teste?.classList.toggle(`progress-bar--60`)
+    }, 1000);
+  }
 }
