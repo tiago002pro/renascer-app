@@ -1,0 +1,32 @@
+$component-name: "progress-bar";
+
+.#{$component-name} {
+    $color-fill: #06618c;
+    $color-background: #e0e0e0;
+
+    width: 300px;
+    border: solid 5px;
+    background-color: $color-background;
+    flex-direction: row;
+
+    @for $value from 0 through 100 {
+        &--#{$value} {
+            $progress-fill: 1% * $value;
+            $progress-background: 1% * (100 - $value);
+
+            .#{$component-name}-fill {
+                width: $progress-fill;
+                height: 50px;
+                background-color: $color-fill;
+                transition: all 2s ease;
+            }
+    
+            .#{$component-name}-background {
+                width: $progress-background;
+                height: 50px;
+                background-color: $color-background;
+                transition: all 2s ease;
+            }
+        }
+    }
+}

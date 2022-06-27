@@ -1,5 +1,11 @@
+//Import my scss files
+@import "./app//modules/home/components/progress-bar";
+
+//Bootstrap imports
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+
+//FontAwesome imports
 // @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 // @import '~@fortawesome/fontawesome-free/scss/solid';
 // @import '~@fortawesome/fontawesome-free/scss/regular';
@@ -33,4 +39,6 @@
 body {
     overflow-x: hidden;
     font-family: 'proxima-nova';
+    background: #121212;
+    overflow: hidden;
 }
