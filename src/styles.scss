@@ -42,6 +42,31 @@ body {
     overflow-x: hidden !important;
     overflow-y: auto !important;
     font-family: 'proxima-nova';
-    background: #121212;
     overflow: hidden;
+    background-color: #131313;
+}
+
+.navbar-scroll-directive {
+    nav {
+        color: #121212;
+        background: #FFF;
+        border-bottom: solid 1px #12121236;
+
+        a {
+            color: #000 !important;
+        }
+
+        .logo-white {
+            display: none !important;
+        }
+
+        .logo-black {
+            display: block !important;
+            opacity: 0.9;
+        }
+    }
+}
+
+.container {
+    position: relative;
 }
