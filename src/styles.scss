@@ -31,9 +31,12 @@
     src: url("../src/assets/fonts/open-sans-hebrew.ttf");
 }
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -56,6 +59,10 @@ body {
             color: #000 !important;
         }
 
+        a::after {
+            background-color: #000 !important;
+        }
+
         .logo-white {
             display: none !important;
         }
@@ -65,10 +72,6 @@ body {
             opacity: 0.9;
         }
     }
-}
-
-.container {
-    position: relative;
 }
 
 //style scroll bar

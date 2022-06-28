@@ -29,4 +29,25 @@ $component-name: "progress-bar";
             }
         }
     }
+
+    @media (min-width: 320px) {
+        width: 50vw;
+    }
+
+    @media (min-width: 480px){
+        width: 45vw;
+    }
+
+    @media (min-width: 768px){
+        width: 40vw;
+    }
+
+    @media (min-width: 960px){
+        width: 40vw;
+
+    }
+
+    @media (min-width: 1200px){
+        width: 30vw;
+    }
 }

@@ -66,35 +66,50 @@
             }
 
             .menu {
-                line-height: 50px;
-                font-size: 0.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: auto;
 
-                .nav-list {
-                    list-style: none;
-                    display: flex;
-                    justify-content: right;
-                    margin: 0;
-            
-                    .nav-links {
-                        text-transform: uppercase;
-                        font-weight: 600;
-                    }
+                a {
+                    position: relative;
+                    text-decoration: none;
+                    padding: 0 10px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    padding: 0 10px;
+
+                }
+
+                a::after {
+                    content: "";
+                    position: absolute;
+                    background-color: #FFF;
+                    height: 3px;
+                    width: 0;
+                    left: 0;
+                    bottom: -10px;
+                    transition: 0.3s;
+                }
+
+                a:hover::after {
+                    width: 100%;
                 }
             
-                .nav-list li {
-                    letter-spacing: 3px;
-                    margin: 0 10px;
-                }
+            }
+
+            .nav-list-mobile {
+                
+            }
             
-                .nav-list-mobile {
-                    display: none;
-                }
-            
-                .nav-list-mobile.active {
-                    transform: translateX(0);
-                }
+            .nav-list-mobile {
+                display: none;
             }
         
+            .nav-list-mobile.active {
+                transform: translateX(0);
+            }
         }
     }
 
@@ -112,46 +127,42 @@
                 }
                 
                 .mobile-menu {
-                    position: absolute;
                     display: block;
                     justify-content: right;
                     z-index: 1;
+                    margin: 20px;
                 }
 
                 .menu {
-                    position:initial;
+                    display: none;
+                }
                     
-                    .nav-list-mobile {
-                        position: absolute;
-                        list-style: none;
-                        display: flex;
-                        top: 0;
-                        right: 0;
-                        width: 100vw;
-                        height: 100vh;
-                        background: #06618cf7;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-around;
-                        transform: translateX(100%);
-                        transition: transform 0.3s ease-in;
-            
-                        .nav-links {
-                            font-size: 20px;
-                            text-transform: uppercase;
-                            font-weight: 600;
-                        }
-
-                        .nav-list-mobile li {
-                            margin-left: 0;
-                            opacity: 0;
-                            letter-spacing: 3px;
-                            margin-left: 32px;
-                        }
+                .nav-list-mobile {
+                    position: absolute;
+                    list-style: none;
+                    display: flex;
+                    top: 0;
+                    right: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background: #06618cf7;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    transform: translateX(100%);
+                    transition: transform 0.3s ease-in;
+        
+                    .nav-links {
+                        font-size: 20px;
+                        text-transform: uppercase;
+                        font-weight: 600;
                     }
-            
-                    .nav-list {
-                        display: none;
+
+                    .nav-list-mobile li {
+                        margin-left: 0;
+                        opacity: 0;
+                        letter-spacing: 3px;
+                        margin-left: 32px;
                     }
                 }
             }

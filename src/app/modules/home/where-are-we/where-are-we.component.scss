@@ -41,4 +41,139 @@
             }
         }
     }
+
+    @media (min-width: 320px) {
+        .container {
+            .title {
+                padding: 5vh 0;
+                font-size: 1rem;
+            }
+    
+            .map {
+                iframe {
+                    height: 40vh;
+                }
+            }
+    
+            .info {
+                padding: 5vh 0;
+    
+                i {
+                    font-size: 1.5rem;
+                }
+    
+                span {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 480px){
+        .container {
+            .title {
+                padding: 3vh 0;
+                font-size: 1.3rem;
+            }
+    
+            .map {
+                iframe {
+                    height: 40vh;
+                }
+            }
+    
+            .info {
+                padding: 5vh 0;
+    
+                i {
+                    font-size: 2rem;
+                }
+    
+                span {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px){
+        .container {
+            .title {
+                padding: 4vh 0;
+                font-size: 1.5rem;
+            }
+    
+            .map {
+                iframe {
+                    height: 50vh;
+                }
+            }
+    
+            .info {
+                padding: 5vh 0;
+    
+                i {
+                    font-size: 2rem;
+                }
+    
+                span {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 960px){
+        .container {
+            .title {
+                padding: 4vh 0;
+                font-size: 2rem;
+            }
+    
+            .map {
+                iframe {
+                    height: 50vh;
+                }
+            }
+    
+            .info {
+                padding: 5vh 0;
+    
+                i {
+                    font-size: 2.5rem;
+                }
+    
+                span {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1200px){
+        .container {
+            .title {
+                padding: 4vh 0;
+                font-size: 2rem;
+            }
+    
+            .map {
+                iframe {
+                    height: 50vh;
+                }
+            }
+    
+            .info {
+                padding: 5vh 0;
+    
+                i {
+                    font-size: 2.5rem;
+                }
+    
+                span {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
 }
