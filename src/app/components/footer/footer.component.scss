@@ -11,16 +11,17 @@
         .container {
             display: flex;
             flex-direction: column;
-            
-            .social-media {
-                border-top: solid 1px rgb(148, 148, 148);
 
+            .social-media {
+                height: 10vh;
+                line-height: 10vh;
+                border-top: solid 1px rgb(148, 148, 148);
+    
                 ul {
                     list-style: none;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin: 1rem;
                 }
         
                 li {
@@ -28,7 +29,7 @@
                 }
                 
                 a i {
-                    font-size: 1.1rem;
+                    font-size: 1.5rem;
                     transition: color .4a ease;
                     color: rgb(148, 148, 148);
                 }
@@ -37,27 +38,29 @@
                     color: #131313;
                 }
             }
+        }
+            
         
-            .bottom {
-                height: 10vh;
-                font-weight: 700;
-                color: rgb(148, 148, 148);;
+        .bottom {
+            height: 10vh;
+            line-height: 10vh;
+            padding: 0 50px;
+            font-weight: 700;
+            background: #131313;
+            color: rgb(148, 148, 148);;
 
-                p {
-                    margin: 0;
-                    line-height: 10vh;
-                    font-size: 14px;
-                    word-spacing: 2px;
-                    text-transform: capitalize;
-                    text-align: left;
-                    font-size: 1rem;
-                }
-        
-                span {
-                    text-transform: uppercase;
-                    opacity: .4;
-                    font-weight: 200;
-                }
+            p {
+                font-size: 14px;
+                word-spacing: 2px;
+                text-transform: capitalize;
+                text-align: left;
+                font-size: 1rem;
+            }
+    
+            span {
+                text-transform: uppercase;
+                opacity: .4;
+                font-weight: 200;
             }
         }
     }
