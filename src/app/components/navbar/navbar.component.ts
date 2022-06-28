@@ -16,6 +16,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 })
 
 export class NavbarComponent implements OnInit {
+  menuItens: Array<any> = []
   showMobileMenu = false
   activeClass = "active"
 
@@ -24,7 +25,15 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.createMenu()
     this.showMobileMenu = false
+  }
+
+  createMenu() {
+    this.menuItens = [
+      {label: "Home", router: "home"},
+      {label: "Onde Estamos", router: "where-we-are"},
+    ]
   }
 
   addClickEvent() {

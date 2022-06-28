@@ -2,24 +2,25 @@
     <nav>
         <div class="container">
             <div class="row">
-                <div class="col-md-2 logo" routerLink="/home">
+                <div class="col-md-7 logo" routerLink="/home">
                     <img src="../../../assets/img/Logo branca.png" class="logo-white" alt="Renascer Logo">
                     <img src="../../../assets/img/Logo preta.png" class="logo-black" alt="Renascer Logo">
                 </div>
-                <div class="col-md-10 mobile-menu" (click)="addClickEvent()">
+                <div class="mobile-menu" (click)="addClickEvent()">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-                <div class="col-md-10 menu">
-                    <ul class="nav-list">
-                        <li class="nav-links"><a routerLink="/home">Home</a></li>
-                        <li class="nav-links"><a routerLink="/where-we-are">Onde estamos</a></li>
-                    </ul>
-                    <ul class="nav-list-mobile">
-                        <li class="nav-links" [@navLinkFade]="showMobileMenu ? 'to': 'from'"><a  routerLink="/home">Home</a></li>
-                        <li class="nav-links" [@navLinkFade]="showMobileMenu ? 'to': 'from'"><a  routerLink="/where-we-are">Onde estamos</a></li>
-                    </ul>
+                <div class="col-md-5 menu">
+                    <div *ngFor="let menu of menuItens">
+                        <a routerLink="{{menu.router}}">{{menu.label}}</a>
+                    </div>
+                </div>
+                
+                <div class="nav-list-mobile">
+                    <div *ngFor="let menu of menuItens">
+                        <a routerLink="{{menu.router}}" (click)="addClickEvent()">{{menu.label}}</a>
+                    </div>
                 </div>
             </div>
         </div>

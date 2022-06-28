@@ -23,30 +23,10 @@
         </div>
 
         <div class="social-media">
-            <ul>
+            <ul *ngFor="let media of socialMedia">
                 <li>
-                    <a href="/">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <i class="bi bi-youtube"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <i class="bi bi-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                        <i class="bi bi-facebook"></i>
+                    <a (click)="openLink(media.link)">
+                        <i class="{{media.icon}}"></i>
                     </a>
                 </li>
             </ul>
