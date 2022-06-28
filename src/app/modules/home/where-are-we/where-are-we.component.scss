@@ -1,17 +1,43 @@
 .where-we-are {
+    background-color: #FFF;
     margin-top: 10vh;
-    background-color: aliceblue;
-
+    
     .container {
         width: 100vw;
         height: 100vh;
-        background-color: aliceblue;
         color: #121212;
 
+        .title {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
         .map {
+            padding: 10px;
+            border: 1px solid #131313;
+
             iframe {
                 width: 100%;
                 height: 50vh;
+            }
+        }
+
+        .info {
+            padding: 50px;
+            text-align: center;
+            font-weight: 600;
+
+            i {
+                font-size: 30px;
+                color: rgb(255, 1, 1);
+            }
+
+            span {
+                font-size: 15px;
+                text-transform: uppercase;
             }
         }
     }
