@@ -70,3 +70,27 @@ body {
 .container {
     position: relative;
 }
+
+//style scroll bar
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    // background: #c4cff9;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    // background-color: red;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #3d4465;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: rgb(110 120 153 / 57%);
+  }
