@@ -31,6 +31,15 @@
     src: url("../src/assets/fonts/open-sans-hebrew.ttf");
 }
 
+//Colors
+:root {
+    --background-color: #232222;
+    --primary-color: #955666;
+    --transparent: #00000000;
+    --white: #FFF;
+    --black: #000;
+}
+
 *,
 *::before,
 *::after {
@@ -46,21 +55,21 @@ body {
     overflow-y: auto !important;
     font-family: 'proxima-nova';
     overflow: hidden;
-    background-color: #131313;
+    background-color: var(--background-color);
 }
 
 .navbar-scroll-directive {
     nav {
         color: #121212;
-        background: #FFF;
+        background: var(--white);
         border-bottom: solid 1px #12121236;
 
         a {
-            color: #000 !important;
+            color: var(--black) !important;
         }
 
         a::after {
-            background-color: #000 !important;
+            background-color: var(--black) !important;
         }
 
         .logo-white {

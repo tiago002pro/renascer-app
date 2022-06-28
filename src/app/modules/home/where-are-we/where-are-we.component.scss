@@ -1,11 +1,11 @@
 .where-we-are {
-    background-color: #FFF;
+    background-color: var(--white);
     margin-top: 10vh;
     
     .container {
         width: 100vw;
         height: 100vh;
-        color: #131313;
+        color: var(--background-color);
 
         .title {
             text-transform: uppercase;
@@ -17,7 +17,7 @@
 
         .map {
             padding: 10px;
-            border: 1px solid #131313;
+            border: 1px solid var(--background-color);
 
             iframe {
                 width: 100%;

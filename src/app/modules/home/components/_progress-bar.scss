@@ -1,7 +1,7 @@
 $component-name: "progress-bar";
 
 .#{$component-name} {
-    $color-fill: #06618c;
+    $color-fill: var(--primary-color);
     $color-background: #e0e0e0;
 
     width: 300px;

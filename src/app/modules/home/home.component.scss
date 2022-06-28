@@ -1,10 +1,10 @@
 .home-module {
     height: 100vh;
     display: flex;
-    color: #FFF;
+    color: var(--white);
     justify-content: center;
-    // background: url("../../../assets/img/church.jpg");
-    background: #06618c;
+    background: url("../../../assets/img/background.jpg");
+    // background: var(--background-color);
     background-size: cover;
 
     .container {
@@ -60,14 +60,14 @@
                     a {
                         cursor: pointer;
                         text-decoration: none;
-                        color: #FFF;
+                        color: var(--white);
 
                         i {
                             font-size: 30px;
                         }
 
                         &:hover {
-                            color: #06618c;
+                            color: var(--primary-color);
                         }
                     }
                 }
@@ -80,9 +80,9 @@
                 letter-spacing: 3px;
                 font-size: 1rem;
                 text-transform: uppercase;
-                background: #f0f8ff00;
-                border: 2px solid #FFF;
-                color: #FFF;
+                background: var(--transparent);
+                border: 2px solid var(--white);
+                color: var(--white);
                 font-weight: 400;
                 cursor: pointer;
 
@@ -91,9 +91,9 @@
                 }
 
                 &:hover {
-                    background-color: #FFF;
+                    background-color: var(--white);
                     font-weight: 400;
-                    color: #121212;
+                    color: var(--background-color);
                 }
             }
         }
