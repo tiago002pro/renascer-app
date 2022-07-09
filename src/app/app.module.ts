@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { WhereAreWeComponent } from './modules/home/where-are-we/where-are-we.component';
+import { WhereAreWeComponent } from './modules/where-are-we/where-are-we.component';
 import { ScrollDirective } from './components/navbar/scroll.directive';
 
 @NgModule({
