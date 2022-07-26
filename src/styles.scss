@@ -1,5 +1,5 @@
 //Import my scss files
-@import "./app//modules/home/components/progress-bar";
+@import "./app//modules/components/progress-bar";
 
 //Bootstrap imports
 @import '~bootstrap/dist/css/bootstrap.min.css';
@@ -49,7 +49,7 @@
 }
 
 body {
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     overflow-x: hidden !important;
     overflow-y: auto !important;
@@ -85,24 +85,35 @@ body {
 
 //style scroll bar
 ::-webkit-scrollbar {
-    width: 15px;
-    height: 15px;
-  }
-  
-  ::-webkit-scrollbar-track {
+    width: 1vw;
+    height: 2vh;
+}
+
+::-webkit-scrollbar-track {
     border-radius: 5px;
-    // background: #c4cff9;
-  }
-  
-  ::-webkit-scrollbar-corner {
+    background: #FFF;
+}
+
+::-webkit-scrollbar-corner {
     // background-color: red;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
     background: #3d4465;
-  }
-  
-  ::-webkit-input-placeholder {
+}
+
+::-webkit-input-placeholder {
     color: rgb(110 120 153 / 57%);
-  }
+}
+
+@media(min-width: 1200px) {
+    .container {
+        max-width: none;
+        margin: 0 56px
+    }
+}
+
+.module {
+    margin-top: 10vh;
+}
