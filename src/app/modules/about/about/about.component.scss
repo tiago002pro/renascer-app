@@ -1,0 +1,11 @@
+.about-module {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 100vw;
+        height: 90vh;
+        border: 1px solid red;
+    }
+}
