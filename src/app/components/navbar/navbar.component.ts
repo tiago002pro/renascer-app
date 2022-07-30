@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
   createMenu() {
     this.menuItens = [
       {label: "Home", router: "home"},
-      {label: "Quem Somos", router: "home"},
+      {label: "Quem Somos", router: "about"},
       {label: "Onde Estamos", router: "where-we-are"},
       {label: "Palavra", router: "home"},
       {label: "Colabore", router: "home"},
