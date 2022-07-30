@@ -3,25 +3,14 @@
         <div class="container">
             <div class="area">
                 <div class="logo" routerLink="/home">
-                    <img src="../../../assets/img/Logo branca.png" class="logo-white" alt="Renascer Logo">
-                    <img src="../../../assets/img/Logo preta.png" class="logo-black" alt="Renascer Logo">
+                    <img src="../../../assets/img/logo_branca.png" class="logo-white" alt="Renascer Logo">
+                    <img src="../../../assets/img/logo_preta.png" class="logo-black" alt="Renascer Logo">
                 </div>
-                <!-- <div class="mobile-menu" (click)="addClickEvent()">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div> -->
                 <div class="menu">
                     <div class="item" *ngFor="let menu of menuItens">
                         <a routerLink="{{menu.router}}">{{menu.label}}</a>
                     </div>
                 </div>
-                
-                <!-- <div class="nav-list-mobile">
-                    <div *ngFor="let menu of menuItens">
-                        <a routerLink="{{menu.router}}" (click)="addClickEvent()">{{menu.label}}</a>
-                    </div>
-                </div> -->
                 <div class="social-media">
                     <div class="item" *ngFor="let media of socialMedia">
                         <a (click)="openLink(media.link)">
