@@ -6,5 +6,46 @@
     .container {
         width: 100vw;
         height: 90vh;
+
+        .about-area {
+            .title {
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 1vw;
+
+            }
+
+            .info {
+                display: flex;
+
+                .image {
+                    margin: 2vw;
+                    img {
+                        width: 450px;
+                        height: 450px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                .text {
+                    margin: auto;
+                    text-align: justify;
+
+                    h4 {
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                    }
+
+                    span {
+                        font-size: 25px;
+
+                    }
+                }
+
+            }
+
+        }
+
     }
 }
