@@ -1,0 +1,17 @@
+.about-module {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 100vw;
+
+        .about-area {
+            .title {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                margin: 1vw;
+            }
+        }
+    }
+}

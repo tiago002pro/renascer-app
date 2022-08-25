@@ -1,28 +1,29 @@
-.about-module {
+.leadership-module {
     background-color: var(--white);
     display: flex;
     justify-content: center;
 
     .container {
         width: 100vw;
-        height: 90vh;
 
-        .about-area {
+        .leadership-area {
             .title {
+                font-family: 'Montserrat', sans-serif;
                 font-weight: 700;
-                text-transform: uppercase;
                 margin: 1vw;
-
             }
 
             .info {
                 display: flex;
+                margin: 10vh 0;
 
                 .image {
-                    margin: 2vw;
+                    margin-right: 2vw;
                     img {
-                        width: 450px;
-                        height: 450px;
+                        max-width: 500px;
+                        max-height: 500px;
+                        width: 350px;
+                        height: 350px;
                         border-radius: 50%;
                         object-fit: cover;
                     }
@@ -33,19 +34,16 @@
                     text-align: justify;
 
                     h4 {
-                        font-weight: 700;
+                        font-family: 'Montserrat', sans-serif;
                         margin-bottom: 10px;
                     }
 
                     span {
-                        font-size: 25px;
+                        font-size: 20px;
 
                     }
                 }
-
             }
-
         }
-
     }
 }
