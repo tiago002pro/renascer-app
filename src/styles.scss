@@ -34,6 +34,16 @@
     src: url("../src/assets/fonts/open-sans-hebrew.ttf");
 }
 
+@font-face {
+    font-family: "aktiv-grotesk-bd";
+    src: url("../src/assets/fonts/AktivGrotesk_Trial_Bd.ttf");
+}
+
+@font-face {
+    font-family: "aktiv-grotesk-md";
+    src: url("../src/assets/fonts/AktivGrotesk_Trial_Md.ttf");
+}
+
 //Colors
 :root {
     --background-color: #232222;
@@ -85,16 +95,18 @@ body {
     color: rgb(110 120 153 / 57%);
 }
 
-.container {
-    padding: 0 2vw;
-}
+// .container {
+//     padding: 0 2vw;
+// }
 
-@media(min-width: 1200px) {
-    .container {
-        max-width: none;
-        margin: 0 350px
-    }
-}
+
+
+// @media(min-width: 1200px) {
+//     .container {
+//         max-width: none;
+//         margin: 0 350px
+//     }
+// }
 
 .module {
     margin-top: 10vh;
