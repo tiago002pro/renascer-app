@@ -3,22 +3,48 @@
     display: flex;
     justify-content: center;
 
-    .container {
-        width: 100vw;
+    section {
+        .container {
+            width: 100vw;
 
-        .leadership-area {
-            .title {
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 700;
-                margin: 1vw;
+            .top {
+                display: flex;
+                justify-content: space-between;
+                font-family: Montserrat-Bold;
+
+                .title {
+                    font-weight: 700;
+                    margin: 1vw;
+                }
+    
+                .return {
+                    float: right;
+                    margin: auto 0px;
+        
+                    button {
+                        color: #ff671f;
+                        background-color: transparent;
+                        font-size: 18px;
+                        transition: 0.1s ease;
+        
+                        i {
+                            padding: 5px;
+                        }
+                    }
+                    
+                    button:hover {
+                        font-size: 20px;
+                    }
+                }
             }
-
+    
             .info {
                 display: flex;
                 margin: 10vh 0;
 
                 .image {
                     margin-right: 2vw;
+
                     img {
                         max-width: 500px;
                         max-height: 500px;
