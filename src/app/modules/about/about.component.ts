@@ -7,6 +7,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  sectionTwo = [
+    { title: "Our Beliefs", router: "beliefs" },
+    { title: "Departments", router: "departments" },
+    { title: "Leadership", router: "leadership" },
+  ]
 
   constructor(
     private route: ActivatedRoute,
@@ -16,16 +21,7 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToDepartment() {
-    this.router.navigate(['department'], {relativeTo: this.route})
+  navigate(router: string) {
+    this.router.navigate([router], {relativeTo: this.route})
   }
-
-  goToLidership() {
-    this.router.navigate(['leadership'], {relativeTo: this.route})
-  }
-
-  goToVision() {
-    this.router.navigate(['vision'], {relativeTo: this.route})
-  }
-
 }

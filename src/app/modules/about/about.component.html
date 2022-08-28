@@ -1,20 +1,28 @@
 <div class="about-module module">
-    <div class="container">
-        <div class="about-area">
-            <div class="title">
-                <h1>About</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <button (click)="goToLidership()" class="btn-dark">Liderança</button>
-                </div>
-                <div class="col-md-4">
-                    <button (click)="goToDepartment()" class="btn-dark">Ministérios</button>
-                </div>
-                <div class="col-md-4">
-                    <button (click)="goToVision()" class="btn-dark">Visão</button>
+    <section class="first-section">
+        <div class="area">
+            <div class="description-area">
+                <div class="description">
+                    <h1 class="title-one">Learn more about Renascer Church</h1>
+                    <h1 class="title-two">See What God Can Do Through You</h1>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="secound-section">
+        <div class="container">
+            <div class="blocks">
+                <div class="block" *ngFor="let section of sectionTwo">
+                    <h1>{{section.title}}</h1>
+                    <div class="learn-more">
+                        <button class="btn"
+                                (click)="navigate(section.router)">
+                            <span>Ver Mais</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
