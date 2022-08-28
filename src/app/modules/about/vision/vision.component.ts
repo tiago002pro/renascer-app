@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,9 +12,14 @@ export class VisionComponent implements OnInit {
   text = "Our approach to beliefs centers around one main belief, the person Jesus Christ. Through that Person, His statements, and His actions we interpret and conclude all other beliefs."
   text2 = "That said, below are some of our core beliefs."
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
+  goToAbout() {
+    this.router.navigate(['about'])
+  }
 }

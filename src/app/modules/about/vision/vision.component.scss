@@ -64,11 +64,29 @@
                 margin-left: auto;
             }
         }
+
+        .return {
+            padding: 3vh 0 0 0;
+
+            button {
+                color: #ff671f;
+                background-color: transparent;
+                font-size: 18px;
+                transition: 0.1s ease;
+
+                i {
+                    padding: 5px;
+                }
+            }
+            
+            button:hover {
+                font-size: 20px;
+            }
+        }
     }
 
     .bg-dark {
         background-color: #131313 !important;
         color: #fff;
-}
-
+    }
 }
