@@ -29,16 +29,16 @@ const routes: Routes = [
     path: 'about', 
     children: [
       { 
-        path: 'department', 
+        path: 'beliefs', 
+        component: VisionComponent
+      },
+      { 
+        path: 'departments', 
         component: DepartmentComponent
       },
       { 
         path: 'leadership', 
         component: LeadershipComponent
-      },
-      { 
-        path: 'vision', 
-        component: VisionComponent
       },
     ]
   },
