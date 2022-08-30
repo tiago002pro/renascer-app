@@ -1,0 +1,45 @@
+<div class="sermons module">
+    <section>
+        <div class="container">
+            <div class="top">
+                <div class="title">
+                    <h1>Sermons</h1>
+                </div>
+            </div>
+            <div class="carousel-videos">
+                <div class="carousel">
+                    <swiper [slidesPerView]="3"
+                            [spaceBetween]="30"
+                            [slidesPerGroup]="3"
+                            [loop]="true"
+                            [loopFillGroupWithBlank]="true"
+                            [pagination]="false"
+                            [navigation]="true"
+                            class="swiper">
+                        <ng-template swiperSlide *ngFor="let item of carouselVideos">
+                            <div class="column">
+                                <div class="area"  *ngFor="let banner of item.banner">
+                                    <div class="item">
+                                        <div class="banner-video">
+                                            <img src="{{banner.img}}" alt="">
+                                        </div>
+                                        <div class="description">
+                                            <span class="title">{{banner.title}}</span>
+                                            <span class="speaker">{{banner.speaker}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <div class="swiper-button-prev">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </swiper>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

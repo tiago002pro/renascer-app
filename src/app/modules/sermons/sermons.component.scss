@@ -1,0 +1,133 @@
+.sermons {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+      
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    section .container {
+        width: 100vw;
+    }
+
+    .container .top .title {
+        font-weight: 700;
+        margin: 1vw;
+    }
+
+    .carousel-videos {
+        width: 100%;
+    }
+
+    .carousel {
+        // border: 2px solid blue;
+    }
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .column {
+        flex-direction: column;
+    }
+
+    .area {
+        color: black;
+        cursor: pointer;
+    }
+
+    .area:hover {
+        .banner-video img {
+            width: 103px;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .item {
+        display: flex;
+        flex-direction: row;
+        width: 290px;
+        height: 110px;
+    }
+
+    .banner-video {
+        margin: 20px;
+        margin-right: 10px;
+    }
+
+    .banner-video img {
+        width: 100px;
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 0px 0px 10px 2px #1212123d;
+        transition: all 0.3s ease;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 5px;
+    }
+
+    .description .title {
+        font-weight: 700;
+        text-align: initial;
+        font-size: 16px;
+    }
+
+    .description .speaker {
+        font-size: 12px;
+        text-align: initial;
+    }
+
+    .swiper-button-prev::after {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f060";
+        color: #121212;
+        font-size: 15px;
+    }
+
+    .swiper-button-next::after {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f061";
+        color: #121212;
+        font-size: 15px;
+    }
+
+    .swiper-button-prev, 
+    .swiper-button-next {
+        background-color: white;
+        width: 40px;
+        height:  40px;
+        margin-top: -22px;
+        border-radius: 50%;
+        transition: all 0.1s ease;
+        box-shadow: 0px 0px 8px 3px #1212123d;
+    }
+
+    .swiper-button-prev:hover, 
+    .swiper-button-next:hover {
+        width: 45px;
+        height: 45px;
+        transition: all 0.3s ease;
+    }
+}
