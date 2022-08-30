@@ -1,3 +1,4 @@
+import { SermonsComponent } from './modules/sermons/sermons.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './modules/about/about.component';
@@ -42,6 +43,10 @@ const routes: Routes = [
       },
     ]
   },
+  {
+    path: 'sermons',
+    component: SermonsComponent
+  }
 ];
 
 @NgModule({

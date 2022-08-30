@@ -36,10 +36,10 @@ export class NavbarComponent implements OnInit {
       {label: "Home", router: "home"},
       {label: "Quem Somos", router: "about"},
       {label: "Onde Estamos", router: "where-we-are"},
-      {label: "Palavra", router: "home"},
-      {label: "Colabore", router: "home"},
-      {label: "Culto Ao Vivo", router: "home"},
-      {label: "Contato", router: "home"},
+      {label: "Sermões", router: "sermons"},
+      // {label: "Colabore", router: "home"},
+      // {label: "Culto Ao Vivo", router: "home"},
+      // {label: "Contato", router: "home"},
     ]
   }
 
