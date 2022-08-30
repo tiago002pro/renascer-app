@@ -11,6 +11,10 @@
 // @import '~@fortawesome/fontawesome-free/scss/regular';
 // @import '~@fortawesome/fontawesome-free/scss/brands';
 
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
@@ -47,6 +51,18 @@
 @font-face {
     font-family: "Montserrat-Bold";
     src: url("../src/assets/fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('/font-awesome/fontawesome-webfont.eot');
+    src: url('/font-awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/font-awesome/fontawesome-webfont.woff2') format('woff2'),
+    url('/font-awesome/fontawesome-webfont.woff') format('woff'),
+    url('/font-awesome/fontawesome-webfont.ttf') format('truetype'),
+    url('/font-awesome/fontawesome-webfont.svgfontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 //Colors
