@@ -33,7 +33,6 @@ export class NavbarComponent implements OnInit {
     this.menuItens = [
       {label: "Home", router: "home"},
       {label: "Onde Estamos", router: "where-we-are"},
-      {label: "Sobre", router: "about"},
     ]
   }
 
