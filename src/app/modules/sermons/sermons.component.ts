@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import SwiperCore, { Pagination, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 
@@ -40,8 +41,18 @@ export class SermonsComponent implements OnInit {
     }
   ]
   
-  constructor() { }
+  constructor(
+    private ngxService: NgxUiLoaderService
+  ) { }
 
   ngOnInit(): void {
+    // this.readyState()
+  }
+
+  readyState() {
+    do {
+      this.ngxService.start()
+    } while (document.readyState == "complete")
+    this.ngxService.stop()
   }
 }

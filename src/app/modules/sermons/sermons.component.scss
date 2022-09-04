@@ -1,7 +1,63 @@
 .sermons {
-    background-color: var(--white);
+    background-color: #f4f5f7;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+
+    section {
+        margin-top: 2vh;
+    }
+
+    section .container {
+        width: 100vw;
+    }
+
+    .top {
+        font-family: Montserrat-Bold;
+        padding: 2vh 0;
+    }
+
+    .top {
+        .title {
+            font-weight: 700;
+            margin-bottom: 1vw;
+        }
+    }
+
+    .banner {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .banner iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .recent-sermons {
+        width: 100%;
+
+        .sub-title {
+            font-family: Montserrat-Bold;
+            font-weight: 700;
+            margin: 1vw 0;
+        }
+    
+        .sub-title h1 {
+            font-size: 18px;
+        }
+    }
+
+
+    .carousel {
+        // border: 2px solid blue;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
 
     .swiper-slide {
         text-align: center;
@@ -21,27 +77,6 @@
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
-    }
-
-    section .container {
-        width: 100vw;
-    }
-
-    .container .top .title {
-        font-weight: 700;
-        margin: 1vw;
-    }
-
-    .carousel-videos {
-        width: 100%;
-    }
-
-    .carousel {
-        // border: 2px solid blue;
-    }
-    .swiper {
-        width: 100%;
-        height: 100%;
     }
 
     .column {
@@ -84,17 +119,17 @@
         display: flex;
         flex-direction: column;
         margin: 20px 5px;
-    }
 
-    .description .title {
-        font-weight: 700;
-        text-align: initial;
-        font-size: 16px;
-    }
-
-    .description .speaker {
-        font-size: 12px;
-        text-align: initial;
+        .title-video {
+            font-weight: 700;
+            text-align: initial;
+            font-size: 16px;
+        }
+    
+        .speaker {
+            font-size: 12px;
+            text-align: initial;
+        }
     }
 
     .swiper-button-prev::after {
