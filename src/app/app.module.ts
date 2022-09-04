@@ -11,6 +11,39 @@ import { ScrollDirective } from './components/navbar/directive/scroll.directive'
 import { AboutModule } from './modules/about/about.module';
 import { SermonsComponent } from './modules/sermons/sermons.component';
 import { SwiperModule } from 'swiper/angular';
+import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+
+const ngxUiLoaderConfig: NgxUiLoaderConfig =
+{
+  "bgsColor": "#ff9700",
+  "bgsOpacity": 0.5,
+  "bgsPosition": "center-center",
+  "bgsSize": 60,
+  "bgsType": "chasing-dots",
+  "blur": 11,
+  "delay": 0,
+  "fastFadeOut": true,
+  "fgsColor": "#ff9700",
+  "fgsPosition": "center-center",
+  "fgsSize": 130,
+  "fgsType": "double-bounce",
+  "gap": 10,
+  "logoPosition": "center-center",
+  "logoSize": 120,
+  "logoUrl": "",
+  "masterLoaderId": "master",
+  "overlayBorderRadius": "0",
+  "overlayColor": "rgb(255,255,255)",
+  "pbColor": "#ff9700",
+  "pbDirection": "ltr",
+  "pbThickness": 3,
+  "hasProgressBar": true,
+  "text": "",
+  "textColor": "#FFFFFF",
+  "textPosition": "center-center",
+  "maxTime": -1,
+  "minTime": 300
+}
 
 @NgModule({
   declarations: [
@@ -26,6 +59,8 @@ import { SwiperModule } from 'swiper/angular';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig), 
+    NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
     SwiperModule,
     AboutModule,
   ],
