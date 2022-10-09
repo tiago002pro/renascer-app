@@ -13,30 +13,30 @@ export class SermonsComponent implements OnInit {
   carouselVideos = [
     {
       banner: [
-        {img: '../../../assets/img/background_1.jpg', title: 'It’s Your Door', speaker: 'Pastor Steven Furtick'},
-        {img: '../../../assets/img/background_1.jpg', title: 'It Was A Good Fight', speaker: 'Pastor Larry Bre'},
-        {img: '../../../assets/img/background_1.jpg', title: 'Faithful With A Few', speaker: 'Pastor Steven Furtick'},
+        {img: '4ubCnaWZSxo', title: 'Por Jesus Vale a Pena', speaker: 'Pastora Eunice Lea'},
+        {img: '4ubCnaWZSxo', title: 'Por Jesus Vale a Pena', speaker: 'Pastora Eunice Lea'},
+        {img: '4ubCnaWZSxo', title: 'Por Jesus Vale a Pena', speaker: 'Pastora Eunice Lea'},
       ],
     },
     {
       banner: [
-        {img: '../../../assets/img/background_2.jpg', title: 'It’s Your Door', speaker: 'Pastor Steven Furtick'},
-        {img: '../../../assets/img/background_2.jpg', title: 'It Was A Good Fight', speaker: 'Pastor Larry Bre'},
-        {img: '../../../assets/img/background_2.jpg', title: 'Faithful With A Few', speaker: 'Pastor Steven Furtick'},
+        {img: 'W_Cvb6_kjfo', title: 'Revolução do Amor', speaker: 'João Pedro'},
+        {img: 'W_Cvb6_kjfo', title: 'Revolução do Amor', speaker: 'João Pedro'},
+        {img: 'W_Cvb6_kjfo', title: 'Revolução do Amor', speaker: 'João Pedro'},
       ],
     },
     {
       banner: [
-        {img: '../../../assets/img/background_3.jpg', title: 'It’s Your Door', speaker: 'Pastor Steven Furtick'},
-        {img: '../../../assets/img/background_3.jpg', title: 'It Was A Good Fight', speaker: 'Pastor Larry Bre'},
-        {img: '../../../assets/img/background_3.jpg', title: 'Faithful With A Few', speaker: 'Pastor Steven Furtick'},
+        {img: '1x41JwdLI4s', title: 'Lugar de Proteção', speaker: 'Pastor Marcio Ribeiro'},
+        {img: '1x41JwdLI4s', title: 'Lugar de Proteção', speaker: 'Pastor Marcio Ribeiro'},
+        {img: '1x41JwdLI4s', title: 'Lugar de Proteção', speaker: 'Pastor Marcio Ribeiro'},
       ],
     },
     {
       banner: [
-        {img: '../../../assets/img/background_4.jpg', title: 'It’s Your Door', speaker: 'Pastor Steven Furtick'},
-        {img: '../../../assets/img/background_4.jpg', title: 'It Was A Good Fight', speaker: 'Pastor Larry Bre'},
-        {img: '../../../assets/img/background_4.jpg', title: 'Faithful With A Few', speaker: 'Pastor Steven Furtick'},
+        {img: 'h0OVot0SjiQ', title: 'Revolução do Amor', speaker: 'Pastor José Octávio'},
+        {img: 'h0OVot0SjiQ', title: 'Revolução do Amor', speaker: 'Pastor José Octávio'},
+        {img: 'h0OVot0SjiQ', title: 'Revolução do Amor', speaker: 'Pastor José Octávio'},
       ],
     }
   ]
