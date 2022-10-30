@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import SwiperCore, { Pagination, Navigation } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
@@ -10,6 +10,7 @@ SwiperCore.use([Pagination, Navigation]);
   encapsulation: ViewEncapsulation.None,
 })
 export class SermonsComponent implements OnInit {
+  slidesPerView!: number
   carouselVideos = [
     {
       banner: [
@@ -47,6 +48,18 @@ export class SermonsComponent implements OnInit {
 
   ngOnInit(): void {
     // this.readyState()
+    this.onResize()
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    if (window.innerWidth >= 800) {
+      this.slidesPerView = 3
+    } else if (window.innerWidth >= 400) {
+      this.slidesPerView = 2
+    } else {
+      this.slidesPerView = 1
+    }
   }
 
   readyState() {
