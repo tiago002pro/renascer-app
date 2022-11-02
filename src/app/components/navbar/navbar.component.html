@@ -21,10 +21,12 @@
             <div class="container-fluid full-height">
                 <div class="menu-item">
                     <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3">
-                        <div class="col" *ngFor="let item of menuItens">
+                        <div class="col box" *ngFor="let item of menuItens">
                             <a (click)="routerLink(item.router)">
                                 <div class="subitem-menu">
-                                    <i class="{{item.icon}}"></i>
+                                    <div class="icon">
+                                        <i class="{{item.icon}}"></i>
+                                    </div>
                                     <span>{{item.label}}</span>
                                 </div>
                             </a>

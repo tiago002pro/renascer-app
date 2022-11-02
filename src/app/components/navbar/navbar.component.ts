@@ -35,17 +35,17 @@ export class NavbarComponent implements OnInit {
       {
         label: "Home", 
         router: "home", 
-        icon: "bi bi-play"
+        icon: "bi bi-house"
       },
       {
         label: "Quem Somos", 
         router: "about", 
-        icon: "bi bi-play"
+        icon: "bi bi-building"
       },
       {
         label: "Onde Estamos", 
         router: "where-we-are", 
-        icon: "bi bi-play"
+        icon: "bi bi-geo-alt"
       },
       {
         label: "Sermões", 
@@ -55,12 +55,12 @@ export class NavbarComponent implements OnInit {
       {
         label: "Loja", 
         router: "", 
-        icon: "bi bi-play"
+        icon: "bi bi-cart3"
       },
       {
         label: "Contato", 
         router: "", 
-        icon: "bi bi-play"
+        icon: "bi bi-chat-square-heart"
       },
     ]
   }
