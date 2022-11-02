@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -19,58 +19,79 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   menuItens: Array<any> = []
   socialMedia: Array<any> = []
-  showMobileMenu = false
-  activeClass = "active"
-  show_menu = false
-  subitems = [
-    {name: "Home", router: "home", icon: "bi bi-play"},
-    {name: "Quem Somos", router: "about", icon: "bi bi-play"},
-    {name: "Onde Estamos", router: "where-we-are", icon: "bi bi-play"},
-    {name: "Sermões", router: "sermons", icon: "bi bi-play"},
-    {name: "Store", router: "", icon: "bi bi-play"},
-    {name: "Giving", router: "", icon: "bi bi-play"},
-  ]
+  showMobileMenu: Boolean = false
 
   constructor(
-    private ElByClassName: ElementRef,
     private router: Router,
   ) { }
 
   ngOnInit(): void {
-    this.createMenu()
-    this.createSocialMedia()
-    this.showMobileMenu = false
+    this.__createMenuItens()
+    this.__createSocialMedia()
   }
 
-  createMenu() {
+  __createMenuItens() {
     this.menuItens = [
-      {label: "Home", router: "home"},
-      {label: "Quem Somos", router: "about"},
-      {label: "Onde Estamos", router: "where-we-are"},
-      {label: "Sermões", router: "sermons"},
-      // {label: "Colabore", router: "home"},
-      // {label: "Culto Ao Vivo", router: "home"},
-      // {label: "Contato", router: "home"},
+      {
+        label: "Home", 
+        router: "home", 
+        icon: "bi bi-play"
+      },
+      {
+        label: "Quem Somos", 
+        router: "about", 
+        icon: "bi bi-play"
+      },
+      {
+        label: "Onde Estamos", 
+        router: "where-we-are", 
+        icon: "bi bi-play"
+      },
+      {
+        label: "Sermões", 
+        router: "sermons", 
+        icon: "bi bi-play"
+      },
+      {
+        label: "Loja", 
+        router: "", 
+        icon: "bi bi-play"
+      },
+      {
+        label: "Contato", 
+        router: "", 
+        icon: "bi bi-play"
+      },
     ]
   }
 
-  addClickEvent() {
-    const navList = (<HTMLElement>this.ElByClassName.nativeElement).querySelector('.nav-list-mobile')
-    const mobileMenu = (<HTMLElement>this.ElByClassName.nativeElement).querySelector('.mobile-menu')
-
-    navList?.classList.toggle(this.activeClass)
-    mobileMenu?.classList.toggle(this.activeClass)
-
-    this.showMobileMenu = !this.showMobileMenu
-  }
-
-  createSocialMedia() {
+  __createSocialMedia() {
     this.socialMedia = [
-      {name: "Instagran", link: "https://www.instagram.com/renascermaringa/?hl=pt-br", icon: "bi bi-instagram"},
-      {name: "Facebook", link: "https://www.facebook.com/igrejarenascermaringa", icon: "bi bi-facebook"},
-      {name: "Twitter", link: "https://twitter.com/renascermaringa", icon: "bi bi-twitter"},
-      {name: "Youtube", link: "https://www.youtube.com/c/RenascerMaring%C3%A1", icon: "bi bi-youtube"},
-      {name: "WhatsApp", link: "http://api.whatsapp.com/send?1=pt_BR&phone=554430302570", icon: "bi bi-whatsapp"},
+      {
+        name: "Instagran", 
+        link: "https://www.instagram.com/renascermaringa/?hl=pt-br", 
+        icon: "bi bi-instagram"
+      },
+      {
+        name: "Facebook", 
+        link: "https://www.facebook.com/igrejarenascermaringa", 
+        icon: "bi bi-facebook"
+      },
+      {
+        name: "Twitter", 
+        link: "https://twitter.com/renascermaringa", 
+        icon: "bi bi-twitter"
+      },
+      {
+        name: "Youtube", 
+        link: "https://www.youtube.com/c/RenascerMaring%C3%A1", 
+        icon: "bi bi-youtube"
+      },
+      {
+        name: "WhatsApp", 
+        link: "http://api.whatsapp.com/send?1=pt_BR&phone=554430302570", 
+        icon: "bi bi-whatsapp"
+      },
     ]
   }
 
@@ -78,12 +99,12 @@ export class NavbarComponent implements OnInit {
     window.open(link)
   }
 
-  showMenu() {
-    this.show_menu = !this.show_menu
+  toggleMobileMenu() {
+    this.showMobileMenu = !this.showMobileMenu
   }
 
   routerLink(link: string) {
-    this.showMenu()
     this.router.navigate([link])
+    this.toggleMobileMenu()
   }
 }

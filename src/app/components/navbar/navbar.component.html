@@ -1,33 +1,31 @@
 <div class="navbar-component" appScroll>
     <header>
-        <div class="header-nav">
-            <div class="row area">
-                <div class="logo col-md-2" routerLink="/home">
-                    <img src="../../../assets/img/logo_branca.png" class="logo-white" alt="Renascer Logo">
-                    <img src="../../../assets/img/logo_preta.png" class="logo-black" alt="Renascer Logo">
+        <div class="row area">
+            <div class="logo col-md-2" routerLink="/home">
+                <img src="../../../assets/img/logo_branca.png" class="logo-white" alt="Renascer Logo">
+                <img src="../../../assets/img/logo_preta.png" class="logo-black" alt="Renascer Logo">
+            </div>
+            <nav class="menu col-md-8">
+                <div class="item" *ngFor="let menu of menuItens">
+                    <a routerLink="{{menu.router}}">{{menu.label}}</a>
                 </div>
-                <nav class="menu col-md-8">
-                    <div class="item" *ngFor="let menu of menuItens">
-                        <a routerLink="{{menu.router}}">{{menu.label}}</a>
-                    </div>
-                </nav>
-                <div [ngClass]="show_menu ? 'btn-menu dark col-md-2' : 'btn-menu col-md-2'" (click)="showMenu()">
-                    <i class="bi bi-list"></i>
-                </div>
+            </nav>
+            <div [ngClass]="showMobileMenu ? 'toggle-menu dark col-md-2' : 'toggle-menu col-md-2'" (click)="toggleMobileMenu()">
+                <i class="bi bi-list"></i>
             </div>
         </div>
     </header>
 
     <div class="menu-mobile">
-        <div [ngClass]="show_menu ? 'menu' : 'menu hide-menu' ">
+        <div [ngClass]="showMobileMenu ? 'menu' : 'menu hide-menu' ">
             <div class="container-fluid full-height">
                 <div class="menu-item">
                     <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3">
-                        <div class="col" *ngFor="let item of subitems">
+                        <div class="col" *ngFor="let item of menuItens">
                             <a (click)="routerLink(item.router)">
                                 <div class="subitem-menu">
                                     <i class="{{item.icon}}"></i>
-                                    <span>{{item.name}}</span>
+                                    <span>{{item.label}}</span>
                                 </div>
                             </a>
                         </div>

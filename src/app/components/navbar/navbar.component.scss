@@ -1,93 +1,88 @@
 .navbar-component {
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 
     header {
+        width: 100%;
         height: 10vh;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
         color: var(--white);
 
-        .header-nav {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
+        .area {
+            height: 10vh;
+            line-height: 10vh;
+            display: flex;
+            justify-content: center;
 
-            .area {
-                height: 10vh;
+            .logo {
+                cursor: pointer;
+
+                img {
+                    height: 6vh;
+                    margin: 20px 0;
+                }
+                
+                .logo-black {
+                    display: none;
+                }
+            }
+
+            .menu {
                 display: flex;
                 justify-content: center;
-                line-height: 10vh;
+                margin: auto;
 
-                .logo {
-                    cursor: pointer;
+                .item {
+                    margin: 0 20px;
 
-                    img {
-                        height: 6vh;
-                        margin: 20px 0;
-
+                    a {
+                        padding: 0 10px;
+                        font-size: 1.5rem;
+                        position: relative;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        color: var(--white);
+                        transition: 0.3s;
+                        // letter-spacing: 2px;
                     }
-                    
-                    .logo-black {
-                        display: none;
+        
+                    a:hover {
+                        color: var(--primary-color);
+                        // opacity: 0.7;
                     }
-                }
     
-                .menu {
-                    display: flex;
-                    justify-content: center;
-                    margin: auto;
-
-                    .item {
-                        margin: 0 20px;
-
-                        a {
-                            font-size: 11px;
-                            position: relative;
-                            text-decoration: none;
-                            padding: 0 10px;
-                            text-transform: uppercase;
-                            font-weight: 400;
-                            // letter-spacing: 2px;
-                            padding: 5px 0;
-                            color: var(--white);
-                            transition: 0.3s;
-                        }
-            
-                        a:hover {
-                            // opacity: 0.7;
-                            color: var(--primary-color);
-                        }
-        
-                        a::after {
-                            content: "";
-                            position: absolute;
-                            background-color: var(--primary-color);
-                            height: 3px;
-                            width: 0;
-                            left: 0;
-                            bottom: -10px;
-                            transition: 0.3s;
-                        }
-        
-                        a:hover::after {
-                            width: 100%;
-                        }
+                    a::after {
+                        content: "";
+                        width: 0;
+                        height: 3px;
+                        position: absolute;
+                        left: 0;
+                        bottom: -10px;
+                        background-color: var(--primary-color);
+                        transition: 0.3s;
                     }
-                
+    
+                    a:hover::after {
+                        width: 100%;
+                    }
                 }
-
+            
             }
+
         }
 
-        .btn-menu {
-            cursor: pointer;
-            z-index: 1;
+        .toggle-menu {
             display: flex;
             justify-content: right;
+            cursor: pointer;
+            z-index: 1;
     
             i {
                 font-size: 30px;
@@ -103,19 +98,18 @@
         .menu {
             width: 30vw;
             height: 100vh;
-            background-color: #FFF;
-            float: right;
-            margin-top: -10vh;
-            z-index: 0;
-            right: 0px;
-            transition: all 0.3s ease;
             position: absolute;
+            margin-top: -10vh;
+            right: 0px;
+            float: right;
+            background-color: #FFF;
+            z-index: 0;
+            transition: all 0.3s ease;
         }
 
         .hide-menu {
             right: -30vw;
             transition: all 0.3s ease;
-
         }
 
         .menu-item {
@@ -123,9 +117,9 @@
         }
         
         .subitem-menu {
-            text-align: center;
             margin-bottom: 5vh;
             display: flex;
+            text-align: center;
             flex-direction: column;
             align-items: center;
 
@@ -136,12 +130,11 @@
     }
 
     @media (max-width: 1023px) {
-        .header-nav {
+        header {
             .area {
                 .menu {
                     .item {
                         display: none !important;
-
                     }
                 }
             }
@@ -150,32 +143,29 @@
 
     @media (max-width: 767px) {
         header {
-            .header-nav {
-                .area {
-                    .logo {
-                        width: 100vw;
-                        display: flex;
-                        justify-content: center;
-    
-                        img {
-                            height: 6vh;
-                            margin: 20px 0;
-    
-                        }
-                        
-                        .logo-black {
-                            display: none;
-                        }
+            .area {
+                .logo {
+                    width: 100vw;
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        height: 6vh;
+                        margin: 20px 0;
+                    }
+                    
+                    .logo-black {
+                        display: none;
                     }
                 }
             }
-        }
-        .btn-menu {
-            justify-content: left !important;
-            position: absolute;
-    
-            i {
-                font-size: 3rem;
+            .toggle-menu {
+                position: absolute;
+                justify-content: left !important;
+        
+                i {
+                    font-size: 3rem;
+                }
             }
         }
 
@@ -193,12 +183,6 @@
             .hide-menu {
                 top: -100vh;
             }
-    
-            .menu-item {
-            }
-            
-            .subitem-menu {
-            }
         }
     }
 }
@@ -208,38 +192,35 @@
         color: #121212;
         background: var(--white);
         border-bottom: solid 1px #12121236;
-
-        .header-nav {
-            .area {
-                .logo {
-                    
-                    .logo-white {
-                        display: none !important;
-                    }
-
-                    .logo-black {
-                        display: block !important;
-                        opacity: 0.9;
-                    }
+        
+        .area {
+            .logo {
+                .logo-white {
+                    display: none !important;
                 }
 
-                .menu {
-                    .item {
-                        a {
-                            color: #000 !important;
-                        }
-
-                        a:hover {
-                            font-weight: 700 !important;
-                            color:  var(--primary-color) !important;
-                        }
-                    }
+                .logo-black {
+                    display: block !important;
+                    opacity: 0.9;
                 }
+            }
 
-                .btn-menu {
-                    i {
+            .menu {
+                .item {
+                    a {
                         color: #000 !important;
                     }
+
+                    a:hover {
+                        font-weight: 700 !important;
+                        color:  var(--primary-color) !important;
+                    }
+                }
+            }
+
+            .toggle-menu {
+                i {
+                    color: #000 !important;
                 }
             }
         }
