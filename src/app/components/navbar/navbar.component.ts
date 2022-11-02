@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, ElementRef, OnInit } from '@angular/core';
 
@@ -20,9 +21,19 @@ export class NavbarComponent implements OnInit {
   socialMedia: Array<any> = []
   showMobileMenu = false
   activeClass = "active"
+  show_menu = false
+  subitems = [
+    {name: "Home", router: "home", icon: "bi bi-play"},
+    {name: "Quem Somos", router: "about", icon: "bi bi-play"},
+    {name: "Onde Estamos", router: "where-we-are", icon: "bi bi-play"},
+    {name: "Sermões", router: "sermons", icon: "bi bi-play"},
+    {name: "Store", router: "", icon: "bi bi-play"},
+    {name: "Giving", router: "", icon: "bi bi-play"},
+  ]
 
   constructor(
-    private ElByClassName: ElementRef
+    private ElByClassName: ElementRef,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -65,5 +76,14 @@ export class NavbarComponent implements OnInit {
 
   openLink(link: any) {
     window.open(link)
+  }
+
+  showMenu() {
+    this.show_menu = !this.show_menu
+  }
+
+  routerLink(link: string) {
+    this.showMenu()
+    this.router.navigate([link])
   }
 }

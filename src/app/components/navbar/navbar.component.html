@@ -1,24 +1,39 @@
 <div class="navbar-component" appScroll>
-    <nav>
-        <div class="container">
-            <div class="area">
-                <div class="logo" routerLink="/home">
+    <header>
+        <div class="header-nav">
+            <div class="row area">
+                <div class="logo col-md-2" routerLink="/home">
                     <img src="../../../assets/img/logo_branca.png" class="logo-white" alt="Renascer Logo">
                     <img src="../../../assets/img/logo_preta.png" class="logo-black" alt="Renascer Logo">
                 </div>
-                <div class="menu">
+                <nav class="menu col-md-8">
                     <div class="item" *ngFor="let menu of menuItens">
                         <a routerLink="{{menu.router}}">{{menu.label}}</a>
                     </div>
+                </nav>
+                <div [ngClass]="show_menu ? 'btn-menu dark col-md-2' : 'btn-menu col-md-2'" (click)="showMenu()">
+                    <i class="bi bi-list"></i>
                 </div>
-                <div class="social-media">
-                    <div class="item" *ngFor="let media of socialMedia">
-                        <a (click)="openLink(media.link)">
-                            <i class="{{media.icon}}"></i>
-                        </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-mobile">
+        <div [ngClass]="show_menu ? 'menu' : 'menu hide-menu' ">
+            <div class="container-fluid full-height">
+                <div class="menu-item">
+                    <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3">
+                        <div class="col" *ngFor="let item of subitems">
+                            <a (click)="routerLink(item.router)">
+                                <div class="subitem-menu">
+                                    <i class="{{item.icon}}"></i>
+                                    <span>{{item.name}}</span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 </div>

@@ -83,12 +83,13 @@
 }
 
 body {
-    width: 99vw;
+    // width: calc(100vw - 1.5vw); // Subtraindo o scrooll
+    width: 100vw; // Subtraindo o scrooll
     height: 100vh;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
+    // overflow-x: hidden !important;
+    // overflow-y: auto !important;
     font-family: 'proxima-nova';
-    overflow: hidden;
+    // overflow: hidden;
     background-color: var(--background-color);
 }
 
@@ -96,7 +97,7 @@ body {
 
 //style scroll bar
 ::-webkit-scrollbar {
-    width: 1vw;
+    // width: 1.5vw;
 }
 
 ::-webkit-scrollbar-track {

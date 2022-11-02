@@ -5,12 +5,16 @@
     left: 0;
     right: 0;
 
-    nav {
+    header {
         height: 10vh;
         color: var(--white);
 
-        .container {
-            width: auto;
+        .header-nav {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
 
             .area {
                 height: 10vh;
@@ -34,6 +38,7 @@
     
                 .menu {
                     display: flex;
+                    justify-content: center;
                     margin: auto;
 
                     .item {
@@ -74,61 +79,137 @@
                     }
                 
                 }
-    
-                .social-media {
-                    display: flex;
 
+            }
+        }
+
+        .btn-menu {
+            cursor: pointer;
+            z-index: 1;
+            display: flex;
+            justify-content: right;
+    
+            i {
+                font-size: 30px;
+            }
+        }
+
+        .dark {
+            color: #000 !important;
+        }
+    }
+
+    .menu-mobile {
+        .menu {
+            width: 30vw;
+            height: 100vh;
+            background-color: #FFF;
+            float: right;
+            margin-top: -10vh;
+            z-index: 0;
+            right: 0px;
+            transition: all 0.3s ease;
+            position: absolute;
+        }
+
+        .hide-menu {
+            right: -30vw;
+            transition: all 0.3s ease;
+
+        }
+
+        .menu-item {
+            margin-top: 10vh;
+        }
+        
+        .subitem-menu {
+            text-align: center;
+            margin-bottom: 5vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            i {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .header-nav {
+            .area {
+                .menu {
                     .item {
-                        margin: 0 5px;
+                        display: none !important;
 
-                        a {
-                            cursor: pointer;
-                        }
-                        
-                        a i {
-                            font-size: 1.2rem;
-                            transition: color .4a ease;
-                            color: rgb(148, 148, 148);
-                        }
-                
-                        a:hover i {
-                            color: var(--white);
-                        }
                     }
-    
                 }
             }
         }
     }
 
-    @media (max-width: 999px) {
-        nav {
-            .container {
-                .logo {
-                    // font-size: 24px;
-                    display: none;
-                    position: inherit;
-            
-                    img {
-                        // width: 30px;
+    @media (max-width: 767px) {
+        header {
+            .header-nav {
+                .area {
+                    .logo {
+                        width: 100vw;
+                        display: flex;
+                        justify-content: center;
+    
+                        img {
+                            height: 6vh;
+                            margin: 20px 0;
+    
+                        }
+                        
+                        .logo-black {
+                            display: none;
+                        }
                     }
                 }
+            }
+        }
+        .btn-menu {
+            justify-content: left !important;
+            position: absolute;
+    
+            i {
+                font-size: 3rem;
+            }
+        }
 
-                .menu {
-                    display: none;
-                }
+        .menu-mobile {
+            position: absolute;
+    
+            .menu {
+                width: 100vw;
+                height: 100vh;
+                right: 0px;
+                left: 0px;
+                top: 0vh;
+            }
+    
+            .hide-menu {
+                top: -100vh;
+            }
+    
+            .menu-item {
+            }
+            
+            .subitem-menu {
             }
         }
     }
 }
 
 .navbar-scroll-directive {
-    nav {
+    header {
         color: #121212;
         background: var(--white);
         border-bottom: solid 1px #12121236;
 
-        .container {
+        .header-nav {
             .area {
                 .logo {
                     
@@ -155,15 +236,9 @@
                     }
                 }
 
-                .social-media {
-                    .item {
-                        a i {
-                            color: #000 !important;
-                        }
-                
-                        a:hover i {
-                            color:  var(--primary-color) !important;
-                        }
+                .btn-menu {
+                    i {
+                        color: #000 !important;
                     }
                 }
             }
