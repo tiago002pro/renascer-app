@@ -8,9 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
   sectionTwo = [
-    { title: "Our Beliefs", router: "beliefs" },
-    { title: "Departments", router: "departments" },
-    { title: "Leadership", router: "leadership" },
+    { title: "Liderança", router: "leadership" },
+    { title: "Visão", router: "beliefs" },
+    { title: "Ministérios", router: "departments" },
   ]
 
   constructor(

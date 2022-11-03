@@ -12,14 +12,14 @@
     <section class="secound-section">
         <div class="container">
             <div class="blocks">
-                <div class="block" *ngFor="let section of sectionTwo">
-                    <h1>{{section.title}}</h1>
+                <div class="block" *ngFor="let section of sectionTwo" (click)="navigate(section.router)">
+                    {{section.title}}
                     <div class="learn-more">
-                        <button class="btn"
+                        <!-- <button class="btn"
                                 (click)="navigate(section.router)">
                             <span>Ver Mais</span>
                             <i class="bi bi-arrow-right"></i>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
             </div>
