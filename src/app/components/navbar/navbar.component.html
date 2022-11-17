@@ -16,22 +16,18 @@
                 </label>
             </div>
         </div>
-        <div [ngClass]="showMobileMenu ? 'menu-mobile' : 'menu-mobile hide-menu'">
-            <div  [@navLinkFade]="showMobileMenu ? 'show' : 'hide'" >
-                <div class="container-fluid full-height">
-                    <div class="menu-item">
-                        <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3">
-                            <div class="col box" *ngFor="let tab of tabsNavigate">
-                                <a (click)="routerLink(tab.router)">
-                                    <div class="subitem-menu">
-                                        <div class="icon">
-                                            <i class="{{tab.icon}}"></i>
-                                        </div>
-                                        <span>{{tab.label}}</span>
-                                    </div>
-                                </a>
+        <div [ngClass]="showMobileMenu ? 'menu-mobile in' : 'menu-mobile out'">
+            <div class="menu-item">
+                <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3">
+                    <div class="col box" *ngFor="let tab of tabsNavigate">
+                        <a (click)="routerLink(tab.router)">
+                            <div class="subitem-menu">
+                                <div class="icon">
+                                    <i class="{{tab.icon}}"></i>
+                                </div>
+                                <span>{{tab.label}}</span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

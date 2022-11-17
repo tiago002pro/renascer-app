@@ -5,15 +5,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
-  animations: [
-    trigger('navLinkFade', [
-      state('show', style({filter:' blur(0px)'})),
-      state('hide', style({filter:' blur(0px)'})),
-      transition('show => hide', [animate('0.5s ease', style({filter:' blur(8px)'}))], ),
-      transition('hide => show', [animate('0.5s ease', style({filter:' blur(8px)'}))]),
-    ])
-  ]
+  styleUrls: ['./navbar.component.scss']
 })
 
 export class NavbarComponent implements OnInit {
