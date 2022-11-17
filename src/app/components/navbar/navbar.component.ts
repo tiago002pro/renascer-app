@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,30 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
   animations: [
     trigger('navLinkFade', [
-      state('from', style({opacity: 0, transform: 'translateX(50px)'})),
-      state('to', style({opacity: 1, transform: 'translateX(0)'})),
-      transition('from => to', [animate('0.5s 0.3s ease')]),
-      transition('to => from', [animate('1s')]),
+      state('show', style({filter:' blur(0px)'})),
+      state('hide', style({filter:' blur(0px)'})),
+      transition('show => hide', [animate('0.5s ease', style({filter:' blur(8px)'}))], ),
+      transition('hide => show', [animate('0.5s ease', style({filter:' blur(8px)'}))]),
     ])
   ]
 })
 
 export class NavbarComponent implements OnInit {
-  menuItens: Array<any> = []
+  tabsNavigate: Array<any> = []
   socialMedia: Array<any> = []
   showMobileMenu: Boolean = false
-
+  @ViewChild('mobileMenu', {static: true}) el!:ElementRef;
+  
   constructor(
     private router: Router,
-  ) { }
+    ) { }
 
   ngOnInit(): void {
-    this.__createMenuItens()
+    this.__createNavigateTabs()
     this.__createSocialMedia()
   }
 
-  __createMenuItens() {
-    this.menuItens = [
+  __createNavigateTabs() {
+    this.tabsNavigate = [
       {
         label: "Home", 
         router: "home", 
@@ -51,16 +52,6 @@ export class NavbarComponent implements OnInit {
         label: "Sermões", 
         router: "sermons", 
         icon: "bi bi-play"
-      },
-      {
-        label: "Loja", 
-        router: "", 
-        icon: "bi bi-cart3"
-      },
-      {
-        label: "Contato", 
-        router: "", 
-        icon: "bi bi-chat-square-heart"
       },
     ]
   }
