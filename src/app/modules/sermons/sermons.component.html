@@ -1,23 +1,23 @@
 <div class="sermons module">
-    <!-- <ngx-ui-loader></ngx-ui-loader> -->
     <section>
         <div class="container">
-            <div class="top">
-                <div class="title">
-                    <h1>Sermons</h1>
-                </div>
-            </div>
-            <div class="banner">
-                <iframe src="https://www.youtube.com/embed/82dtxLC-wxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="title">
+                <h1>Sermons</h1>
             </div>
         </div>
     </section>
 
-    <!-- <section>
+    <section>
         <div class="container">
-
+            <div class="banner">
+                <iframe src="https://www.youtube.com/embed/82dtxLC-wxM" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
         </div>
-    </section> -->
+    </section>
 
     <section>
         <div class="container">
@@ -36,7 +36,7 @@
                             class="swiper">
                         <ng-template swiperSlide *ngFor="let item of carouselVideos">
                             <div class="column">
-                                <div class="area"  *ngFor="let banner of item.banner">
+                                <div class="area" *ngFor="let banner of item.banner">
                                     <div class="item">
                                         <div class="banner-video">
                                             <img src="https://img.youtube.com/vi/{{banner.img}}/0.jpg" alt="">
