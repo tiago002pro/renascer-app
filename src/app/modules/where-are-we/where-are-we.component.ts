@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./where-are-we.component.scss']
 })
 export class WhereAreWeComponent implements OnInit {
+  imgTitle =  './../../../assets/img/module-whereAreWe.jpg'
+
   constructor() { }
 
   ngOnInit(): void {

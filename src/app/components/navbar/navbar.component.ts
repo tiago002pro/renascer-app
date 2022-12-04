@@ -1,5 +1,4 @@
 import { Router } from '@angular/router';
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
@@ -10,7 +9,6 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 export class NavbarComponent implements OnInit {
   tabsNavigate: Array<any> = []
-  socialMedia: Array<any> = []
   showMobileMenu: Boolean = false
   @ViewChild('mobileMenu', {static: true}) el!:ElementRef;
   
@@ -20,66 +18,17 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.__createNavigateTabs()
-    this.__createSocialMedia()
   }
 
   __createNavigateTabs() {
     this.tabsNavigate = [
-      {
-        label: "Home", 
-        router: "home", 
-        icon: "bi bi-house"
-      },
-      {
-        label: "Quem Somos", 
-        router: "about", 
-        icon: "bi bi-building"
-      },
-      {
-        label: "Onde Estamos", 
-        router: "where-we-are", 
-        icon: "bi bi-geo-alt"
-      },
-      {
-        label: "Sermões", 
-        router: "sermons", 
-        icon: "bi bi-play"
-      },
+      { label: "Home", router: "home", icon: "bi bi-house" },
+      { label: "Quem Somos", router: "about", icon: "bi bi-building" },
+      { label: "Onde Estamos", router: "where-we-are", icon: "bi bi-geo-alt" },
+      { label: "Sermões", router: "sermons", icon: "bi bi-play" },
+      { label: "Liderança", router: "leadership", icon: "bi bi-play" },
+      { label: "Ministérios", router: "departments", icon: "bi bi-play" },
     ]
-  }
-
-  __createSocialMedia() {
-    this.socialMedia = [
-      {
-        name: "Instagran", 
-        link: "https://www.instagram.com/renascermaringa/?hl=pt-br", 
-        icon: "bi bi-instagram"
-      },
-      {
-        name: "Facebook", 
-        link: "https://www.facebook.com/igrejarenascermaringa", 
-        icon: "bi bi-facebook"
-      },
-      {
-        name: "Twitter", 
-        link: "https://twitter.com/renascermaringa", 
-        icon: "bi bi-twitter"
-      },
-      {
-        name: "Youtube", 
-        link: "https://www.youtube.com/c/RenascerMaring%C3%A1", 
-        icon: "bi bi-youtube"
-      },
-      {
-        name: "WhatsApp", 
-        link: "http://api.whatsapp.com/send?1=pt_BR&phone=554430302570", 
-        icon: "bi bi-whatsapp"
-      },
-    ]
-  }
-
-  openLink(link: any) {
-    window.open(link)
   }
 
   toggleMobileMenu() {

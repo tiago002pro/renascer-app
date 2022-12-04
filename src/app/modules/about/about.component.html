@@ -1,28 +1,3 @@
-<div class="about-module module">
-    <section class="first-section">
-        <div class="area">
-            <div class="description-area">
-                <div class="description">
-                    <h1 class="title-one">Learn more about Renascer Church</h1>
-                    <h1 class="title-two">See What God Can Do Through You</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="secound-section">
-        <div class="container">
-            <div class="blocks">
-                <div class="block" *ngFor="let section of sectionTwo" (click)="navigate(section.router)">
-                    {{section.title}}
-                    <div class="learn-more">
-                        <!-- <button class="btn"
-                                (click)="navigate(section.router)">
-                            <span>Ver Mais</span>
-                            <i class="bi bi-arrow-right"></i>
-                        </button> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="about-module">
+    <app-title-module  [image]="imgTitle" [title]="'Quem somos'" ></app-title-module>
 </div>

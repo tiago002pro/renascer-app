@@ -10,6 +10,7 @@ SwiperCore.use([Pagination, Navigation]);
   encapsulation: ViewEncapsulation.None,
 })
 export class SermonsComponent implements OnInit {
+  imgTitle =  './../../../assets/img/module-sermons.jpg'
   slidesPerView!: number
   carouselVideos = [
     {

@@ -1,3 +1,4 @@
+import { AboutComponent } from './modules/about/about.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,10 +9,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WhereAreWeComponent } from './modules/where-are-we/where-are-we.component';
 import { ScrollDirective } from './components/navbar/directive/scroll.directive';
-import { AboutModule } from './modules/about/about.module';
 import { SermonsComponent } from './modules/sermons/sermons.component';
 import { SwiperModule } from 'swiper/angular';
 import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+import { TitleModuleComponent } from './modules/components/title-module/title-module.component';
+import { ComponentsModule } from './modules/components/components.module';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig =
 {
@@ -54,6 +56,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
     WhereAreWeComponent,
     ScrollDirective,
     SermonsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig), 
     NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
     SwiperModule,
-    AboutModule,
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

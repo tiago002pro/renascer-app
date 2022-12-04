@@ -10,9 +10,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 13vh;
+            height: 10vh;
             padding: 0 20px;
-            background-color: #1c1c1c;
+            background-color: transparent;
+            background: linear-gradient(180deg, #000000f2, transparent);
         }
 
         .header-nav {
@@ -23,14 +24,14 @@
         }
 
         .tabs {
-            margin: 0 20px;
+            margin: 0 30px;
 
             a {
                 text-decoration: none;
                 text-transform: uppercase;
-                font-weight: 400;
+                font-weight: 700;
                 color: #FFF;
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
         }
 
@@ -295,6 +296,7 @@
         .header-inner {
             background-color: #FFF;
             border-bottom: solid 1px #1c1c1c;
+            background: #FFF;
         }
 
         .tabs {
@@ -306,7 +308,5 @@
         .bar {
             background-color: #1c1c1c;
         }
-        
-
     }
 }
