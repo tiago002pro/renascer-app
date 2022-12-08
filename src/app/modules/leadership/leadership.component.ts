@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leadership.component.scss']
 })
 export class LeadershipComponent implements OnInit {
+  imgTitle = './../../../assets/img/module-leadership.jpg'
 
   constructor(
     private router: Router,
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   goToAbout() {
     this.router.navigate(['about'])

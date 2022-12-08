@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   
   constructor(
     private router: Router,
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.__createNavigateTabs()
@@ -26,8 +26,9 @@ export class NavbarComponent implements OnInit {
       { label: "Quem Somos", router: "about", icon: "bi bi-building" },
       { label: "Onde Estamos", router: "where-we-are", icon: "bi bi-geo-alt" },
       { label: "Sermões", router: "sermons", icon: "bi bi-play" },
-      { label: "Liderança", router: "leadership", icon: "bi bi-play" },
-      { label: "Ministérios", router: "departments", icon: "bi bi-play" },
+      { label: "Liderança", router: "leadership", icon: "bi bi-people" },
+      { label: "Ministérios", router: "departments", icon: "bi bi-diagram-3" },
+      { label: "Contato", router: "contact", icon: "bi bi-envelope-open-heart" },
     ]
   }
 

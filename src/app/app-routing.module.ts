@@ -1,3 +1,4 @@
+import { ContactComponent } from './modules/contact/contact.component';
 import { LeadershipComponent } from './modules/leadership/leadership.component';
 import { DepartmentComponent } from './modules/department/department.component';
 import { SermonsComponent } from './modules/sermons/sermons.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'departments', component: DepartmentComponent },
   { path: 'leadership', component: LeadershipComponent },
-  { path: 'sermons', component: SermonsComponent }
+  { path: 'sermons', component: SermonsComponent },
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({

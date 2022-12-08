@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./department.component.scss']
 })
 export class DepartmentComponent implements OnInit {
+  imgTitle =  './../../../assets/img/module-departament.jpg'
 
   constructor(
     private router: Router,
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   goToAbout() {
     this.router.navigate(['about'])

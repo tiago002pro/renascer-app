@@ -1,3 +1,5 @@
+import { DepartmentComponent } from './modules/department/department.component';
+import { LeadershipComponent } from './modules/leadership/leadership.component';
 import { AboutComponent } from './modules/about/about.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,8 +14,8 @@ import { ScrollDirective } from './components/navbar/directive/scroll.directive'
 import { SermonsComponent } from './modules/sermons/sermons.component';
 import { SwiperModule } from 'swiper/angular';
 import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
-import { TitleModuleComponent } from './modules/components/title-module/title-module.component';
 import { ComponentsModule } from './modules/components/components.module';
+import { ContactComponent } from './modules/contact/contact.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig =
 {
@@ -56,7 +58,10 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
     WhereAreWeComponent,
     ScrollDirective,
     SermonsComponent,
-    AboutComponent
+    AboutComponent,
+    LeadershipComponent,
+    DepartmentComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
