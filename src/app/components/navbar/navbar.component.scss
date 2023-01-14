@@ -5,6 +5,7 @@
         left: 0;
         position: fixed;
         color: #FFF;
+        background-color: #1c1c1c;
 
         .header-inner {
             display: flex;
@@ -31,7 +32,12 @@
                 text-transform: uppercase;
                 font-weight: 700;
                 color: #FFF;
-                font-size: 1.2rem;
+                font-family: BebasNeue-Regular;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 24px;
+                letter-spacing: 2px;
+                line-height: 1em;
             }
         }
 
