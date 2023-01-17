@@ -5,7 +5,6 @@
         left: 0;
         position: fixed;
         color: #FFF;
-        background-color: #1c1c1c;
 
         .header-inner {
             display: flex;
@@ -14,7 +13,7 @@
             height: 10vh;
             padding: 0 20px;
             background-color: transparent;
-            background: linear-gradient(180deg, #000000f2, transparent);
+            // background: linear-gradient(180deg, #000000f2, transparent);
         }
 
         .header-nav {
@@ -38,6 +37,8 @@
                 font-size: 24px;
                 letter-spacing: 2px;
                 line-height: 1em;
+            }:hover {
+                color: #fcbf49;
             }
         }
 
@@ -184,17 +185,25 @@
     }
 
 
-//     @media (max-width: 1023px) {
-//         header {
-//             .area {
-//                 .menu {
-//                     .item {
-//                         display: none !important;
-//                     }
-//                 }
-//             }
-//         }
-//     }
+    @media (max-width: 1023px) {
+        header {
+            .tabs {
+                display: none !important;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        header {
+            .area {
+                .menu {
+                    .item {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
 
 //     @media (max-width: 767px) {
 //         header {
@@ -296,23 +305,25 @@
 
 
 .navbar-scroll-directive {
-    header {
-        color: #1c1c1c;
-
-        .header-inner {
-            background-color: #FFF;
-            border-bottom: solid 1px #1c1c1c;
-            background: #FFF;
-        }
-
-        .tabs {
-            a {
-                color: #1c1c1c;
+    @media (min-width: 1023px) {
+        header {
+            color: #1c1c1c;
+    
+            .header-inner {
+                background-color: #FFF;
+                border-bottom: solid 1px #1c1c1c;
+                background: #FFF;
             }
-        }
-
-        .bar {
-            background-color: #1c1c1c;
+    
+            .tabs {
+                a {
+                    color: #1c1c1c;
+                }
+            }
+    
+            .bar {
+                background-color: #1c1c1c;
+            }
         }
     }
 }

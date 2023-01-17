@@ -6,22 +6,27 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        height: 50vh;
         text-align: center;
-        line-height: 40vh;
     }
     
     .title {
-        background: linear-gradient(180deg, transparent, #1c1c1c);
-        height: 40vh;
+        // background: linear-gradient(180deg, transparent, #1c1c1c);
+        height: 30vh;
+        line-height: 30vh;
         
         span {
             color: #FFF;
-            font-size: 100px;
+            font-size: 70px;
             text-transform: uppercase;
         }
     }
 
-    @media (max-width: 1023px) {}
+    @media (max-width: 1023px) {
+        .title {
+            background: linear-gradient(180deg, transparent, #1c1c1c);
+            line-height: 20vh;
+        }
+    }
+
     @media (max-width: 767px) {} 
 }
