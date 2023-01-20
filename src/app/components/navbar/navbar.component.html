@@ -1,15 +1,18 @@
 <div class="navbar-component" appScroll>
     <header>
         <div class="header-inner">
-            <div class="header-nav">
-                <nav class="navigation">
-                    <div class="tabs" *ngFor="let tab of tabsNavigate">
-                        <a routerLink="{{tab.router}}">{{tab.label}}</a>
-                    </div>
-                </nav>
-            </div>
-            <div class="toggle-menu" (click)="toggleMobileMenu()">
-                <label for="mobileNavToggle" class="mobile-nav-toggle-label">
+            <nav>
+                <div class="tabs" 
+                     *ngFor="let tab of tabsNavigate">
+                    <a routerLink="{{tab.router}}">
+                        {{tab.label}}
+                    </a>
+                </div>
+            </nav>
+            <div class="toggle-menu" 
+                 (click)="toggleMobileMenu()">
+                <label for="mobileNavToggle" 
+                       class="mobile-nav-toggle-label">
                     <div  [ngClass]="!showMobileMenu ? 'top bar' : 'top bar rotate-top'"></div>
                     <div  [ngClass]="!showMobileMenu ? 'middle bar' : 'middle bar rotate-middle'"></div>
                     <div  [ngClass]="!showMobileMenu ? 'bottom bar' : 'bottom bar rotate-bottom'"></div>
@@ -18,17 +21,15 @@
         </div>
         <div [ngClass]="showMobileMenu ? 'menu-mobile in' : 'menu-mobile out'">
             <div class="menu-item">
-                <div class="row row-cols-3 row-cols-sm-3 row-cols-md-3">
-                    <div class="col box" *ngFor="let tab of tabsNavigate">
-                        <a (click)="routerLink(tab.router)">
-                            <div class="subitem-menu">
-                                <div class="icon">
-                                    <i class="{{tab.icon}}"></i>
-                                </div>
-                                <span>{{tab.label}}</span>
+                <div class="box" *ngFor="let tab of tabsNavigate">
+                    <a (click)="routerLink(tab.router)">
+                        <div class="subitem-menu">
+                            <div class="icon">
+                                <i class="{{tab.icon}}"></i>
                             </div>
-                        </a>
-                    </div>
+                            <span>{{tab.label}}</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
