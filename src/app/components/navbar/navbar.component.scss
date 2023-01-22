@@ -13,13 +13,9 @@
             height: 10vh;
             padding: 0 20px;
             background-color: transparent;
-            background: linear-gradient(180deg, #000000f2, transparent);
         }
 
-        .header-nav {
-        }
-
-        .navigation {
+        nav {
             display: flex;
         }
 
@@ -31,80 +27,83 @@
                 text-transform: uppercase;
                 font-weight: 700;
                 color: #FFF;
-                font-size: 1.2rem;
+                font-family: BebasNeue-Regular;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 24px;
+                letter-spacing: 2px;
+                line-height: 1em;
+            }:hover {
+                color: #fcbf49;
             }
         }
 
         .toggle-menu {
+            width: 100%;
             display: flex;
-            justify-content: right;
-            position: absolute;
-            right: 0;
-            padding: 0 20px;
             z-index: 1040;
+            display: none;
+
+            .mobile-nav-toggle-label {
+                color: #FFF;
+                cursor: pointer;
+                margin: 0;
+            }
+    
+            .top {
+                margin-bottom: 5px;
+            }
+    
+            .middle {
+                margin-bottom: 5px;
+            }
+    
+            .bottom {
+            }
+    
+            .bar {
+                background-color: #FFF;
+                width: 30px;
+                height: 3px;
+                top: 0;
+                right: 0;
+                transition: all 0.3s ease;
+            }
+    
+            .rotate-top {
+                transform: rotate(45deg);
+                margin: 0;
+                transition: all 0.3s ease;
+                background: #1c1c1c;
+            }
+    
+            .rotate-middle {
+                transform: rotate(-45deg);
+                margin: 0;
+                transition: all 0.3s ease;
+                position: relative;
+                top: -3px;
+                background: #1c1c1c;
+            }
+    
+            .rotate-bottom {
+                transform: rotate(-45deg);
+                margin: 0;
+                transition: all 0.3s ease;
+                position: relative;
+                top: -6px;
+                background: #1c1c1c;
+            }
         }
 
-        .mobile-nav-toggle-label {
-            color: #FFF;
-            cursor: pointer;
-            margin: 0;
-        }
-
-        .top {
-            margin-bottom: 5px;
-        }
-
-        .middle {
-            margin-bottom: 5px;
-        }
-
-        .bottom {
-        }
-
-        .bar {
-            background-color: #FFF;
-            width: 30px;
-            height: 3px;
-            top: 0;
-            right: 0;
-            transition: all 0.3s ease;
-
-        }
-
-        .rotate-top {
-            transform: rotate(45deg);
-            margin: 0;
-            transition: all 0.3s ease;
-            background: #1c1c1c;
-        }
-
-        .rotate-middle {
-            transform: rotate(-45deg);
-            margin: 0;
-            transition: all 0.3s ease;
-            position: relative;
-            top: -3px;
-            background: #1c1c1c;
-        }
-
-        .rotate-bottom {
-            transform: rotate(-45deg);
-            margin: 0;
-            transition: all 0.3s ease;
-            position: relative;
-            top: -6px;
-            background: #1c1c1c;
-        }
 
         .menu-mobile {
-            // width: 40%;
+            width: 100vw;
             height: 100vh;
             position: absolute;
-            margin-top: -13vh;
-            right: 0px;
-            float: right;
+            margin-top: -10vh;
             background-color: #FFF;
-
+            display: none;
         }
 
         .in {
@@ -118,13 +117,10 @@
             -o-animation: menu-mobile-out-animation .45s cubic-bezier(.755,.05,.855,.06) both;
             animation: menu-mobile-out-animation .45s cubic-bezier(.755,.05,.855,.06) both;
         }
-
     
         .menu-item {
-            margin-top: 13vh;
+            margin-top: 10vh;
             cursor: pointer;
-            border-top: 1px solid hsla(0,0%,9%,.15);
-            border-bottom: 1px solid hsla(0,0%,9%,.15);
 
             .box {
                 display: flex;
@@ -142,7 +138,7 @@
             }
     
             a:hover {
-                color: var(--primary-color);
+                color: #fcbf49;
             }
         }
         
@@ -169,78 +165,13 @@
                 margin-top: 5px;
             }
         }
-
-        .slide-in-blurred-right {
-            -webkit-animation: slide-in-blurred-right .5s cubic-bezier(.23,1,.32,1) both;
-            -o-animation: slide-in-blurred-right .5s cubic-bezier(.23,1,.32,1) both;
-            animation: slide-in-blurred-right .5s cubic-bezier(.23,1,.32,1) both;
-        }
     }
 
-
-//     @media (max-width: 1023px) {
-//         header {
-//             .area {
-//                 .menu {
-//                     .item {
-//                         display: none !important;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-
-//     @media (max-width: 767px) {
-//         header {
-//             .area {
-//                 .logo {
-//                     width: 100vw;
-//                     display: flex;
-//                     justify-content: center;
-
-//                     img {
-//                         height: 6vh;
-//                         margin: 20px 0;
-//                     }
-                    
-//                     .logo-black {
-//                         display: none;
-//                     }
-//                 }
-//             }
-//             .toggle-menu {
-//                 position: absolute;
-//                 justify-content: left !important;
-        
-//                 i {
-//                     font-size: 3rem;
-//                 }
-//             }
-//         }
-
-//         .menu-mobile {
-//             position: absolute;
-    
-//             .menu {
-//                 width: 100vw;
-//                 height: 100vh;
-//                 right: 0px;
-//                 left: 0px;
-//                 top: 0vh;
-//             }
-    
-//             .hide-menu {
-//                 top: -100vh;
-//             }
-//         }
-//     }
-
     @keyframes menu-mobile-in-animation {
-
         0% {
-            -webkit-transform: translateX(1000px);
-            -o-transform: translateX(1000px);
-            transform: translateX(1000px);
+            -webkit-transform: translateX(-1000px);
+            -o-transform: translateX(-1000px);
+            transform: translateX(-1000px);
             -webkit-transform-origin: 0 50%;
             -o-transform-origin: 0 50%;
             transform-origin: 0 50%;
@@ -275,9 +206,9 @@
         }
 
         100% {
-            -webkit-transform: translateX(1000px);
-            -o-transform: translateX(1000px);
-            transform: translateX(1000px);
+            -webkit-transform: translateX(-1000px);
+            -o-transform: translateX(-1000px);
+            transform: translateX(-1000px);
             -webkit-transform-origin: 0 50%;
             -o-transform-origin: 0 50%;
             transform-origin: 0 50%;
@@ -286,27 +217,60 @@
             opacity: 0;
         }
     }
-}
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+        header {
+            .tabs {
+                display: none !important;
+            }
 
-.navbar-scroll-directive {
-    header {
-        color: #1c1c1c;
+            .toggle-menu {
+                display: block;
+            }
 
-        .header-inner {
-            background-color: #FFF;
-            border-bottom: solid 1px #1c1c1c;
-            background: #FFF;
-        }
-
-        .tabs {
-            a {
-                color: #1c1c1c;
+            .menu-mobile {
+                display: block;
             }
         }
+    }
 
-        .bar {
-            background-color: #1c1c1c;
+    @media (max-width: 767px) {
+        header {
+            .tabs {
+                display: none !important;
+            }
+
+            .toggle-menu {
+                display: block;
+            }
+
+            .menu-mobile {
+                display: block;
+            }
+        }
+    }
+}
+
+.navbar-scroll-directive {
+    @media (min-width: 1023px) {
+        header {
+            color: #1c1c1c;
+    
+            .header-inner {
+                background-color: #FFF;
+                border-bottom: solid 1px #1c1c1c;
+                background: #FFF;
+            }
+    
+            .tabs {
+                a {
+                    color: #1c1c1c;
+                }
+            }
+    
+            .bar {
+                background-color: #1c1c1c;
+            }
         }
     }
 }

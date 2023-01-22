@@ -15,6 +15,10 @@
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
 
+//ngx-owl-carousel-o
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
@@ -51,6 +55,21 @@
 @font-face {
     font-family: "Montserrat-Bold";
     src: url("../src/assets/fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "BebasNeue-Regular";
+    src: url("../src/assets/fonts/BebasNeue-Regular.otf");
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url("../src/assets/fonts/Helvetica/Helvetica.ttf");
+}
+
+@font-face {
+    font-family: "Helvetica-Bold";
+    src: url("../src/assets/fonts/Helvetica/Helvetica-Bold.ttf");
 }
 
 @font-face {

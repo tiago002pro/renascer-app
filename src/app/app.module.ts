@@ -16,6 +16,8 @@ import { SwiperModule } from 'swiper/angular';
 import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import { ComponentsModule } from './modules/components/components.module';
 import { ContactComponent } from './modules/contact/contact.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { RouterModule } from '@angular/router';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig =
 {
@@ -61,7 +63,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
     AboutComponent,
     LeadershipComponent,
     DepartmentComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,6 +73,8 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
     NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
     SwiperModule,
     ComponentsModule,
+    RouterModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
