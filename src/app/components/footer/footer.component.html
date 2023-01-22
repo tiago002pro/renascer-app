@@ -1,9 +1,23 @@
 <div class="footer-component">
     <footer>
         <div class="container">
+            <div class="logo">
+                <img src="./../../../assets/img/logo_branca.png" alt="">
+                <span>
+                    Igreja <p>Renascer</p>
+                </span>
+            </div>
+
+            <div class="info">
+                <span class="city">Maringá</span>
+                <span class="address">
+                    Rua Pioneiro José Jacinto Maia, 250 - Jardim Copacabana, Maringá - PR
+                </span>
+            </div>
+
             <div class="social-media">
-                <ul *ngFor="let media of socialMedia">
-                    <li>
+                <ul>
+                    <li *ngFor="let media of socialMedia">
                         <a (click)="openLink(media.link)">
                             <i class="{{media.icon}}"></i>
                         </a>
@@ -12,7 +26,9 @@
             </div>
         </div>
         <div class="bottom">
-            <p>&copy;2022, Igreja Renascer Maringá</p>
+            <div class="container">
+                <p>&copy;2023, Igreja Renascer Maringá</p>
+            </div>
         </div>
     </footer>
 </div>
