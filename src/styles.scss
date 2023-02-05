@@ -151,5 +151,28 @@ body {
 
 //Toda pagina precia dessa margimm devido ao navbar fixado
 .module {
-    margin-top: 10vh;
+    margin: 0 2vh;
+}
+
+.container {
+    // padding: 10px;
+    // margin: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container, .container-sm {
+        max-width: initial;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container, .container-sm {
+        max-width: initial;
+    }
+}
+
+@media (max-width: 576px) {
+    .container, .container-sm {
+        max-width: initial;
+    }
 }
