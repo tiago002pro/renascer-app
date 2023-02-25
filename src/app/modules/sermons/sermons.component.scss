@@ -1,19 +1,11 @@
 .sermons {
-    height: 90vh;
     color: #000;
     background-color: #FFF;
-    // background-color: #f4f5f7;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-
-    .title {
-        font-weight: 700;
-    }
 
     .banner {
         width: 100%;
-        height: 45vh;
+        height: 50vh;
+        padding: 5vh 5vh 0 5vh;
     }
 
     .banner iframe {
@@ -23,12 +15,11 @@
     }
 
     .recent-sermons {
-        // width: 100%;
+        padding: 5vh;
 
         .sub-title {
             font-family: Montserrat-Bold;
             font-weight: 700;
-            // margin: 1vw 0;
         }
     
         .sub-title h1 {
@@ -39,6 +30,7 @@
 
     .carousel {
         // border: 2px solid blue;
+        // z-index: -9999;
     }
 
     .swiper {
@@ -83,37 +75,48 @@
     .item {
         display: flex;
         flex-direction: row;
-        width: 240px;
-        height: 110px;
+        padding: 20px;
+
+        // width: 300px;
+        // height: 110px;
+    }
+
+    .item:hover {
+        // background-color: red;
+        // padding: 0;
+        padding: 10px;
+
+        .banner-video {
+            width: 120px;
+            height: 75px; 
+        }
     }
 
     .banner-video {
-        margin: 20px;
-        margin-right: 10px;
-    }
+        background: aqua;
+        width: 115px;
+        height: 65px;
+        margin-right: 2vh;
 
-    .banner-video img {
-        width: 100px;
-        border-radius: 8px;
-        position: relative;
-        box-shadow: 0px 0px 10px 2px #1212123d;
-        transition: all 0.3s ease;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
     }
 
     .description {
         display: flex;
         flex-direction: column;
-        margin: 20px 5px;
+        font-weight: 700;
 
         .title-video {
-            font-weight: 700;
             text-align: initial;
-            font-size: 16px;
+            font-size: 17px;
         }
     
         .speaker {
-            font-size: 12px;
+            font-size: 13px;
             text-align: initial;
+            color: gray;
         }
     }
 

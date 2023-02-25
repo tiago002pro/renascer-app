@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination, Navigation, SwiperOptions } from "swiper";
 SwiperCore.use([Pagination, Navigation]);
 
 @Component({
@@ -34,14 +34,17 @@ export class SermonsComponent implements OnInit {
         {img: '1x41JwdLI4s', title: 'Lugar de Proteção', speaker: 'Pastor Marcio Ribeiro'},
       ],
     },
-    {
-      banner: [
-        {img: 'h0OVot0SjiQ', title: 'Revolução do Amor', speaker: 'Pastor José Octávio'},
-        {img: 'h0OVot0SjiQ', title: 'Revolução do Amor', speaker: 'Pastor José Octávio'},
-        {img: 'h0OVot0SjiQ', title: 'Revolução do Amor', speaker: 'Pastor José Octávio'},
-      ],
-    }
+    // {
+    //   banner: [
+    //     {img: 'h0OVot0SjiQ', title: 'Revolução do Amor', speaker: 'Pastor José Octávio'},
+    //     {img: 'h0OVot0SjiQ', title: 'Revolução do Amor', speaker: 'Pastor José Octávio'},
+    //     {img: 'h0OVot0SjiQ', title: 'Revolução do Amor', speaker: 'Pastor José Octávio'},
+    //   ],
+    // }
   ]
+
+  config!: SwiperOptions
+  slides!: Array<any>
   
   constructor(
     private ngxService: NgxUiLoaderService
@@ -50,13 +53,15 @@ export class SermonsComponent implements OnInit {
   ngOnInit(): void {
     // this.readyState()
     this.onResize()
+    this.__loadOwlCarousel()
+    this.__loadSlidesCousel()
   }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    if (window.innerWidth >= 800) {
+    if (window.innerWidth > 700) {
       this.slidesPerView = 3
-    } else if (window.innerWidth >= 400) {
+    } else if (window.innerWidth > 500) {
       this.slidesPerView = 2
     } else {
       this.slidesPerView = 1
@@ -68,5 +73,30 @@ export class SermonsComponent implements OnInit {
       this.ngxService.start()
     } while (document.readyState == "complete")
     this.ngxService.stop()
+  }
+
+  __loadOwlCarousel() {
+    this.config = {
+      slidesPerView: this.slidesPerView,
+      spaceBetween: 50,
+      navigation: true,
+      pagination: { clickable: true },
+      scrollbar: { draggable: true },
+    }
+  }
+
+  onSwiper(swiper: any) {
+    console.log(swiper);
+  }
+  onSlideChange() {
+    console.log('slide change');
+  }
+
+  __loadSlidesCousel() {
+    this.slides = [
+      {id: 1, img: '4ubCnaWZSxo', title: 'Por Jesus Vale a Pena', speaker: 'Pastora Eunice Lea'},
+      {id: 2, img: 'W_Cvb6_kjfo', title: 'Por Jesus Vale a Pena', speaker: 'Pastora Eunice Lea'},
+      {id: 3, img: '1x41JwdLI4s', title: 'Por Jesus Vale a Pena', speaker: 'Pastora Eunice Lea'},
+    ]
   }
 }
