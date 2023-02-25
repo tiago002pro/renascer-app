@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  imgTitle =  './../../../assets/img/module-contact.jpg'
+  imgTitle =  './../../../assets/img/Contact.jpg'
 
   constructor() { }
 
