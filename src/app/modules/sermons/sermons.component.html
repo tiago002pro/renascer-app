@@ -1,7 +1,6 @@
-<div class="sermons">
-    <app-title-module  [image]="imgTitle" [title]="'Sermões'" ></app-title-module>
-
-    <section>
+<app-title-module  [image]="imgTitle" [title]="'Vídeos'" ></app-title-module>
+<div class="sermons module">
+    <section class="section-banner">
         <div class="container">
             <div class="banner">
                 <iframe src="https://www.youtube.com/embed/82dtxLC-wxM" 
@@ -13,22 +12,55 @@
         </div>
     </section>
 
-    <section>
+    <section class="section-popular-sermons">
         <div class="container">
-            <div class="recent-sermons">
-                 <div class="sub-title">
-                    <h1>Recent Sermons</h1>
+            <div class="popular-sermons">
+                <div class="sub-title">
+                    <h1>Popular</h1>
                 </div>
                 <div class="carousel">
-                    <swiper [config]="config"
+                    <swiper [config]="configPopularSermons"
+                            (swiper)="onSwiper($event)"
+                            (slideChange)="onSlideChange()"
+                            showsPagination={false}>
+                        <ng-template swiperSlide *ngFor="let banner of popularSermons">
+                            <div class="area">
+                                <div class="item" 
+                                        (click)="openVideo(banner.code)">
+                                    <img class="banner-video" 
+                                            src="https://img.youtube.com/vi/{{banner.code}}/0.jpg" alt="">
+                                </div>
+                            </div>
+                        </ng-template>
+                        <div class="swiper-button-prev">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </swiper>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-recent-sermons">
+        <div class="container">
+            <div class="recent-sermons">
+                <div class="sub-title">
+                    <h1>Carregados Recentemente</h1>
+                </div>
+                <div class="carousel">
+                    <swiper [config]="configRecentSermons"
                             (swiper)="onSwiper($event)"
                             (slideChange)="onSlideChange()">
-                        <ng-template swiperSlide *ngFor="let item of carouselVideos">
+                        <ng-template swiperSlide *ngFor="let item of recentSermons">
                             <div class="column">
                                 <div class="area" *ngFor="let banner of item.banner">
-                                    <div class="item">
-                                        <div class="banner-video" style="background-image: url('https://img.youtube.com/vi/{{banner.img}}/0.jpg');">
-                                        </div>
+                                    <div class="item" 
+                                            (click)="openVideo(banner.code)">
+                                        <img class="banner-video"
+                                                src="https://img.youtube.com/vi/{{banner.code}}/0.jpg" alt="">
                                         <div class="description">
                                             <span class="title-video">{{banner.title}}</span>
                                             <span class="speaker">{{banner.speaker}}</span>
@@ -46,6 +78,17 @@
                     </swiper>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="section-more-sermons">
+        <div class="more-sermons">
+            <button type="button" class="btn">
+                <span>Mais vídeos</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
         </div>
     </section>
 </div>
