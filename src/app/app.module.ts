@@ -11,13 +11,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WhereAreWeComponent } from './modules/where-are-we/where-are-we.component';
 import { ScrollDirective } from './components/navbar/directive/scroll.directive';
-import { SermonsComponent } from './modules/sermons/sermons.component';
+import { SermonsComponent } from './modules/sermons/sermons/sermons.component';
 import { SwiperModule } from 'swiper/angular';
 import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import { ComponentsModule } from './modules/components/components.module';
 import { ContactComponent } from './modules/contact/contact.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RouterModule } from '@angular/router';
+import { AllSermonsComponent } from './modules/sermons/all-sermons/all-sermons.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig =
 {
@@ -64,6 +65,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
     LeadershipComponent,
     DepartmentComponent,
     ContactComponent,
+    AllSermonsComponent,
   ],
   imports: [
     BrowserModule,
