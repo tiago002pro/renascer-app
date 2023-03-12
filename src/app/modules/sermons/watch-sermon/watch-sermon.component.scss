@@ -1,0 +1,93 @@
+.watch-sermon {
+    background-color: black;
+    color: white;
+
+    .video {
+        width: 100%;
+        height: 70vh;
+        margin-bottom: 2vh;
+    }
+
+    .video iframe {
+        width: 100%;
+        height: 100%;
+        box-shadow: 3px 3px 10px #1c1c1c;
+    }
+
+    .description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        
+        .title-video {
+            font-weight: 700;
+            text-align: initial;
+            font-size: 1.3rem;
+        }
+    
+        .speaker {
+            font-weight: 400;
+            font-size: .9rem;
+            text-align: initial;
+            color: gray;
+            margin-bottom: 2vh;
+        }
+
+        .description-video {
+            text-align: justify;
+        }
+    }
+
+    .section-more-sermons {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: #000;
+
+        .more-sermons {
+        }
+
+        .btn {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            box-shadow: 3px 3px 10px #1c1c1c40;
+            transition: all .3s ease;
+            border: none;
+            background-color: white;
+
+            svg {
+                margin-left: 5px;
+                color: #000;
+            }
+        }
+
+        
+        .btn:hover {
+            font-size: 1.1rem;
+            transition: all .3s ease;
+            color: #000;
+        }
+    }
+
+    //Tablet
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .video {
+            height: 50vh;
+        }
+    }
+
+    //Smartphone
+    @media (max-width: 767px) {
+        .video {
+            height: 25vh;
+        }
+    }
+}

@@ -19,6 +19,7 @@ import { ContactComponent } from './modules/contact/contact.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RouterModule } from '@angular/router';
 import { AllSermonsComponent } from './modules/sermons/all-sermons/all-sermons.component';
+import { WatchSermonComponent } from './modules/sermons/watch-sermon/watch-sermon.component';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig =
 {
@@ -66,6 +67,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
     DepartmentComponent,
     ContactComponent,
     AllSermonsComponent,
+    WatchSermonComponent,
   ],
   imports: [
     BrowserModule,

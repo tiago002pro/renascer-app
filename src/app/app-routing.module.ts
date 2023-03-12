@@ -8,6 +8,7 @@ import { AboutComponent } from './modules/about/about.component';
 import { HomeComponent } from './modules/home/home.component';
 import { WhereAreWeComponent } from './modules/where-are-we/where-are-we.component';
 import { AllSermonsComponent } from './modules/sermons/all-sermons/all-sermons.component';
+import { WatchSermonComponent } from './modules/sermons/watch-sermon/watch-sermon.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'leadership', component: LeadershipComponent },
   { path: 'sermons', component: SermonsComponent },
   { path: 'all-sermons', component: AllSermonsComponent },
+  { path: 'sermon/:title', component: WatchSermonComponent },
   { path: 'contact', component: ContactComponent },
 ];
 
