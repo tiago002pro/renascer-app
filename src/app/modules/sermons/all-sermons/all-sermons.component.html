@@ -1,1 +1,38 @@
-<p>all-sermons works!</p>
+<!-- <app-title-module  [image]="imgTitle" [title]="'Vídeos'" ></app-title-module> -->
+<div class="all-sermons module">
+    <div class="container">
+        <div class="session">
+            <div class="search-session">
+                <div class="search">
+                    <div class="title">
+                        <span>Speakers</span>
+                    </div>
+                    <div class="input-search">
+                        <input class="form-control" type="text">
+                    </div>
+                    <div class="speakers"
+                         *ngFor="let sermon of allSermons">
+                        <label >
+                            {{sermon.speaker}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="video-session">
+                <div class="area">
+                    <div class="box" *ngFor="let sermon of allSermons"
+                    routerLink="/sermon/{{sermon.url}}">
+                        <div class="img" 
+                             style="background-image: url('https://img.youtube.com/vi/{{sermon.img}}/0.jpg');">
+                        </div>
+                        <div class="description">
+                            <span class="title-video">{{sermon.title}}</span>
+                            <span class="speaker">{{sermon.speaker}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
