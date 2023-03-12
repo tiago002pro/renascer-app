@@ -4,21 +4,30 @@
         "banner": [
             { 
                 "id": 1,
-                "code": "NyembfBwBCs", 
+                "img": "NyembfBwBCs", 
+                "url": "",
                 "title": "Mismo Dios (Same God)", 
-                "speaker": "Elevation Worship"
+                "speaker": "Elevation Worship",
+                "description": "",
+                "date": ""
             },
             {
                 "id": 2,
-                "code": "30JJlkzEd90", 
+                "img": "30JJlkzEd90", 
+                "url": "",
                 "title": "Lean on the Lord", 
-                "speaker": "Ryan Ellis"
+                "speaker": "Ryan Ellis",
+                "description": "",
+                "date": ""
             },
             {
                 "id": 3,
-                "code": "MstCiLrJXUc", 
+                "img": "MstCiLrJXUc", 
+                "url": "",
                 "title": "Só Quero Você", 
-                "speaker": "ONE Sounds & Erick Mathias"
+                "speaker": "ONE Sounds & Erick Mathias",
+                "description": "",
+                "date": ""
             }
         ]
     },
@@ -27,21 +36,30 @@
         "banner": [
             { 
                 "id": 1,
-                "code": "n_Voi3JM8ZA", 
+                "img": "n_Voi3JM8ZA", 
+                "url": "",
                 "title": "Give Me Faith", 
-                "speaker": "Elevation Worship"
+                "speaker": "Elevation Worship",
+                "description": "",
+                "date": ""
             },
             {
                 "id": 2,
-                "code": "XHR_bhm942g", 
+                "img": "XHR_bhm942g", 
+                "url": "",
                 "title": "Closer", 
-                "speaker": "Ryan Ellis"
+                "speaker": "Ryan Ellis",
+                "description": "",
+                "date": ""
             },
             {
                 "id": 3,
-                "code": "YtAcW2yxD_Q", 
+                "img": "YtAcW2yxD_Q", 
+                "url": "",
                 "title": "Keep My Eyes Up (feat. Ryan Ellis)", 
-                "speaker": "Housefires"
+                "speaker": "Housefires",
+                "description": "",
+                "date": ""
             }
         ]
     },
@@ -50,21 +68,30 @@
         "banner": [
             { 
                 "id": 1,
-                "code": "aCwSldNyIFk", 
+                "img": "aCwSldNyIFk", 
+                "url": "",
                 "title": "Como Eu Te Amo", 
-                "speaker": " ONE Sounds & Henrique Machado"
+                "speaker": " ONE Sounds & Henrique Machado",
+                "description": "",
+                "date": ""
             },
             {
                 "id": 2,
-                "code": "gp5tziO5lXg", 
+                "img": "gp5tziO5lXg", 
+                "url": "",
                 "title": "You Saved Me", 
-                "speaker": "Ryan Ellis"
+                "speaker": "Ryan Ellis",
+                "description": "",
+                "date": ""
             },
             {
                 "id": 3,
-                "code": "-xi6isGU9Xw", 
+                "img": "-xi6isGU9Xw", 
+                "url": "",
                 "title": "Hide e Seek", 
-                "speaker": "Ryan Ellis"
+                "speaker": "Ryan Ellis",
+                "description": "",
+                "date": ""
             }
         ]
     },
@@ -73,21 +100,30 @@
         "banner": [
             { 
                 "id": 1,
-                "code": "NyembfBwBCs", 
+                "img": "NyembfBwBCs", 
+                "url": "",
                 "title": "Born Again", 
-                "speaker": "Cory Asbury"
+                "speaker": "Cory Asbury",
+                "description": "",
+                "date": ""
             },
             {
                 "id": 2,
-                "code": "5HKfN4_Oe94", 
+                "img": "5HKfN4_Oe94", 
+                "url": "",
                 "title": "Wounded One", 
-                "speaker": "Davy Flowers"
+                "speaker": "Davy Flowers",
+                "description": "",
+                "date": ""
             },
             {
                 "id": 3,
-                "code": "Zu7h0Z64xuQ", 
+                "img": "Zu7h0Z64xuQ", 
+                "url": "",
                 "title": "Tiempo de Esencia", 
-                "speaker": "Majo y Dan"
+                "speaker": "Majo y Dan",
+                "description": "",
+                "date": ""
             }
         ]
     }

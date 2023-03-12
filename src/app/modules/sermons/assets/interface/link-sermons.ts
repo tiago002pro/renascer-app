@@ -1,10 +1,13 @@
 export interface LinkSermons {
-    banner: Array<Banner>
+    banner: Array<Sermon>
 }
 
-export interface Banner {
+export interface Sermon {
     id: number,
-    code: string, 
+    url: string,
+    img: string,
     title: string, 
-    speaker: string
+    speaker: string,
+    description: string,
+    date: Date,
 }
