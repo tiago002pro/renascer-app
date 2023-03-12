@@ -1,4 +1,4 @@
-<app-title-module  [image]="imgTitle" [title]="'Vídeos'" ></app-title-module>
+<!-- <app-title-module  [image]="imgTitle" [title]="'Vídeos'" ></app-title-module> -->
 <div class="sermons module">
     <section class="section-banner">
         <div class="container">
@@ -26,9 +26,9 @@
                         <ng-template swiperSlide *ngFor="let banner of popularSermons">
                             <div class="area">
                                 <div class="item" 
-                                        (click)="openVideo(banner.code)">
+                                        (click)="openVideo(banner.img)">
                                     <img class="banner-video" 
-                                            src="https://img.youtube.com/vi/{{banner.code}}/0.jpg" alt="">
+                                            src="https://img.youtube.com/vi/{{banner.img}}/0.jpg" alt="">
                                 </div>
                             </div>
                         </ng-template>
@@ -58,9 +58,9 @@
                             <div class="column">
                                 <div class="area" *ngFor="let banner of item.banner">
                                     <div class="item" 
-                                            (click)="openVideo(banner.code)">
+                                            (click)="openVideo(banner.img)">
                                         <img class="banner-video"
-                                                src="https://img.youtube.com/vi/{{banner.code}}/0.jpg" alt="">
+                                                src="https://img.youtube.com/vi/{{banner.img}}/0.jpg" alt="">
                                         <div class="description">
                                             <span class="title-video">{{banner.title}}</span>
                                             <span class="speaker">{{banner.speaker}}</span>

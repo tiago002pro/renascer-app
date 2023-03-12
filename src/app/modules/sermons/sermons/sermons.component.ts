@@ -1,10 +1,9 @@
 import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Pagination, Navigation, SwiperOptions } from "swiper";
-import { Banner, LinkSermons } from '../assets/interface/link-sermons';
+import { Sermon, LinkSermons } from '../assets/interface/link-sermons';
 
 import recentSermonsData from '../assets/json/recent-sermons.json';
 import popularSermonsData from '../assets/json/popular-sermons.json';
-import { Router } from '@angular/router';
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -18,15 +17,15 @@ export class SermonsComponent implements OnInit {
   imgTitle!: string
   configPopularSermons!: SwiperOptions
   popularSermonsSidesPerView!: number
-  popularSermons: Array<Banner>
+  popularSermons: Array<Sermon> | undefined
   configRecentSermons!: SwiperOptions
   recentSermonsSlidesPerView!: number
-  recentSermons: Array<LinkSermons>
+  recentSermons: Array<LinkSermons> | undefined
   
   constructor() {
     this.imgTitle = '../../../../assets/img/module-sermons.jpg'
-    this.popularSermons = popularSermonsData
-    this.recentSermons = recentSermonsData
+    // this.popularSermons = popularSermonsData
+    // this.recentSermons = recentSermonsData
   }
 
   ngOnInit(): void {
