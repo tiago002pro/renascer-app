@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Sermon } from '../assets/interface/link-sermons';
+import { lastValueFrom } from 'rxjs';
 
-import allSermonsData from '../assets/json/all-sermons.json';
+import { SermonService } from '../service/sermon.service';
 
 @Component({
   selector: 'app-all-sermons',
@@ -11,18 +12,20 @@ import allSermonsData from '../assets/json/all-sermons.json';
 export class AllSermonsComponent {
   imgTitle!: string
   allSermons: Array<Sermon> | undefined
-  speakers!: string
 
-  constructor() {
+  constructor(
+    private sermonService: SermonService
+  ) {
     this.imgTitle = '../../../../assets/img/module-sermons.jpg'
-    // this.allSermons = allSermonsData
   }
 
   ngOnInit(): void {
-    this.__loadSpeakers()
+    this.__loadSermons()
   }
 
-  __loadSpeakers() {
-    console.log(this.allSermons);
+  __loadSermons() {
+    this.sermonService.getAll().toPromise().then((res) => {
+      this.allSermons = res
+    })
   }
 }
