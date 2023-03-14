@@ -20,6 +20,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RouterModule } from '@angular/router';
 import { AllSermonsComponent } from './modules/sermons/all-sermons/all-sermons.component';
 import { WatchSermonComponent } from './modules/sermons/watch-sermon/watch-sermon.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig =
 {
@@ -71,7 +73,9 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig), 
     NgxUiLoaderHttpModule.forRoot({ showForeground: true }),

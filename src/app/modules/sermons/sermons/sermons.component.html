@@ -19,16 +19,17 @@
                     <h1>Popular</h1>
                 </div>
                 <div class="carousel">
-                    <swiper [config]="configPopularSermons"
+                    <swiper [slidesPerView]="popularSermonsSidesPerView"
+                            [spaceBetween]="50"
+                            [navigation]="true"
+                            [pagination]="{ clickable: true }"
+                            [scrollbar]="{ draggable: true }"
                             (swiper)="onSwiper($event)"
-                            (slideChange)="onSlideChange()"
-                            showsPagination={false}>
-                        <ng-template swiperSlide *ngFor="let banner of popularSermons">
+                            (slideChange)="onSlideChange()">
+                        <ng-template swiperSlide *ngFor="let sermon of popularSermons">
                             <div class="area">
-                                <div class="item" 
-                                        (click)="openVideo(banner.img)">
-                                    <img class="banner-video" 
-                                            src="https://img.youtube.com/vi/{{banner.img}}/0.jpg" alt="">
+                                <div class="item" (click)="openVideo(sermon.url)">
+                                    <img class="banner-video" src="{{sermon.img}}" alt="">
                                 </div>
                             </div>
                         </ng-template>
@@ -51,16 +52,20 @@
                     <h1>Carregados Recentemente</h1>
                 </div>
                 <div class="carousel">
-                    <swiper [config]="configRecentSermons"
+                    <swiper [slidesPerView]="recentSermonsSlidesPerView"
+                            [spaceBetween]="30"
+                            [navigation]="true"
+                            [pagination]="{ clickable: true }"
+                            [scrollbar]="{ draggable: true }"
                             (swiper)="onSwiper($event)"
                             (slideChange)="onSlideChange()">
                         <ng-template swiperSlide *ngFor="let item of recentSermons">
                             <div class="column">
                                 <div class="area" *ngFor="let banner of item.banner">
-                                    <div class="item" 
-                                            (click)="openVideo(banner.img)">
-                                        <img class="banner-video"
-                                                src="https://img.youtube.com/vi/{{banner.img}}/0.jpg" alt="">
+                                    <div class="item" (click)="openVideo(banner.img)">
+                                        <div class="img">
+                                            <img class="banner-video" src="{{banner.img}}" alt="">
+                                        </div>
                                         <div class="description">
                                             <span class="title-video">{{banner.title}}</span>
                                             <span class="speaker">{{banner.speaker}}</span>

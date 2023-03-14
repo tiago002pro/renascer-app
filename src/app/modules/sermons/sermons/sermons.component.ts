@@ -4,6 +4,7 @@ import { Sermon, LinkSermons } from '../assets/interface/link-sermons';
 
 import recentSermonsData from '../assets/json/recent-sermons.json';
 import popularSermonsData from '../assets/json/popular-sermons.json';
+import { SermonService } from '../service/sermon.service';
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -17,21 +18,52 @@ export class SermonsComponent implements OnInit {
   imgTitle!: string
   configPopularSermons!: SwiperOptions
   popularSermonsSidesPerView!: number
-  popularSermons: Array<Sermon> | undefined
+  popularSermons!: any;
   configRecentSermons!: SwiperOptions
   recentSermonsSlidesPerView!: number
-  recentSermons: Array<LinkSermons> | undefined
+  recentSermons!: any
   
-  constructor() {
+  constructor(
+    private sermonService: SermonService,
+  ) {
     this.imgTitle = '../../../../assets/img/module-sermons.jpg'
     // this.popularSermons = popularSermonsData
     // this.recentSermons = recentSermonsData
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    await this.__loadPopularSermons()
+    this.__loadRecentSermons()
     this.__onResize()
     this.__loadConfigPopularSermons()
-    this.__loadConfigRecentSermons()
+    // this.__loadConfigRecentSermons()
+  }
+
+  async __loadPopularSermons() {
+    this.popularSermons = await this.sermonService.getAll().toPromise().then((res) => res )
+    
+  }
+  
+  __loadRecentSermons() {
+    console.log("popularSermons", this.popularSermons);
+    this.recentSermons = [
+      { banner: this.popularSermons},
+      { banner: this.popularSermons},
+      { banner: this.popularSermons},
+      { banner: this.popularSermons},
+      { banner: this.popularSermons},
+      { banner: this.popularSermons},
+      { banner: this.popularSermons},
+    ]
+
+    console.log("recentSermons" , this.recentSermons);
+    
+    
+
+    // this.popularSermons.forEach((sermon) => {
+    //   console.log(" -> ", sermon);
+      
+    // })
   }
 
   @HostListener('window:resize', ['$event'])
@@ -55,8 +87,8 @@ export class SermonsComponent implements OnInit {
       navigation: true,
       pagination: { clickable: true },
       scrollbar: { draggable: true },
-      loop: true,
-      observer: false,
+      loop: false,
+    
       
     }
   }
@@ -72,14 +104,14 @@ export class SermonsComponent implements OnInit {
   }
 
   openVideo(id: string) {
-    window.open(`http://www.youtube.com/watch?v=${id}`, "_blank");
+    window.open(`id`, "_blank");
   }
 
   onSwiper(swiper: any) {
-    console.log(swiper);
+    // console.log(swiper);
   }
   
   onSlideChange() {
-    console.log('slide change');
+    // console.log('slide change');
   }
 }
