@@ -51,8 +51,8 @@
                         (swiper)="onSwiper($event)"
                         (slideChange)="onSlideChange()"
                         class="swiper">
-                    <ng-template swiperSlide *ngFor="let sermon of recentSermons">
-                        <div class="item">
+                    <ng-template swiperSlide *ngFor="let item of recentSermons">
+                        <div class="item" *ngFor="let sermon of item.sermons">
                             <div class="img">
                                 <img src="{{sermon.img}}" alt="">
                             </div>

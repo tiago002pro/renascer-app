@@ -33,23 +33,87 @@ export class SermonsComponent implements OnInit {
   }
   
   __loadRecentSermons() {
-    this.recentSermons = this.popularSermons
+    this.recentSermons = [
+      {
+        sermons: [
+          this.popularSermons[0],
+          this.popularSermons[1],
+          this.popularSermons[2]
+        ]
+      },
+      {
+        sermons: [
+          this.popularSermons[3],
+          this.popularSermons[4],
+          this.popularSermons[5]
+        ]
+      },
+      {
+        sermons: [
+          this.popularSermons[6],
+          this.popularSermons[7],
+          this.popularSermons[8]
+        ]
+      },
+      {
+        sermons: [
+          this.popularSermons[9],
+          this.popularSermons[10],
+          this.popularSermons[11]
+        ]
+      },
+      {
+        sermons: [
+          this.popularSermons[12],
+          this.popularSermons[13],
+          this.popularSermons[14]
+        ]
+      },
+      {
+        sermons: [
+          this.popularSermons[15],
+          this.popularSermons[16],
+          this.popularSermons[17]
+        ]
+      },
+      {
+        sermons: [
+          this.popularSermons[18],
+          this.popularSermons[19],
+          this.popularSermons[20]
+        ]
+      },
+      {
+        sermons: [
+          this.popularSermons[21],
+          this.popularSermons[22],
+          this.popularSermons[23]
+        ]
+      },
+      {
+        sermons: [
+          this.popularSermons[24],
+          this.popularSermons[25],
+          this.popularSermons[26]
+        ]
+      }
+    ]
   }
 
   __loadConfigPopularSermons() {
     this.configPopularSermons = {
-      slidesPerView: 1,
+      slidesPerView: 3,
       spaceBetween: 50,
       navigation: true,
       pagination: { clickable: true },
       scrollbar: { draggable: true },
-      loop: false,
+      loop: true,
     }
   }
 
   __loadConfigRecentSermons() {
     this.configRecentSermons = {
-      slidesPerView: 1,
+      slidesPerView: 3,
       spaceBetween: 30,
       navigation: true,
       pagination: { clickable: true },
