@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import SwiperCore, { Pagination, Navigation, SwiperOptions } from "swiper";
+import { SwiperOptions } from "swiper";
 import { SermonService } from '../service/sermon.service';
-
-SwiperCore.use([Pagination, Navigation]);
 
 @Component({
   selector: 'app-sermons',
@@ -29,7 +27,6 @@ export class SermonsComponent implements OnInit {
 
   async __loadPopularSermons() {
     this.popularSermons = await this.sermonService.getAll().toPromise().then((res) => res )
-    
   }
   
   __loadRecentSermons() {

@@ -12,6 +12,8 @@ import { SermonService } from '../service/sermon.service';
 export class AllSermonsComponent {
   imgTitle!: string
   allSermons: Array<Sermon> | undefined
+  speakers!: any
+  searchSpeakers!: any
 
   constructor(
     private sermonService: SermonService
@@ -19,13 +21,37 @@ export class AllSermonsComponent {
     this.imgTitle = '../../../../assets/img/module-sermons.jpg'
   }
 
-  ngOnInit(): void {
-    this.__loadSermons()
+  async ngOnInit(): Promise<void> {
+    this.searchSpeakers = []
+    await this.__loadSermons()
+    await this.searchAllSpeaker('')
   }
 
-  __loadSermons() {
-    this.sermonService.getAll().toPromise().then((res) => {
-      this.allSermons = res
-    })
+  async __loadSermons() {
+    this.allSermons = await this.sermonService.getAll().toPromise().then((res) => res)
+  }
+
+  async searchBySpeakers(name: string) {
+    this.__createSpearkerListSearch(name)
+    this.allSermons = await this.sermonService.searchBySpeakers(this.searchSpeakers).toPromise().then((res: any) => res)
+  }
+
+  async searchAllSpeaker(name: string) {
+    this.speakers = await this.sermonService.searchAllSpeaker(name).toPromise().then((res) => res)
+  }
+
+  __createSpearkerListSearch(speaker: string) {
+    if (!this.searchSpeakers.includes(speaker)) {
+      this.searchSpeakers.push(speaker)
+    } else {
+      const index = this.searchSpeakers.indexOf(speaker)
+      if (index >= 0) {
+        this.searchSpeakers.splice(index, 1)
+      }
+    }
+  }
+
+  filterTheName(name: string) {
+    return this.searchSpeakers.includes(name)
   }
 }

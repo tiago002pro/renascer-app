@@ -10,11 +10,12 @@
                     <div class="input-search">
                         <input class="form-control" type="text">
                     </div>
-                    <div class="speakers"
-                         *ngFor="let sermon of allSermons">
-                        <label >
-                            {{sermon.speaker}}
-                        </label>
+                    <div *ngFor="let speaker of speakers" [ngClass]="filterTheName(speaker) ? 'filter-speaker' : 'speakers'" >
+                        <a (click)="searchBySpeakers(speaker)">
+                            <label>
+                                {{speaker}}
+                            </label>
+                        </a>
                     </div>
                 </div>
             </div>
