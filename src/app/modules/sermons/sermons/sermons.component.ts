@@ -59,41 +59,41 @@ export class SermonsComponent implements OnInit {
           this.popularSermons[11]
         ]
       },
-      {
-        sermons: [
-          this.popularSermons[12],
-          this.popularSermons[13],
-          this.popularSermons[14]
-        ]
-      },
-      {
-        sermons: [
-          this.popularSermons[15],
-          this.popularSermons[16],
-          this.popularSermons[17]
-        ]
-      },
-      {
-        sermons: [
-          this.popularSermons[18],
-          this.popularSermons[19],
-          this.popularSermons[20]
-        ]
-      },
-      {
-        sermons: [
-          this.popularSermons[21],
-          this.popularSermons[22],
-          this.popularSermons[23]
-        ]
-      },
-      {
-        sermons: [
-          this.popularSermons[24],
-          this.popularSermons[25],
-          this.popularSermons[26]
-        ]
-      }
+      // {
+      //   sermons: [
+      //     this.popularSermons[12],
+      //     this.popularSermons[13],
+      //     this.popularSermons[14]
+      //   ]
+      // },
+      // {
+      //   sermons: [
+      //     this.popularSermons[15],
+      //     this.popularSermons[16],
+      //     this.popularSermons[17]
+      //   ]
+      // },
+      // {
+      //   sermons: [
+      //     this.popularSermons[18],
+      //     this.popularSermons[19],
+      //     this.popularSermons[20]
+      //   ]
+      // },
+      // {
+      //   sermons: [
+      //     this.popularSermons[21],
+      //     this.popularSermons[22],
+      //     this.popularSermons[23]
+      //   ]
+      // },
+      // {
+      //   sermons: [
+      //     this.popularSermons[24],
+      //     this.popularSermons[25],
+      //     this.popularSermons[26]
+      //   ]
+      // }
     ]
   }
 

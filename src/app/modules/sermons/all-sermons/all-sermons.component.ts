@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Sermon } from '../assets/interface/link-sermons';
-import { lastValueFrom } from 'rxjs';
 
 import { SermonService } from '../service/sermon.service';
 
@@ -23,21 +22,29 @@ export class AllSermonsComponent {
 
   async ngOnInit(): Promise<void> {
     this.searchSpeakers = []
-    await this.__loadSermons()
-    await this.searchAllSpeaker('')
+    this.allSermons = await this.__getAllSermons()
+    this.speakers = await this.searchAllSpeaker('')
   }
 
-  async __loadSermons() {
-    this.allSermons = await this.sermonService.getAll().toPromise().then((res) => res)
+  async __getAllSermons() {
+    return await this.sermonService.getAll().toPromise().then((res) => res)
+  }
+
+  async __searchBySpeakers() {
+    return await this.sermonService.searchBySpeakers(this.searchSpeakers).toPromise().then((res: any) => res)
+  }
+
+  async searchAllSpeaker(name: string) {
+    return await this.sermonService.searchAllSpeaker(name).toPromise().then((res) => res)
   }
 
   async searchBySpeakers(name: string) {
     this.__createSpearkerListSearch(name)
-    this.allSermons = await this.sermonService.searchBySpeakers(this.searchSpeakers).toPromise().then((res: any) => res)
-  }
-
-  async searchAllSpeaker(name: string) {
-    this.speakers = await this.sermonService.searchAllSpeaker(name).toPromise().then((res) => res)
+    if (this.searchSpeakers.length > 0) {
+      this.allSermons = await this.sermonService.searchBySpeakers(this.searchSpeakers).toPromise().then((res: any) => res)
+    } else {
+      this.allSermons = await this.__getAllSermons()
+    }
   }
 
   __createSpearkerListSearch(speaker: string) {

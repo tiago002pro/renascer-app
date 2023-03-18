@@ -31,7 +31,7 @@ export class SermonService {
     }
 
     searchAllSpeaker(name: string): Observable<Sermon[]> {
-        return this.http.get<Sermon[]>((this.url) + this.api + `/speakers`, {
+        return this.http.get<Sermon[]>((this.url) + this.api + `/speakers-by-name`, {
             params: {
                 name: name
             }

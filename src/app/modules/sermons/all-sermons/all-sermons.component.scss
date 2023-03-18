@@ -54,11 +54,6 @@
                 cursor: pointer;
                 margin-bottom: 10px;
             }
-            
-            label:hover {
-                background-color: #f4f5f7;
-                color: #1c1c1c;
-            }
         }
     }
 
@@ -82,12 +77,6 @@
             transition: .3s ease;
             margin: 0 2vw 2vw 0;
         }
-
-        // .box:hover {
-        //     width: 19vw;
-        //     margin: 0 1vw 1vw 0;
-        //     transition: .3s ease;
-        // }
 
         .img {
             position: relative;
