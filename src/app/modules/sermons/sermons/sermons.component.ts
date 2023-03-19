@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { SwiperOptions } from "swiper";
+import SwiperCore, { Navigation, Pagination, Scrollbar, SwiperOptions } from "swiper";
 import { Sermon } from '../assets/interface/link-sermons';
 import { SermonService } from '../service/sermon.service';
+
+SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
 @Component({
   selector: 'app-sermons',
@@ -113,7 +115,14 @@ export class SermonsComponent implements OnInit {
       navigation: true,
       pagination: { clickable: true },
       scrollbar: { draggable: true },
-      loop: true,
+      breakpoints: {
+        800: {
+          slidesPerView: 2
+        },
+        1000: {
+          slidesPerView: 3
+        }
+      }
     }
   }
 
@@ -124,8 +133,13 @@ export class SermonsComponent implements OnInit {
       navigation: true,
       pagination: { clickable: true },
       scrollbar: { draggable: true },
-      grid: {
-        rows: 2
+      breakpoints: {
+        800: {
+          slidesPerView: 2
+        },
+        1000: {
+          slidesPerView: 3
+        }
       }
     }
   }
@@ -134,11 +148,11 @@ export class SermonsComponent implements OnInit {
     this.router.navigate([`/sermon/${id}`])
   }
 
-  onSwiper(swiper: any) {
-    // console.log(swiper);
+  onSwiper([swiper]: any) {
+    console.log(swiper);
   }
   
   onSlideChange() {
-    // console.log('slide change');
+    console.log('slide change');
   }
 }

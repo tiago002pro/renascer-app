@@ -5,13 +5,11 @@
     .session {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
     }
 
     .search-session {
-        width: 30%;
-        margin-right: 2vw;
-        
+        width: 500px;
+
         .search {
             padding: 2vw;
             border-radius: 5px;
@@ -58,29 +56,27 @@
     }
 
     .video-session {
-        width: 70%;
+        width: 100%;
 
         .area {
             display: flex;
             flex-wrap: wrap;
-            flex-direction: row;
-            // justify-content: space-between;
         }
 
         .box {
             border-radius: 10px;
             background-color: #FFF;
-            width: 18vw;
+            width: 400px;
             margin-bottom: 5%;
             cursor: pointer;
             box-shadow: 5px 5px 10px #1c1c1c4d;
             transition: .3s ease;
-            margin: 0 2vw 2vw 0;
+            margin: 0 0 2vw 2vw;
         }
 
         .img {
             position: relative;
-            height: 20vh;
+            height: 25vh;
             display: flex;
             border-radius: 10px 10px 0 0;
             background-position: center;

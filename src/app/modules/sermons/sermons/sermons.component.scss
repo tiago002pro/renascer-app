@@ -100,6 +100,8 @@
     }
 
     .section-popular-sermons {
+        padding: 1vh;
+
         .item {
             color: black;
             cursor: pointer;
@@ -157,6 +159,8 @@
     }
 
     .section-recent-sermons {
+            padding: 1vh;
+
         .item {
             display: flex;
             flex-direction: row;
