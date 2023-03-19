@@ -136,43 +136,23 @@ body {
     color: rgb(110 120 153 / 57%);
 }
 
-// .container {
-//     padding: 0 2vw;
-// }
-
-
-
-// @media(min-width: 1200px) {
-//     .container {
-//         max-width: none;
-//         margin: 0 350px
-//     }
-// }
-
-//Toda pagina precia dessa margimm devido ao navbar fixado
 .module {
-    margin: 0 2vh;
+    padding: 5vh 0;
+    background-color: #f4f5f7;
 }
 
-.container {
-    // padding: 10px;
-    // margin: 10px;
-}
-
+//Tablet
 @media (min-width: 768px) and (max-width: 1023px) {
     .container, .container-sm {
         max-width: initial;
+        padding: 0 5vh;
     }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+//Smartphone
+@media (max-width: 767px) {
     .container, .container-sm {
         max-width: initial;
-    }
-}
-
-@media (max-width: 576px) {
-    .container, .container-sm {
-        max-width: initial;
+        padding: 0 5vh;
     }
 }

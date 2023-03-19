@@ -4,18 +4,22 @@
             <nav>
                 <div class="tabs" 
                      *ngFor="let tab of tabsNavigate">
-                    <a routerLink="{{tab.router}}">
-                        {{tab.label}}
-                    </a>
+                    <div class="container">
+                        <a routerLink="{{tab.router}}">
+                            {{tab.label}}
+                        </a>
+                    </div>
                 </div>
             </nav>
             <div class="toggle-menu" 
                  (click)="toggleMobileMenu()">
                 <label for="mobileNavToggle" 
                        class="mobile-nav-toggle-label">
-                    <div  [ngClass]="!showMobileMenu ? 'top bar' : 'top bar rotate-top'"></div>
-                    <div  [ngClass]="!showMobileMenu ? 'middle bar' : 'middle bar rotate-middle'"></div>
-                    <div  [ngClass]="!showMobileMenu ? 'bottom bar' : 'bottom bar rotate-bottom'"></div>
+                    <div class="container">
+                        <div  [ngClass]="!showMobileMenu ? 'top bar' : 'top bar rotate-top'"></div>
+                        <div  [ngClass]="!showMobileMenu ? 'middle bar' : 'middle bar rotate-middle'"></div>
+                        <div  [ngClass]="!showMobileMenu ? 'bottom bar' : 'bottom bar rotate-bottom'"></div>
+                    </div>
                 </label>
             </div>
         </div>

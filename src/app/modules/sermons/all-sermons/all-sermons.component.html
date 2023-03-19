@@ -1,0 +1,39 @@
+<div class="all-sermons module">
+    <div class="container">
+        <div class="session">
+            <div class="search-session">
+                <div class="search">
+                    <div class="title">
+                        <span>Speakers</span>
+                    </div>
+                    <div class="input-search">
+                        <input class="form-control" type="text" (ngModelChange)="getSpeakers($event)" ngModel>
+                    </div>
+                    <div *ngFor="let speaker of speakers" [ngClass]="filterTheName(speaker) ? 'filter-speaker' : 'speakers'" >
+                        <a (click)="searchBySpeakers(speaker)">
+                            <label>
+                                {{speaker}}
+                            </label>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="video-session">
+                <div class="area">
+                    <div class="box" 
+                         *ngFor="let sermon of allSermons" 
+                         routerLink="/sermon/{{sermon.id}}">
+                        <div class="img" 
+                             style="background-image: url('{{sermon.img}}');">
+                        </div>
+                        <div class="description">
+                            <span class="title-video">{{sermon.title}}</span>
+                            <span class="speaker">{{sermon.speaker}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

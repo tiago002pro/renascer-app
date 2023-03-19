@@ -3,15 +3,15 @@
         width: 100%;
         top: 0;
         left: 0;
-        position: fixed;
+        // position: fixed;
         color: #FFF;
+        z-index: 9999999;
 
         .header-inner {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 10vh;
-            padding: 0 20px;
+            height: 7vh;
             background-color: transparent;
         }
 
@@ -110,12 +110,14 @@
             -webkit-animation: menu-mobile-in-animation .5s cubic-bezier(.23,1,.32,1) both;
             -o-animation: menu-mobile-in-animation .5s cubic-bezier(.23,1,.32,1) both;
             animation: menu-mobile-in-animation .5s cubic-bezier(.23,1,.32,1) both;
+            z-index: 1039;
         }
 
         .out {
             -webkit-animation: menu-mobile-out-animation .45s cubic-bezier(.755,.05,.855,.06) both;
             -o-animation: menu-mobile-out-animation .45s cubic-bezier(.755,.05,.855,.06) both;
             animation: menu-mobile-out-animation .45s cubic-bezier(.755,.05,.855,.06) both;
+            z-index: 1039;
         }
     
         .menu-item {

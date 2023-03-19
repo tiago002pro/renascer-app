@@ -1,0 +1,278 @@
+.sermons {
+    color: #000;
+    background-color: #FFF;
+
+    section {
+        margin-bottom: 3vh;
+    }
+
+    .section-banner {
+        .banner {
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 1vh;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px #1c1c1c;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+            margin: 2vh;
+            position: absolute;
+            margin-top: -10vh;
+            text-align: initial;
+    
+            .title-video {
+                font-size: 2rem;
+                color: #FFF;
+            }
+        
+            .speaker {
+                font-size: 1rem;
+                color: gray;
+            }
+        }
+    }
+
+    .sub-title {
+        font-family: Montserrat-Bold;
+        font-weight: 700;
+    }
+
+    .sub-title h1 {
+        font-size: 18px;
+    }
+
+    .swiper-button-prev::after {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f060";
+        color: #121212;
+        font-size: 15px;
+    }
+
+    .swiper-button-next::after {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f061";
+        color: #121212;
+        font-size: 15px;
+    }
+
+    .swiper-button-prev, 
+    .swiper-button-next {
+        background-color: white;
+        width: 50px;
+        height:  50px;
+        margin-top: -22px;
+        border-radius: 50%;
+        transition: all 0.1s ease;
+        // box-shadow: 0px 0px 3px 2px #1212123d;
+        border: 1px solid #1212123d;
+    }
+
+
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-prev:hover, 
+    .swiper-button-next:hover {
+        width: 55px;
+        height: 55px;
+        transition: all 0.3s ease;
+    }
+    
+    .swiper-pagination-bullets {
+        display: none;
+    }
+
+    .section-popular-sermons {
+        padding: 1vh;
+
+        .item {
+            color: black;
+            cursor: pointer;
+            width: 97%;
+            display: flex;
+            flex-direction: column;
+            transition: all .1s ease;
+            padding: .5vh;
+            transition: all .3s ease;
+        }
+
+        .item:hover {
+            padding: 0;
+            transition: all .3s ease;
+        }
+
+        img {
+            margin-bottom: 2vh;
+            background: #1c1c1c;
+            height: 20vh;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px #1c1c1c;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 1vh;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+            margin: 0 1vh;
+    
+            .title-video {
+                text-align: initial;
+                font-size: 1.2rem;
+            }
+        
+            .speaker {
+                font-size: .9rem;
+                text-align: initial;
+                color: gray;
+            }
+        }
+
+        .swiper-button-prev, 
+        .swiper-button-next {
+            margin-top: -60px;
+        }
+
+        .swiper-button-prev, 
+        .swiper-button-next:hover {
+            margin-top: -70px;
+        }
+    }
+
+    .section-recent-sermons {
+            padding: 1vh;
+
+        .item {
+            display: flex;
+            flex-direction: row;
+            padding: .5vh;
+            height: 15vh;
+            transition: all .3s ease;
+            cursor: pointer;
+        }
+
+        .item:hover {
+            padding: 0vh;
+            transition: all .3s ease;
+        }
+        
+        img {
+            margin-right: 2vh;
+            width: 10vw;
+            background: #1c1c1c;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px #1c1c1c;
+        }
+
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+    
+            .title-video {
+                text-align: initial;
+                font-size: 1.2rem;
+            }
+        
+            .speaker {
+                font-size: .9rem;
+                text-align: initial;
+                color: gray;
+            }
+        }
+
+        .swiper-button-prev, 
+        .swiper-button-next {
+            margin-top: -40px !important;
+        }
+
+        .swiper-button-prev, 
+        .swiper-button-next:hover {
+            margin-top: -70px;
+        }
+    }
+
+    .section-more-sermons {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .more-sermons {
+        }
+
+        .btn {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            box-shadow: 3px 3px 10px #1c1c1c40;
+            transition: all .3s ease;
+            border: none;
+            color: #000;
+
+            svg {
+                margin-left: 5px;
+                color: #000;
+            }
+        }
+
+        .btn:hover {
+            font-size: 1.1rem;
+            transition: all .3s ease;
+            color: #000;
+        }
+    }
+
+    //Tablet
+    @media (min-width: 768px) and (max-width: 1023px) {
+    }
+
+    //Smartphone
+    @media (max-width: 767px) {
+        .swiper-button-prev, 
+        .swiper-button-next {
+            display: none;
+        }
+    
+        .swiper-button-prev:hover, 
+        .swiper-button-next:hover {
+            display: none;
+        }
+
+        .item {
+            justify-content: center;
+        }
+
+        .section-recent-sermons {
+            .area {
+                padding: 2vh 1vh;
+                border-top: 1px solid #1c1c1c40;
+            }
+
+            .banner-video {
+                width: 30%;
+            }
+        }
+    }
+}
