@@ -1,5 +1,5 @@
 export interface LinkSermons {
-    banner: Array<Sermon>
+    sermons:Sermon[]
 }
 
 export interface Sermon {

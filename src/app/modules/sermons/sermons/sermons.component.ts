@@ -13,34 +13,79 @@ SwiperCore.use([Navigation, Pagination, Scrollbar]);
   encapsulation: ViewEncapsulation.None,
 })
 export class SermonsComponent implements OnInit {
-  videoBanner!:Sermon
-  configPopularSermons!: SwiperOptions
-  popularSermons!: any;
-  configRecentSermons!: SwiperOptions
-  recentSermons!: any
+  configPopularSermons!:SwiperOptions
+  configRecentSermons!:SwiperOptions
+  videoBanner!:any
+  popularSermons!:any;
+  recentSermons!:any
   
   constructor(
     private router:Router,
-    private sermonService: SermonService,
+    private sermonService:SermonService,
   ) {}
 
-  async ngOnInit(): Promise<void> {
+  async ngOnInit():Promise<void> {
+    this.__initializingVariables()
     await this.__loadPopularSermons()
-    this.__loadVideoBanner()
+    this.__getVideoBanner()
     this.__loadRecentSermons()
+  }
+
+  __initializingVariables():void {
+    this.__loadVideoBanner()
     this.__loadConfigPopularSermons()
     this.__loadConfigRecentSermons()
   }
 
-  __loadVideoBanner() {
+  __loadVideoBanner():void {
+    this.videoBanner = {
+      id: null,
+      url: null,
+      img: null,
+      title: null, 
+      speaker: null,
+      description: null,
+      date: null,
+    }
+  }
+
+  __loadConfigPopularSermons():void {
+    this.configPopularSermons = {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      navigation: true,
+      pagination: { clickable: true },
+      scrollbar: { draggable: true },
+      breakpoints: {
+        800: { slidesPerView: 2 },
+        1000: { slidesPerView: 3 }
+      }
+    }
+  }
+
+  __loadConfigRecentSermons():void {
+    this.configRecentSermons = {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: true,
+      pagination: { clickable: true },
+      scrollbar: { draggable: true },
+      breakpoints: {
+        800: { slidesPerView: 2 },
+        1000: { slidesPerView: 3 }
+      }
+    }
+  }
+
+  __getVideoBanner():void {
     this.videoBanner = this.popularSermons[1]
   }
 
-  async __loadPopularSermons() {
+  async __loadPopularSermons():Promise<void> {
     this.popularSermons = await this.sermonService.getAll().toPromise().then((res) => res)
   }
   
-  __loadRecentSermons() {
+  __loadRecentSermons():void {
     this.recentSermons = [
       {
         sermons: [
@@ -70,89 +115,10 @@ export class SermonsComponent implements OnInit {
           this.popularSermons[11]
         ]
       },
-      // {
-      //   sermons: [
-      //     this.popularSermons[12],
-      //     this.popularSermons[13],
-      //     this.popularSermons[14]
-      //   ]
-      // },
-      // {
-      //   sermons: [
-      //     this.popularSermons[15],
-      //     this.popularSermons[16],
-      //     this.popularSermons[17]
-      //   ]
-      // },
-      // {
-      //   sermons: [
-      //     this.popularSermons[18],
-      //     this.popularSermons[19],
-      //     this.popularSermons[20]
-      //   ]
-      // },
-      // {
-      //   sermons: [
-      //     this.popularSermons[21],
-      //     this.popularSermons[22],
-      //     this.popularSermons[23]
-      //   ]
-      // },
-      // {
-      //   sermons: [
-      //     this.popularSermons[24],
-      //     this.popularSermons[25],
-      //     this.popularSermons[26]
-      //   ]
-      // }
     ]
   }
 
-  __loadConfigPopularSermons() {
-    this.configPopularSermons = {
-      slidesPerView: 3,
-      spaceBetween: 50,
-      navigation: true,
-      pagination: { clickable: true },
-      scrollbar: { draggable: true },
-      breakpoints: {
-        800: {
-          slidesPerView: 2
-        },
-        1000: {
-          slidesPerView: 3
-        }
-      }
-    }
-  }
-
-  __loadConfigRecentSermons() {
-    this.configRecentSermons = {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      navigation: true,
-      pagination: { clickable: true },
-      scrollbar: { draggable: true },
-      breakpoints: {
-        800: {
-          slidesPerView: 2
-        },
-        1000: {
-          slidesPerView: 3
-        }
-      }
-    }
-  }
-
-  openVideo(id: number) {
+  openVideo(id:number):void {
     this.router.navigate([`/sermon/${id}`])
-  }
-
-  onSwiper([swiper]: any) {
-    console.log(swiper);
-  }
-  
-  onSlideChange() {
-    console.log('slide change');
   }
 }

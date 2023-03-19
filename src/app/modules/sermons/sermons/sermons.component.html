@@ -18,9 +18,7 @@
                 <div class="sub-title">
                     <h1>Popular</h1>
                 </div>
-                <swiper [config]="configPopularSermons"
-                        (swiper)="onSwiper($event)"
-                        (slideChange)="onSlideChange()">
+                <swiper [config]="configPopularSermons">
                     <ng-template swiperSlide *ngFor="let sermon of popularSermons">
                         <div class="item" (click)="openVideo(sermon.id)">
                             <img src="{{sermon.img}}" alt="">
@@ -47,10 +45,7 @@
                 <div class="sub-title">
                     <h1>Carregados Recentemente</h1>
                 </div>
-                <swiper [config]="configRecentSermons"
-                        (swiper)="onSwiper($event)"
-                        (slideChange)="onSlideChange()"
-                        class="swiper">
+                <swiper [config]="configRecentSermons" class="swiper">
                     <ng-template swiperSlide *ngFor="let item of recentSermons">
                         <div class="item" 
                              *ngFor="let sermon of item.sermons"
