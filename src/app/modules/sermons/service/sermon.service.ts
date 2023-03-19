@@ -1,4 +1,4 @@
-import { HttpClient, HttpContext, HttpHeaders, HttpParams } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs";
 import { Sermon } from "../assets/interface/link-sermons";
@@ -14,11 +14,15 @@ export class SermonService {
         private http: HttpClient
     ) {}
 
-    getAll(): Observable<Sermon[]> {
+    getById(id:number):any {
+        return this.http.get<Sermon>((this.url) + this.api + `/${id}`);
+    }
+
+    getAll() {
         return this.http.get<Sermon[]>((this.url) + this.api + `/all`);
     }
 
-    searchAllBySpeaker(name: string): Observable<Sermon[]> {
+    searchBySpeaker(name: string): Observable<Sermon[]> {
         return this.http.get<Sermon[]>((this.url) + this.api + `/by-speaker`, {
             params: {
                 name: name
@@ -30,8 +34,8 @@ export class SermonService {
         return this.http.post<Sermon[]>((this.url) + this.api + `/by-speakers`, speakers);
     }
 
-    searchAllSpeaker(name: string): Observable<Sermon[]> {
-        return this.http.get<Sermon[]>((this.url) + this.api + `/speakers-by-name`, {
+    searchSpeakers(name: string): Observable<Sermon[]> {
+        return this.http.get<Sermon[]>((this.url) + this.api + `/speakers`, {
             params: {
                 name: name
             }

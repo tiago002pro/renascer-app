@@ -9,21 +9,18 @@ import { SermonService } from '../service/sermon.service';
   styleUrls: ['./all-sermons.component.scss']
 })
 export class AllSermonsComponent {
-  imgTitle!: string
-  allSermons: Array<Sermon> | undefined
+  allSermons: Sermon[] | undefined
   speakers!: any
   searchSpeakers!: any
 
   constructor(
-    private sermonService: SermonService
-  ) {
-    this.imgTitle = '../../../../assets/img/module-sermons.jpg'
-  }
+    private sermonService: SermonService,
+  ) {}
 
   async ngOnInit(): Promise<void> {
     this.searchSpeakers = []
     this.allSermons = await this.__getAllSermons()
-    this.speakers = await this.searchAllSpeaker('')
+    await this.searchAllSpeaker('')
   }
 
   async __getAllSermons() {
@@ -35,7 +32,7 @@ export class AllSermonsComponent {
   }
 
   async searchAllSpeaker(name: string) {
-    return await this.sermonService.searchAllSpeaker(name).toPromise().then((res) => res)
+    this.speakers = await this.sermonService.searchSpeakers(name).toPromise().then((res) => res)
   }
 
   async searchBySpeakers(name: string) {

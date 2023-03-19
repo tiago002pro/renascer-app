@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'leadership', component: LeadershipComponent },
   { path: 'sermons', component: SermonsComponent },
   { path: 'all-sermons', component: AllSermonsComponent },
-  { path: 'sermon/:title', component: WatchSermonComponent },
+  { path: 'sermon/:id', component: WatchSermonComponent },
   { path: 'contact', component: ContactComponent },
 ];
 

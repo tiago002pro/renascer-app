@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 import { SwiperOptions } from "swiper";
+import { Sermon } from '../assets/interface/link-sermons';
 import { SermonService } from '../service/sermon.service';
 
 @Component({
@@ -9,24 +11,31 @@ import { SermonService } from '../service/sermon.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class SermonsComponent implements OnInit {
+  videoBanner!:Sermon
   configPopularSermons!: SwiperOptions
   popularSermons!: any;
   configRecentSermons!: SwiperOptions
   recentSermons!: any
   
   constructor(
+    private router:Router,
     private sermonService: SermonService,
   ) {}
 
   async ngOnInit(): Promise<void> {
     await this.__loadPopularSermons()
+    this.__loadVideoBanner()
     this.__loadRecentSermons()
     this.__loadConfigPopularSermons()
     this.__loadConfigRecentSermons()
   }
 
+  __loadVideoBanner() {
+    this.videoBanner = this.popularSermons[1]
+  }
+
   async __loadPopularSermons() {
-    this.popularSermons = await this.sermonService.getAll().toPromise().then((res) => res )
+    this.popularSermons = await this.sermonService.getAll().toPromise().then((res) => res)
   }
   
   __loadRecentSermons() {
@@ -121,8 +130,8 @@ export class SermonsComponent implements OnInit {
     }
   }
 
-  openVideo(id: string) {
-    window.open(`id`, "_blank");
+  openVideo(id: number) {
+    this.router.navigate([`/sermon/${id}`])
   }
 
   onSwiper(swiper: any) {

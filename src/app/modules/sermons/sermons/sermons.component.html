@@ -2,13 +2,12 @@
 <div class="sermons module">
     <section class="section-banner">
         <div class="container">
-            <div class="banner">
-                <img src="{{popularSermons[0].img}}" alt="">
-                <!-- <iframe src="https://www.youtube.com/embed/82dtxLC-wxM" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe> -->
+            <div class="banner" (click)="openVideo(videoBanner.id)">
+                <img src="{{videoBanner.img}}" alt="">
+                <div class="description">
+                    <span class="title-video">{{videoBanner.title}}</span>
+                    <span class="speaker">{{videoBanner.speaker}}</span>
+                </div>
             </div>
         </div>
     </section>
@@ -23,7 +22,7 @@
                         (swiper)="onSwiper($event)"
                         (slideChange)="onSlideChange()">
                     <ng-template swiperSlide *ngFor="let sermon of popularSermons">
-                        <div class="item" (click)="openVideo(sermon.url)">
+                        <div class="item" (click)="openVideo(sermon.id)">
                             <img src="{{sermon.img}}" alt="">
                             <div class="description">
                                 <span class="title-video">{{sermon.title}}</span>
@@ -53,7 +52,9 @@
                         (slideChange)="onSlideChange()"
                         class="swiper">
                     <ng-template swiperSlide *ngFor="let item of recentSermons">
-                        <div class="item" *ngFor="let sermon of item.sermons">
+                        <div class="item" 
+                             *ngFor="let sermon of item.sermons"
+                             (click)="openVideo(sermon.id)">
                             <div class="img">
                                 <img src="{{sermon.img}}" alt="">
                             </div>
