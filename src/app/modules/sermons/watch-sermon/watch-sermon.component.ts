@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import moment from 'moment';
 import { SermonService } from '../service/sermon.service';
 
+moment.locale('pt-br')
+
 @Component({
   selector: 'app-watch-sermon',
   templateUrl: './watch-sermon.component.html',
@@ -15,21 +17,23 @@ export class WatchSermonComponent {
   videoDATE!:any
 
   constructor(
-    private sermonService: SermonService,
-    private route: ActivatedRoute,
-    private _sanitizer: DomSanitizer,
-  ) {
+    private sermonService:SermonService,
+    private route:ActivatedRoute,
+    private _sanitizer:DomSanitizer,
+  ) {}
+
+  async ngOnInit():Promise<void> {
+    this.__initializingVariables()
+    await this.loadSermon()
+    this.loadVideo()
+  }
+
+  __initializingVariables():void {
     this.__initializeSermon()
+    this.__initializeVideo()
   }
 
-  async ngOnInit(): Promise<void> {
-    const id = this.route.snapshot.params['id']
-    this.sermon = await this.sermonService.getById(id).toPromise().then((res:any) => res)
-    this.videoURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.sermon.url)
-    this.videoDATE = moment(this.sermon.date).format("MMM Do YY");    
-  }
-
-  __initializeSermon() {
+  __initializeSermon():void {
     this.sermon = {
       id: null,
       url: null,
@@ -39,5 +43,19 @@ export class WatchSermonComponent {
       description: null,
       date: null,
     }
+  }
+  __initializeVideo():void {
+    this.videoURL = this._sanitizer.bypassSecurityTrustResourceUrl('null');
+    this.videoDATE = null;
+  }
+
+  async loadSermon():Promise<void> {
+    const id = this.route.snapshot.params['id']
+    this.sermon = await this.sermonService.getById(id).toPromise().then((res:any) => res)
+  }
+
+  loadVideo():void {
+    this.videoURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.sermon.url)
+    this.videoDATE = moment(this.sermon.date).format("LL");   
   }
 }
