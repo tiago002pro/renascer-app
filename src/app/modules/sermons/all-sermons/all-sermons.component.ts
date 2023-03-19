@@ -9,42 +9,54 @@ import { SermonService } from '../service/sermon.service';
   styleUrls: ['./all-sermons.component.scss']
 })
 export class AllSermonsComponent {
-  allSermons: Sermon[] | undefined
-  speakers!: any
-  searchSpeakers!: any
+  allSermons:any
+  speakers!:any
+  searchSpeakers!:any
 
   constructor(
-    private sermonService: SermonService,
+    private sermonService:SermonService,
   ) {}
 
-  async ngOnInit(): Promise<void> {
-    this.searchSpeakers = []
-    this.allSermons = await this.__getAllSermons()
-    await this.searchAllSpeaker('')
+  async ngOnInit():Promise<void> {
+    this.__initializingVariables()
+    await this.__loadSermons()
+    await this.getSpeakers('')
   }
 
-  async __getAllSermons() {
+  __initializingVariables():void {
+    this.searchSpeakers = []
+  }
+
+  async __loadSermons():Promise<void> {
+    this.allSermons = await this.__getAllSermons()
+  }
+
+  async __getAllSermons():Promise<any> {
     return await this.sermonService.getAll().toPromise().then((res) => res)
   }
 
-  async __searchBySpeakers() {
-    return await this.sermonService.searchBySpeakers(this.searchSpeakers).toPromise().then((res: any) => res)
+  async getSpeakers(name:string):Promise<void> {
+    this.speakers = await this.__searchAllSpeaker(name)
   }
 
-  async searchAllSpeaker(name: string) {
-    this.speakers = await this.sermonService.searchSpeakers(name).toPromise().then((res) => res)
+  async __searchAllSpeaker(name:string):Promise<any> {
+    return await this.sermonService.searchSpeakers(name).toPromise().then((res) => res)
   }
 
-  async searchBySpeakers(name: string) {
+  async searchBySpeakers(name:string):Promise<void> {
     this.__createSpearkerListSearch(name)
     if (this.searchSpeakers.length > 0) {
-      this.allSermons = await this.sermonService.searchBySpeakers(this.searchSpeakers).toPromise().then((res: any) => res)
+      this.allSermons = await this.__searchBySpeakers()
     } else {
       this.allSermons = await this.__getAllSermons()
     }
   }
 
-  __createSpearkerListSearch(speaker: string) {
+  async __searchBySpeakers():Promise<any> {
+    return await this.sermonService.searchBySpeakers(this.searchSpeakers).toPromise().then((res:any) => res)
+  }
+
+  __createSpearkerListSearch(speaker:string):void {
     if (!this.searchSpeakers.includes(speaker)) {
       this.searchSpeakers.push(speaker)
     } else {
@@ -55,7 +67,7 @@ export class AllSermonsComponent {
     }
   }
 
-  filterTheName(name: string) {
+  filterTheName(name:string):Boolean {
     return this.searchSpeakers.includes(name)
   }
 }

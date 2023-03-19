@@ -7,14 +7,14 @@ import { Sermon } from "../assets/interface/link-sermons";
     providedIn: 'root'
 })
 export class SermonService {
-    url: String = 'http://localhost:8080'
-    api = `/api/sermon`;
+    url:string = 'http://localhost:8080'
+    api:string = `/api/sermon`;
 
     constructor(
-        private http: HttpClient
+        private http:HttpClient
     ) {}
 
-    getById(id:number):any {
+    getById(id:number) {
         return this.http.get<Sermon>((this.url) + this.api + `/${id}`);
     }
 
@@ -22,7 +22,7 @@ export class SermonService {
         return this.http.get<Sermon[]>((this.url) + this.api + `/all`);
     }
 
-    searchBySpeaker(name: string): Observable<Sermon[]> {
+    searchBySpeaker(name:string):Observable<Sermon[]> {
         return this.http.get<Sermon[]>((this.url) + this.api + `/by-speaker`, {
             params: {
                 name: name
@@ -30,11 +30,11 @@ export class SermonService {
         });
     }
 
-    searchBySpeakers(speakers: string[]) {
+    searchBySpeakers(speakers:string[]) {
         return this.http.post<Sermon[]>((this.url) + this.api + `/by-speakers`, speakers);
     }
 
-    searchSpeakers(name: string): Observable<Sermon[]> {
+    searchSpeakers(name:string):Observable<Sermon[]> {
         return this.http.get<Sermon[]>((this.url) + this.api + `/speakers`, {
             params: {
                 name: name

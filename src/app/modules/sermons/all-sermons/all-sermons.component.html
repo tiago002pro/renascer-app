@@ -7,7 +7,7 @@
                         <span>Speakers</span>
                     </div>
                     <div class="input-search">
-                        <input class="form-control" type="text" (ngModelChange)="searchAllSpeaker($event)" ngModel>
+                        <input class="form-control" type="text" (ngModelChange)="getSpeakers($event)" ngModel>
                     </div>
                     <div *ngFor="let speaker of speakers" [ngClass]="filterTheName(speaker) ? 'filter-speaker' : 'speakers'" >
                         <a (click)="searchBySpeakers(speaker)">
