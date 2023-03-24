@@ -17,7 +17,7 @@ export class WhereAreWeComponent implements OnInit {
     this.initMap();
   }
 
-  private initMap(): void {
+  initMap(): void {
     this.map = L.map('map', {
       center: [-23.376373474794963, -51.938296850489365],
       zoom: 10
@@ -38,10 +38,13 @@ export class WhereAreWeComponent implements OnInit {
       iconAnchor:   [50, 94], // point of the icon which will correspond to marker's location
       shadowAnchor: [-5, 65],  // the same for the shadow
       popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-  });
+    })
 
-  const marker = L.marker([-23.376373474794963, -51.938296850489365], {icon: icon}).addTo(this.map);
-
+    L.marker([-23.376373474794963, -51.938296850489365], {icon: icon}).addTo(this.map);
     tiles.addTo(this.map);
+  }
+
+  openRoutes() {
+    window.open("https://www.google.com/maps/dir//renascer+maringa/@-23.3969393,-51.944497,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ecd689d1cdfa2d:0x14b0e34c1da80b1b!2m2!1d-51.9383009!2d-23.3769624")
   }
 }
