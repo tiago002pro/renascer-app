@@ -23,20 +23,24 @@ export class WhereAreWeComponent implements OnInit {
       zoom: 10
     });
 
-    const marker = L.marker([-23.376373474794963, -51.938296850489365]).addTo(this.map);
-
-    var circle = L.circle([-23.376373474794963, -51.938296850489365], {
-      color: '#1c1c1c',
-      fillColor: '#1c1c1c',
-      fillOpacity: 0.5,
-      radius: 500
-  }).addTo(this.map);
-
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 50,
       minZoom: 15,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
+
+    const icon = L.icon({
+      iconUrl: './../../../assets/img/location-icon.png',
+      shadowUrl: './../../../assets/img/location-shadow-icon.png',
+  
+      iconSize:     [95, 95], // size of the icon
+      shadowSize:   [64, 64], // size of the shadow
+      iconAnchor:   [50, 94], // point of the icon which will correspond to marker's location
+      shadowAnchor: [-5, 65],  // the same for the shadow
+      popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+  });
+
+  const marker = L.marker([-23.376373474794963, -51.938296850489365], {icon: icon}).addTo(this.map);
 
     tiles.addTo(this.map);
   }
