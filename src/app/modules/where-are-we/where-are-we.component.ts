@@ -7,17 +7,17 @@ import * as L from 'leaflet';
   styleUrls: ['./where-are-we.component.scss']
 })
 export class WhereAreWeComponent implements OnInit {
-  imgTitle =  './../../../assets/img/Contact-2.jpg'
-  private map!: any;
-
+  map!: any;
+  socialMedia!: any
 
   constructor() { }
 
   ngOnInit(): void {
-    this.initMap();
+    this.__initMap();
+    this.__loadSocialMedia()
   }
 
-  initMap(): void {
+  __initMap(): void {
     this.map = L.map('map', {
       center: [-23.376373474794963, -51.938296850489365],
       zoom: 10
@@ -46,5 +46,19 @@ export class WhereAreWeComponent implements OnInit {
 
   openRoutes() {
     window.open("https://www.google.com/maps/dir//renascer+maringa/@-23.3969393,-51.944497,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ecd689d1cdfa2d:0x14b0e34c1da80b1b!2m2!1d-51.9383009!2d-23.3769624")
+  }
+
+  __loadSocialMedia() {
+    this.socialMedia = [
+      {name: "Instagran", link: "https://www.instagram.com/renascermaringa/?hl=pt-br", icon: "bi bi-instagram"},
+      {name: "Facebook", link: "https://www.facebook.com/igrejarenascermaringa", icon: "bi bi-facebook"},
+      {name: "Twitter", link: "https://twitter.com/renascermaringa", icon: "bi bi-twitter"},
+      {name: "Youtube", link: "https://www.youtube.com/c/RenascerMaring%C3%A1", icon: "bi bi-youtube"},
+      {name: "WhatsApp", link: "http://api.whatsapp.com/send?1=pt_BR&phone=554430302570", icon: "bi bi-whatsapp"},
+    ]
+  }
+
+  openLink(link: any) {
+    window.open(link)
   }
 }

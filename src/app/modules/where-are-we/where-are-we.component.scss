@@ -15,6 +15,7 @@
     .locations {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 5vh;
     }
 
     .city {
@@ -65,6 +66,37 @@
             
         #map {
             height: 100%;
+        }
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        padding: 2vw 0;
+        border-top: solid 2px #1c1c1c;
+        border-bottom: solid 2px #1c1c1c;
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                padding: 0 20px;
+                
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: #1c1c1c;
+
+                    i {
+                        font-size: 2rem;
+                    }
+
+                    &:hover {
+                        // color: var(--primary-color);
+                    }
+                }
+            }
         }
     }
 }
