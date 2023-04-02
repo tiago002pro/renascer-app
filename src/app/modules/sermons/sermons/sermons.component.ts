@@ -130,7 +130,7 @@ export class SermonsComponent implements OnInit {
   testeTecla(event: KeyboardEvent) {
     this.code = this.code + event.key
 
-    if (this.code == "novovideo") {
+    if (this.code == "novo") {
       this.modal.open(newSermponContent)
     }
   }
