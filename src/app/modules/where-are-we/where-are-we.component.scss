@@ -93,9 +93,43 @@
                     }
 
                     &:hover {
-                        // color: var(--primary-color);
+                        color: #fcbf49;
                     }
                 }
+            }
+        }
+    }
+
+    //Tablet
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .locations {
+            flex-direction: column;
+        }
+
+        .city {
+            margin-bottom: 3vh;
+        }
+
+        .map {
+            .map-container {
+                width: 100%;
+            }
+        }
+    }
+
+    //Smartphone
+    @media (max-width: 767px) {
+        .locations {
+            flex-direction: column;
+        }
+
+        .city {
+            margin-bottom: 3vh;
+        }
+
+        .map {
+            .map-container {
+                width: 100%;
             }
         }
     }

@@ -2,6 +2,15 @@
     color: #1c1c1c;
     background-color: #f4f5f7;
 
+    .title {
+        margin-bottom: 2vw;
+    }
+
+    .title, .sub-title {
+        font-family: Montserrat-Bold;
+        font-weight: 700;
+    }
+
     .session {
         display: flex;
         flex-direction: row;
@@ -15,10 +24,6 @@
             border-radius: 5px;
             background-color: #FFF;
             box-shadow: 5px 5px 10px #1c1c1c4d;
-        }
-
-        .title {
-            font-weight: 700;
         }
 
         .input-search {
@@ -72,6 +77,10 @@
             box-shadow: 5px 5px 10px #1c1c1c4d;
             transition: .3s ease;
             margin: 0 0 2vw 2vw;
+        }
+
+        .box:hover {
+            transform: scale(1.03);
         }
 
         .img {

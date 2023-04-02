@@ -2,8 +2,13 @@
 <div class="sermons module">
     <section class="section-banner">
         <div class="container">
+            <div class="title">
+                <h1>Pregações</h1>
+            </div>
             <div class="banner" (click)="openVideo(videoBanner.id)">
-                <img src="{{videoBanner.img}}" alt="">
+                <div class="img">
+                    <img src="{{videoBanner.img}}" alt="">
+                </div>
                 <div class="description">
                     <span class="title-video">{{videoBanner.title}}</span>
                     <span class="speaker">{{videoBanner.speaker}}</span>
@@ -16,7 +21,7 @@
         <div class="container">
             <div class="popular-sermons">
                 <div class="sub-title">
-                    <h1>Popular</h1>
+                    <h1>Populares</h1>
                 </div>
                 <swiper [config]="configPopularSermons">
                     <ng-template swiperSlide *ngFor="let sermon of popularSermons">

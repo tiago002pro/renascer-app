@@ -3,48 +3,74 @@
     background-color: #FFF;
 
     section {
-        margin-bottom: 3vh;
+        margin-bottom: 2vh;
+    }
+
+    .title {
+        // margin-bottom: 2vw;
+    }
+
+    .title, .sub-title {
+        font-family: Montserrat-Bold;
+        font-weight: 700;
+    }
+
+    .swiper {
+        padding: 1vh 1.5vw;
     }
 
     .section-banner {
+        padding: 1vh 1.5vw;
+
         .banner {
             width: 100%;
+            height: 70vh;
             border-radius: 5px;
             cursor: pointer;
-            padding: 1vh;
+            transition: all .3s ease;
+            position: relative;
         }
 
-        .banner img {
+        .banner:hover {
+            transform: scale(1.01);
+        }
+
+        .img {
+            position: inherit;
             width: 100%;
             height: 100%;
-            border-radius: 5px;
-            box-shadow: 3px 3px 10px #1c1c1c;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                box-shadow: 3px 3px 10px #1c1c1c;
+                position: relative;
+            }
         }
 
         .description {
             display: flex;
             flex-direction: column;
             font-weight: 700;
-            margin: 2vh;
             position: absolute;
-            margin-top: -10vh;
             text-align: initial;
+            padding: 2vh 2vw;
+            bottom: 1vh;
+            width: 100%;
     
             .title-video {
                 font-size: 2rem;
                 color: #FFF;
+                position: relative;
             }
         
             .speaker {
                 font-size: 1rem;
                 color: gray;
+                position: relative;
             }
         }
-    }
-
-    .sub-title {
-        font-family: Montserrat-Bold;
-        font-weight: 700;
     }
 
     .sub-title h1 {
@@ -100,22 +126,16 @@
     }
 
     .section-popular-sermons {
-        padding: 1vh;
-
         .item {
-            color: black;
+            color: #1c1c1c;
             cursor: pointer;
-            width: 97%;
             display: flex;
             flex-direction: column;
-            transition: all .1s ease;
-            padding: .5vh;
             transition: all .3s ease;
         }
 
         .item:hover {
-            padding: 0;
-            transition: all .3s ease;
+            transform: scale(1.05);
         }
 
         img {
@@ -159,20 +179,16 @@
     }
 
     .section-recent-sermons {
-            padding: 1vh;
-
         .item {
             display: flex;
             flex-direction: row;
-            padding: .5vh;
             height: 15vh;
             transition: all .3s ease;
             cursor: pointer;
         }
 
         .item:hover {
-            padding: 0vh;
-            transition: all .3s ease;
+            transform: scale(1.05);
         }
         
         img {
@@ -213,7 +229,6 @@
     }
 
     .section-more-sermons {
-        height: 10vh;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -246,6 +261,34 @@
 
     //Tablet
     @media (min-width: 768px) and (max-width: 1023px) {
+        .sub-title {
+            padding: 0 2vw;
+        }
+
+        .section-banner {
+            .banner {
+                height: 60vh;
+            }
+        }
+
+        .section-popular-sermons {
+            .swiper {
+                padding: 2vw;
+            }
+
+            img {
+                box-shadow: 3px 5px 5px #1c1c1c;
+            }
+        }
+        .section-recent-sermons {
+            .swiper {
+                padding: 2vw;
+            }
+
+            img {
+                width: 15vw;
+            }
+        }
     }
 
     //Smartphone
@@ -262,6 +305,12 @@
 
         .item {
             justify-content: center;
+        }
+        
+        .section-banner {
+            .banner {
+                height: 50vh;
+            }
         }
 
         .section-recent-sermons {

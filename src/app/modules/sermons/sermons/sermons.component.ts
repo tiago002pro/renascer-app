@@ -51,13 +51,12 @@ export class SermonsComponent implements OnInit {
 
   __loadConfigPopularSermons():void {
     this.configPopularSermons = {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 50,
       navigation: true,
       pagination: { clickable: true },
       scrollbar: { draggable: true },
       breakpoints: {
-        800: { slidesPerView: 2 },
         1000: { slidesPerView: 3 }
       }
     }
@@ -65,8 +64,8 @@ export class SermonsComponent implements OnInit {
 
   __loadConfigRecentSermons():void {
     this.configRecentSermons = {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 1,
+      spaceBetween: 50,
       navigation: true,
       pagination: { clickable: true },
       scrollbar: { draggable: true },

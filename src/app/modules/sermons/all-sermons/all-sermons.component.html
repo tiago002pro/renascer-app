@@ -1,19 +1,20 @@
 <div class="all-sermons module">
     <div class="container">
+        <div class="title">
+            <h1>Pregações</h1>
+        </div>
         <div class="session">
             <div class="search-session">
                 <div class="search">
-                    <div class="title">
-                        <span>Speakers</span>
+                    <div class="sub-title">
+                        <span>Preletores</span>
                     </div>
                     <div class="input-search">
                         <input class="form-control" type="text" (ngModelChange)="getSpeakers($event)" ngModel>
                     </div>
                     <div *ngFor="let speaker of speakers" [ngClass]="filterTheName(speaker) ? 'filter-speaker' : 'speakers'" >
                         <a (click)="searchBySpeakers(speaker)">
-                            <label>
-                                {{speaker}}
-                            </label>
+                            <label>{{speaker}}</label>
                         </a>
                     </div>
                 </div>
