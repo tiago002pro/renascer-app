@@ -1,8 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import SwiperCore, { Navigation, Pagination, Scrollbar, SwiperOptions } from "swiper";
 import { Sermon } from '../assets/interface/link-sermons';
 import { SermonService } from '../service/sermon.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { newSermponContent } from '../modals/new-sermon-modal/new-sermon-modal';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
@@ -18,10 +20,12 @@ export class SermonsComponent implements OnInit {
   videoBanner!:any
   popularSermons!:any;
   recentSermons!:any
+  code!: string
   
   constructor(
     private router:Router,
     private sermonService:SermonService,
+    private modal: NgbModal,
   ) {}
 
   async ngOnInit():Promise<void> {
@@ -35,6 +39,7 @@ export class SermonsComponent implements OnInit {
     this.__loadVideoBanner()
     this.__loadConfigPopularSermons()
     this.__loadConfigRecentSermons()
+    this.code = ''
   }
 
   __loadVideoBanner():void {
@@ -119,5 +124,14 @@ export class SermonsComponent implements OnInit {
 
   openVideo(id:number):void {
     this.router.navigate([`/sermon/${id}`])
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  testeTecla(event: KeyboardEvent) {
+    this.code = this.code + event.key
+
+    if (this.code == "novovideo") {
+      this.modal.open(newSermponContent)
+    }
   }
 }

@@ -1,0 +1,29 @@
+<div class="new-sermon-modal">
+  <div class="modal-header">
+    <h4 class="modal-title">Novo vídeo</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-12">
+        <label class="model-label">url</label>
+        <input class="form-control" type="text">
+      </div>
+      <div class="col-md-12">
+        <label class="model-label">Título</label>
+        <input class="form-control" type="text">
+      </div>
+      <div class="col-md-12">
+        <label class="model-label">Descrição</label>
+        <input class="form-control" type="text">
+      </div>
+      <div class="col-md-12">
+        <label class="model-label">Imagem</label>
+        <input class="form-control" type="file" [accept]="requiredFileType" (change)="uploadImage($event)" ngModel >
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</div>
