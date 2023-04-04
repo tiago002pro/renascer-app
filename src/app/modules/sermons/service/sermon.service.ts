@@ -14,12 +14,24 @@ export class SermonService {
         private http:HttpClient
     ) {}
 
-    getById(id:number) {
-        return this.http.get<Sermon>((this.url) + this.api + `/${id}`);
+    create(sermon: Sermon): Observable<Sermon> {
+        return this.http.post<Sermon>((this.url) + this.api + `/create`, sermon);
+    }
+
+    update(sermon: Sermon): Observable<Sermon> {
+        return this.http.put<Sermon>((this.url) + this.api + `/update/${sermon.id}`, sermon);
+    }
+
+    delete(id: Number) {
+        return this.http.delete((this.url) + this.api + `/delete/${id}`);
     }
 
     getAll() {
         return this.http.get<Sermon[]>((this.url) + this.api + `/all`);
+    }
+
+    getById(id:number) {
+        return this.http.get<Sermon>((this.url) + this.api + `/${id}`);
     }
 
     searchBySpeaker(name:string):Observable<Sermon[]> {
