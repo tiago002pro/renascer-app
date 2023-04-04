@@ -4,7 +4,7 @@ import SwiperCore, { Navigation, Pagination, Scrollbar, SwiperOptions } from "sw
 import { Sermon } from '../assets/interface/link-sermons';
 import { SermonService } from '../service/sermon.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { newSermponContent } from '../modals/new-sermon-modal/new-sermon-modal';
+import { FormSermonModal } from '../modals/form-sermon-modal/form-sermon-modal';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
@@ -131,7 +131,7 @@ export class SermonsComponent implements OnInit {
     this.code = this.code + event.key
 
     if (this.code == "novo") {
-      this.modal.open(newSermponContent)
+      this.modal.open(FormSermonModal)
     }
   }
 }

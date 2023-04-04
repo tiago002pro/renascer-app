@@ -3,12 +3,12 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { FirebaseService } from "src/app/services/firebase/firebase.service";
 
 @Component({
-  selector: 'new-sermon-content',
+  selector: 'form-sermon-modal',
   standalone: true,
-  templateUrl: './new-sermon-modal.html',
-  styleUrls: ['./new-sermon-modal.scss'],
+  templateUrl: './form-sermon-modal.html',
+  styleUrls: ['./form-sermon-modal.scss'],
 })
-export class newSermponContent {
+export class FormSermonModal {
   constructor(
     public activeModal: NgbActiveModal,
     private firebaseService: FirebaseService
