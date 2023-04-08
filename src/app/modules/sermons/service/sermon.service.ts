@@ -53,4 +53,12 @@ export class SermonService {
             }
         });
     }
+
+    getMostRecent(limit: number) {
+        return this.http.get<Sermon[]>((this.url) + this.api + `/most-recents`, {
+            params: {
+                limit: limit
+            }
+        });
+    }
 }

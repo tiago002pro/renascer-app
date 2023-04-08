@@ -1,41 +1,54 @@
-<div class="home-module">
+<div class="home module">
     <div class="container">
-        <!-- <div class="background-image"></div> -->
-        <div class="title">
-            <span>Em</span>
-            <br />
-            <span>construção</span>
-        </div>
-
-        <div class="sub-title">
-            <span>O site está quase pronto</span>
-        </div>
-        
-        <div class="bar">
-            <div class="progress-bar">
-                <div class="progress-bar-fill"></div>
-                <div class="progress-bar-background"></div>
+        <section class="last-sermon">
+            <div class="banner">
+                <div class="img">
+                    <img src="{{videoBanner.img}}" alt="">
+                </div>
+                <div class="description">
+                    <div class="latest">
+                        <span>Mais recente</span>
+                    </div>
+                    <span class="title-video">{{videoBanner.title}}</span>
+                    <div class="buttons">
+                        <button class="btn watch" (click)="goToSermon()">
+                            Assistir
+                        </button>
+                        <button class="btn more" (click)="goToSermons()">
+                            Mais pregações
+                        </button>
+                    </div>
+                </div>
             </div>
-            <span class="porcentage">
-                <span>0%</span>
-                <span>100%</span>
-            </span>
-        </div>
+        </section>
+        <section>
+            <div class="data">
+                <div class="left-data">
 
-        <div class="social-media">
-            <ul *ngFor="let media of socialMedia">
-                <li>
-                    <a (click)="openLink(media.link)">
-                        <i class="{{media.icon}}"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="where-we-are">
-            <button class="bnt" routerLink="/where-we-are">
-                <i class="bi bi-geo-alt-fill"></i>
-                Onde estamos
-            </button>
-        </div>    
+                </div>
+                <div class="right-data">
+                    <div class="schedule">
+                        <div class="title">Agenda</div>
+                        <div class="day" *ngFor="let day of schedule">
+                            <span class="service">{{day.service}}</span>
+                            <span class="week">{{day.dayWeek}}</span>
+                            <span class="time">{{day.time}}</span>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <div class="title">Redes sociais</div>
+                        <div class="media" *ngFor="let media of socialMedia" (click)="openLink(media.link)">
+                            <div class="name">
+                                <img src="{{media.img}}" alt="">
+                                <span class="name">{{media.name}}</span>
+                            </div>
+                            <div class="arrow">
+                                <i class="bi bi-arrow-up-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </div>

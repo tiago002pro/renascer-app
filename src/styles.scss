@@ -73,6 +73,11 @@
 }
 
 @font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../src/assets/fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
     font-family: 'FontAwesome';
     src: url('/font-awesome/fontawesome-webfont.eot');
     src: url('/font-awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
@@ -105,10 +110,9 @@ body {
     // width: calc(100vw - 1.5vw); // Subtraindo o scrooll
     width: 100vw; // Subtraindo o scrooll
     height: 100vh;
-    // overflow-x: hidden !important;
-    // overflow-y: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
     font-family: 'proxima-nova';
-    // overflow: hidden;
     background-color: var(--background-color);
 }
 
@@ -137,8 +141,9 @@ body {
 }
 
 .module {
-    padding: 3vh 0;
+    padding: 10px 0;
     background-color: #f4f5f7;
+    color: #000;
 }
 
 //Tablet
