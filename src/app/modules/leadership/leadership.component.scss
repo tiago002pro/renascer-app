@@ -1,78 +1,39 @@
-.leadership-module {
-    height: 90vh;
-    color: #000;
-    background-color: #FFF;
-    // background-color: var(--white);
-    // display: flex;
-    // justify-content: center;
+.leadership {
+    .image {
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
 
-    section {
-        .container {
-            width: 100vw;
+    .info {
+        display: flex;
+        flex-direction: column;
 
-            .top {
-                display: flex;
-                justify-content: space-between;
-                font-family: Montserrat-Bold;
+        .sub-title {
+            margin-bottom: 20px;
+        }
 
-                .title {
-                    font-weight: 700;
-                    margin: 1vw;
-                }
-    
-                .return {
-                    float: right;
-                    margin: auto 0px;
-        
-                    button {
-                        color: #ff671f;
-                        background-color: transparent;
-                        font-size: 18px;
-                        transition: 0.1s ease;
-        
-                        i {
-                            padding: 5px;
-                        }
-                    }
-                    
-                    button:hover {
-                        font-size: 20px;
-                    }
-                }
+        .description {
+            margin: auto;
+            text-align: justify;
+
+            p {
+                text-indent: 3ch;
             }
-    
-            .info {
-                display: flex;
-                margin: 10vh 0;
 
-                .image {
-                    margin-right: 2vw;
+            h4 {
+                font-family: 'Montserrat', sans-serif;
+                margin-bottom: 10px;
+            }
 
-                    img {
-                        max-width: 500px;
-                        max-height: 500px;
-                        width: 350px;
-                        height: 350px;
-                        border-radius: 50%;
-                        object-fit: cover;
-                    }
-                }
+            span {
+                font-size: 20px;
 
-                .text {
-                    margin: auto;
-                    text-align: justify;
-
-                    h4 {
-                        font-family: 'Montserrat', sans-serif;
-                        margin-bottom: 10px;
-                    }
-
-                    span {
-                        font-size: 20px;
-
-                    }
-                }
             }
         }
+
+
     }
 }
