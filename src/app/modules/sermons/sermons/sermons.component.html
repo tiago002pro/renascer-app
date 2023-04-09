@@ -1,9 +1,8 @@
-<!-- <app-title-module  [image]="imgTitle" [title]="'Vídeos'" ></app-title-module> -->
 <div class="sermons module">
-    <section class="section-banner">
-        <div class="container">
+    <div class="container">
+        <section class="section-banner">
             <div class="title">
-                <h1>Pregações</h1>
+                Pregações
             </div>
             <div class="banner" (click)="openVideo(videoBanner.id)">
                 <div class="img">
@@ -14,14 +13,12 @@
                     <span class="speaker">{{videoBanner.speaker}}</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-popular-sermons">
-        <div class="container">
+        <section class="section-popular-sermons">
             <div class="popular-sermons">
                 <div class="sub-title">
-                    <h1>Populares</h1>
+                    Populares
                 </div>
                 <swiper [config]="configPopularSermons">
                     <ng-template swiperSlide *ngFor="let sermon of popularSermons">
@@ -41,20 +38,18 @@
                     </div>
                 </swiper>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-recent-sermons">
-        <div class="container">
+        <section class="section-recent-sermons">
             <div class="recent-sermons">
                 <div class="sub-title">
-                    <h1>Carregados Recentemente</h1>
+                    Carregados Recentemente
                 </div>
                 <swiper [config]="configRecentSermons" class="swiper">
                     <ng-template swiperSlide *ngFor="let item of recentSermons">
                         <div class="item" 
-                             *ngFor="let sermon of item.sermons"
-                             (click)="openVideo(sermon.id)">
+                                *ngFor="let sermon of item.sermons"
+                                (click)="openVideo(sermon.id)">
                             <div class="img">
                                 <img src="{{sermon.img}}" alt="">
                             </div>
@@ -72,19 +67,19 @@
                     </div>
                 </swiper>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-more-sermons">
-        <div class="more-sermons">
-            <a routerLink="/all-sermons">
-                <button type="button" class="btn">
-                    <span>Mais vídeos</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                    </svg>
-                </button>
-            </a>
-        </div>
-    </section>
+        <section class="section-more-sermons">
+            <div class="more-sermons">
+                <a routerLink="/all-sermons">
+                    <button type="button" class="btn">
+                        <span>Mais vídeos</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </section>
+    </div>
 </div>

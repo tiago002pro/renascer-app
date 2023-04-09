@@ -17,7 +17,7 @@
             img {
                 width: 100%;
                 border-radius: 5px;
-                box-shadow: 5px 5px 5px hsla(0,0%,9%,.15);
+                box-shadow: var(--box-shadow);
                 position: relative;
             }
         }
@@ -100,6 +100,7 @@
 
     .right-data {
         float: right;
+        width: 250px;
 
         .title {
             font-size: 25px;
@@ -113,9 +114,8 @@
         .schedule {
             background-color: #FFF;
             padding: 20px;
-            width: 250px;
             border-radius: 5px;
-            box-shadow: 5px 5px 5px hsla(0,0%,9%,.15);
+            box-shadow: var(--box-shadow);
             margin-bottom: 20px;
         
             .day {
@@ -148,9 +148,8 @@
         .social-media {
             background-color: #FFF;
             padding: 20px;
-            width: 250px;
             border-radius: 5px;
-            box-shadow: 5px 5px 5px hsla(0,0%,9%,.15);
+            box-shadow: var(--box-shadow);
         
             .media {
                 border-bottom: 1px solid hsla(0,0%,9%,.15);

@@ -24,9 +24,9 @@ export class NavbarComponent implements OnInit {
     this.tabsNavigate = [
       { label: "Home", router: "home", icon: "bi bi-house" },
       { label: "A Renascer", router: "about", icon: "bi bi-building" },
+      { label: "Liderança", router: "leadership", icon: "bi bi-people" },
       { label: "Onde Estamos", router: "where-we-are", icon: "bi bi-geo-alt" },
       { label: "Pregações", router: "sermons", icon: "bi bi-play" },
-      // { label: "Liderança", router: "leadership", icon: "bi bi-people" },
       // { label: "Ministérios", router: "departments", icon: "bi bi-diagram-3" },
       // { label: "Contato", router: "contact", icon: "bi bi-envelope-open-heart" },
     ]
@@ -39,5 +39,10 @@ export class NavbarComponent implements OnInit {
   routerLink(link: string) {
     this.router.navigate([link])
     this.toggleMobileMenu()
+  }
+
+  goHome() {
+    this.router.navigate(["/home"])
+    this.showMobileMenu = false
   }
 }

@@ -91,11 +91,12 @@
 
 //Colors
 :root {
-    --background-color: #232222;
-    --primary-color: #955666;
+    --primary-color: #ff671f;
+    --secondary-color: #fcbf49;
     --transparent: #00000000;
     --white: #FFF;
     --black: #000;
+    --box-shadow: 5px 5px 5px hsla(0,0%,9%,.15);
 }
 
 *,
@@ -144,6 +145,20 @@ body {
     padding: 10px 0;
     background-color: #f4f5f7;
     color: #000;
+}
+
+.title, .sub-title {
+    font-family: Montserrat-Bold;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.sub-title {
+    font-size: 20px;
 }
 
 //Tablet

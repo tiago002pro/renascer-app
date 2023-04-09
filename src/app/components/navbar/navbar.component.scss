@@ -3,16 +3,21 @@
         width: 100%;
         top: 0;
         left: 0;
-        // position: fixed;
-        color: #FFF;
         z-index: 9999999;
 
         .header-inner {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 7vh;
-            background-color: transparent;
+            height: 70px;
+
+            .logo {
+                cursor: pointer;
+                display: none;
+                img {
+                    width: 50px;
+                }
+            }
         }
 
         nav {
@@ -39,8 +44,6 @@
         }
 
         .toggle-menu {
-            width: 100%;
-            display: flex;
             z-index: 1040;
             display: none;
 
@@ -104,6 +107,7 @@
             margin-top: -10vh;
             background-color: #FFF;
             display: none;
+            left: 0;
         }
 
         .in {
@@ -171,9 +175,9 @@
 
     @keyframes menu-mobile-in-animation {
         0% {
-            -webkit-transform: translateX(-1000px);
-            -o-transform: translateX(-1000px);
-            transform: translateX(-1000px);
+            -webkit-transform: translateX(1000px);
+            -o-transform: translateX(1000px);
+            transform: translateX(1000px);
             -webkit-transform-origin: 0 50%;
             -o-transform-origin: 0 50%;
             transform-origin: 0 50%;
@@ -208,9 +212,9 @@
         }
 
         100% {
-            -webkit-transform: translateX(-1000px);
-            -o-transform: translateX(-1000px);
-            transform: translateX(-1000px);
+            -webkit-transform: translateX(1000px);
+            -o-transform: translateX(1000px);
+            transform: translateX(1000px);
             -webkit-transform-origin: 0 50%;
             -o-transform-origin: 0 50%;
             transform-origin: 0 50%;
@@ -222,6 +226,14 @@
 
     @media (min-width: 768px) and (max-width: 1023px) {
         header {
+            .header-inner {
+                justify-content: space-between;
+            }
+
+            .logo {
+                display: contents !important;
+            }
+
             .tabs {
                 display: none !important;
             }
@@ -238,6 +250,14 @@
 
     @media (max-width: 767px) {
         header {
+            .header-inner {
+                justify-content: space-between;
+            }
+
+            .logo {
+                display: contents !important;
+            }
+
             .tabs {
                 display: none !important;
             }
@@ -248,30 +268,6 @@
 
             .menu-mobile {
                 display: block;
-            }
-        }
-    }
-}
-
-.navbar-scroll-directive {
-    @media (min-width: 1023px) {
-        header {
-            color: #1c1c1c;
-    
-            .header-inner {
-                background-color: #FFF;
-                border-bottom: solid 1px #1c1c1c;
-                background: #FFF;
-            }
-    
-            .tabs {
-                a {
-                    color: #1c1c1c;
-                }
-            }
-    
-            .bar {
-                background-color: #1c1c1c;
             }
         }
     }

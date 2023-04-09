@@ -23,7 +23,7 @@
             padding: 2vw;
             border-radius: 5px;
             background-color: #FFF;
-            box-shadow: 5px 5px 10px #1c1c1c4d;
+            box-shadow: var(--box-shadow);
         }
 
         .input-search {
@@ -74,7 +74,7 @@
             width: 400px;
             margin-bottom: 5%;
             cursor: pointer;
-            box-shadow: 5px 5px 10px #1c1c1c4d;
+            box-shadow: var(--box-shadow);
             transition: .3s ease;
             margin: 0 0 2vw 2vw;
         }
