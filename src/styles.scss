@@ -89,19 +89,19 @@
     font-style: normal;
 }
 
-//Colors
 :root {
     --primary-color: #ff671f;
     --secondary-color: #fcbf49;
+    --netral: rgba(244, 245, 247, 0.5);
+    --netral-2: hsla(0,0%,9%,.15);
+    --netral-3: gray;
     --transparent: #00000000;
     --white: #FFF;
     --black: #000;
-    --box-shadow: 5px 5px 5px hsla(0,0%,9%,.15);
+    --box-shadow: 5px 5px 5px var(--netral-2);
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -111,9 +111,10 @@ body {
     // width: calc(100vw - 1.5vw); // Subtraindo o scrooll
     width: 100vw; // Subtraindo o scrooll
     height: 100vh;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    font-family: 'proxima-nova';
+    // overflow: hidden;
+    // overflow-x: hidden !important;
+    // overflow-y: auto !important;
+    font-family: proxima-nova;
     background-color: var(--background-color);
 }
 

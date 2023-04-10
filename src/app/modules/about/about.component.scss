@@ -37,7 +37,7 @@
         height: 50vh;
         padding: 5vh;
         color:  white;
-        background-color: #fcbf49;
+        background-color: var(--secondary-color);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -94,7 +94,7 @@
 
                 h4 {
                     text-transform: capitalize;
-                    color: #fcbf49;
+                    color: var(--secondary-color);
                 }
 
                 p {
@@ -156,7 +156,7 @@
     
                     h4 {
                         text-transform: capitalize;
-                        color: #fcbf49;
+                        color: var(--secondary-color);
                         font-size: 1.5rem;
                     }
                     p {
@@ -209,7 +209,7 @@
     
                     h4 {
                         text-transform: capitalize;
-                        color: #fcbf49;
+                        color: var(--secondary-color);
                         font-size: 1.5rem;
                     }
                     p {

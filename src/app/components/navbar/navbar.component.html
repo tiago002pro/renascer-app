@@ -1,4 +1,13 @@
-<div class="navbar-component" appScroll>
+<div class="navbar-component">
+    <header class="mobile">
+        <div [ngClass]="showMobileMenu ? 'menu-mobile in' : 'menu-mobile out'">
+            <div class="menu-item" *ngFor="let tab of tabsNavigate" (click)="routerLink(tab.router)">
+                <a (click)="routerLink(tab.router)">
+                    <span>{{tab.label}}</span>
+                </a>
+            </div>
+        </div>
+    </header>
     <header>
         <div class="container">
             <div class="header-inner">
@@ -16,20 +25,6 @@
                         <div [ngClass]="!showMobileMenu ? 'middle bar' : 'middle bar rotate-middle'"></div>
                         <div [ngClass]="!showMobileMenu ? 'bottom bar' : 'bottom bar rotate-bottom'"></div>
                     </label>
-                </div>
-            </div>
-            <div [ngClass]="showMobileMenu ? 'menu-mobile in' : 'menu-mobile out'">
-                <div class="menu-item">
-                    <div class="box" *ngFor="let tab of tabsNavigate">
-                        <a (click)="routerLink(tab.router)">
-                            <div class="subitem-menu">
-                                <div class="icon">
-                                    <i class="{{tab.icon}}"></i>
-                                </div>
-                                <span>{{tab.label}}</span>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
