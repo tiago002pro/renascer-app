@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   schedule!: any
   socialMedia!: any
   sermons!: any
+  news!:any
 
   constructor(
     private sermonService: SermonService,
@@ -22,6 +23,14 @@ export class HomeComponent implements OnInit {
     await this.__loadVideoBannner()
     this.__loadSchedule()
     this.__loadSocialMedia()
+
+    this.news = [
+      {id: 1, title: "Servir a Igreja"},
+      {id: 2, title: "Intensivo de Liderança - THEGOODVILAGES"},
+      {id: 3, title: "Escola de Evangelismo - Maranhão"},
+      // {id: 4, title: "Escola de Evangelismo - Maranhão"},
+      // {id: 5, title: "Escola de Evangelismo - Maranhão"},
+    ]
   }
 
   async __loadVideoBannner(){

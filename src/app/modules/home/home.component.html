@@ -24,7 +24,15 @@
         <section>
             <div class="data">
                 <div class="left-data">
-
+                    <div class="title">Renascer News</div>
+                    <div class="news-area">
+                        <div class="news" *ngFor="let new of news">
+                            <img src="./../../../assets/img/background_1.jpg" alt="">
+                            <div class="info">
+                                <span>{{new.title}}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="right-data">
                     <div class="schedule">
