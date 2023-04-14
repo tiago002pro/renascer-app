@@ -7,20 +7,19 @@
             background-color: rgba(20,20,20,0.95);
             padding-top: 70px;
             right: 0;
+            z-index: 1039;
         }
     
         .in {
             -webkit-animation: menu-mobile-in-animation .5s cubic-bezier(.23,1,.32,1) both;
             -o-animation: menu-mobile-in-animation .5s cubic-bezier(.23,1,.32,1) both;
             animation: menu-mobile-in-animation .5s cubic-bezier(.23,1,.32,1) both;
-            z-index: 1039;
         }
     
         .out {
             -webkit-animation: menu-mobile-out-animation .45s cubic-bezier(.755,.05,.855,.06) both;
             -o-animation: menu-mobile-out-animation .45s cubic-bezier(.755,.05,.855,.06) both;
             animation: menu-mobile-out-animation .45s cubic-bezier(.755,.05,.855,.06) both;
-            z-index: 1039;
         }
     
         .menu-item {
@@ -150,9 +149,9 @@
 
     @keyframes menu-mobile-in-animation {
         0% {
-            -webkit-transform: translateX(1000px);
-            -o-transform: translateX(1000px);
-            transform: translateX(1000px);
+            -webkit-transform: translateX(3000px);
+            -o-transform: translateX(3000px);
+            transform: translateX(3000px);
             -webkit-transform-origin: 0 50%;
             -o-transform-origin: 0 50%;
             transform-origin: 0 50%;
@@ -187,9 +186,9 @@
         }
 
         100% {
-            -webkit-transform: translateX(1000px);
-            -o-transform: translateX(1000px);
-            transform: translateX(1000px);
+            -webkit-transform: translateX(3000px);
+            -o-transform: translateX(3000px);
+            transform: translateX(3000px);
             -webkit-transform-origin: 0 50%;
             -o-transform-origin: 0 50%;
             transform-origin: 0 50%;
