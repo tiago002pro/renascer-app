@@ -25,9 +25,9 @@ export class HomeComponent implements OnInit {
     this.__loadSocialMedia()
 
     this.news = [
-      {id: 1, title: "Servir a Igreja"},
-      {id: 2, title: "Intensivo de Liderança - THEGOODVILAGES"},
-      {id: 3, title: "Escola de Evangelismo - Maranhão"},
+      {id: 1, title: "Servir a Igreja", image: "https://firebasestorage.googleapis.com/v0/b/renascer-app.appspot.com/o/101721_DIGITAL_ASSETS_00_MasterBranding_02_DCEN_DigitalCentral_001_Archive_GodsUpToSomethingUpstreamec-egroups-curriculu.webp?alt=media&token=83bcf8b5-2b6c-4917-a21c-ec7e35c0fb7a"},
+      {id: 2, title: "Intensivo de Liderança - THEGOODVILAGES",  image: "https://firebasestorage.googleapis.com/v0/b/renascer-app.appspot.com/o/il_794xN.4539599214_gc0l.webp?alt=media&token=59358f85-a9c0-436a-9344-d8e6497fcdfa"},
+      {id: 3, title: "Escola de Evangelismo - Maranhão",  image: "https://firebasestorage.googleapis.com/v0/b/renascer-app.appspot.com/o/Captura%20de%20tela_20230204_144014.png?alt=media&token=21a7489d-534f-4e63-9439-3517d06429b7"},
       // {id: 4, title: "Escola de Evangelismo - Maranhão"},
       // {id: 5, title: "Escola de Evangelismo - Maranhão"},
     ]
