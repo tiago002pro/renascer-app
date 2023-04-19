@@ -112,7 +112,7 @@ body {
     width: 100vw; // Subtraindo o scrooll
     height: 100vh;
     // overflow: hidden;
-    // overflow-x: hidden !important;
+    overflow-x: hidden !important;
     // overflow-y: auto !important;
     font-family: proxima-nova;
     background-color: var(--background-color);

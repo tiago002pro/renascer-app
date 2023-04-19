@@ -26,7 +26,7 @@
             font-weight: 700;
             position: absolute;
             text-align: initial;
-            padding: 2vh 2vw;
+            padding: 2vw;
             bottom: 0vh;
             width: 100%;
 
@@ -95,6 +95,10 @@
     .left-data {
         width: calc(100% - 250px);
         margin-right: 20px;
+
+        section {
+            margin-bottom: 20px;
+        }
 
         .our-home {
             .image {
