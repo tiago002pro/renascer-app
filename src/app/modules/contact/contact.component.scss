@@ -1,38 +1,67 @@
-.contact-module {
-    color: #000;
-    background-color: #FFF;
-
-    .data {
-        padding: 5vw 0;
+.contact {
+    section {
+      margin-bottom: 40px;
     }
 
-    .info {
-        // background-color: aqua;
-
-
-        .title {
-            font-size: 50px;
-            font-weight: 500;
-        }
-
-        .content {
-            font-size: 25px;
-            display: flex;
-            flex-direction: column;
-
-        }
-
-        .bold {
-            font-weight: 700;
-        }
-
-        .map {
-            padding: 10px;
-
-            iframe {
-                width: 100%;
-                height: 50vh;
-            }
-        }
+  .about {
+    .image {
+      width: 58%;
+      height: 400px;
+      background-color: #1c1c1c;
+      background-position: center;
+      background-size: cover;
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 20px;
     }
+
+    .text {
+      font-size: 20px;
+      text-align: justify;
+
+      p {
+        margin-bottom: 0;
+        margin-top: 0;
+        text-indent: 2rem;
+      }
+    }
+  }
+
+  .carousel-section {
+    .swiper {
+      border-radius: 5px;
+    }
+
+    .image {
+      width: 100%;
+      height: 700px;
+      border-radius: 5px;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  .lidearship {
+    .image {
+      width: 500px;
+      height: 400px;
+      background-color: #1c1c1c;
+      background-position: center;
+      background-size: cover;
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    .text {
+      font-size: 20px;
+      text-align: justify;
+
+      p {
+        margin-bottom: 0;
+        margin-top: 0;
+        text-indent: 2rem;
+      }
+    }
+  }
 }

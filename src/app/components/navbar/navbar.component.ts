@@ -26,10 +26,10 @@ export class NavbarComponent implements OnInit {
       { label: "A Renascer", router: "about", icon: "bi bi-building" },
       { label: "Liderança", router: "leadership", icon: "bi bi-people" },
       { label: "Onde Estamos", router: "where-we-are", icon: "bi bi-geo-alt" },
-      { label: "Pregações", router: "all-sermons", icon: "bi bi-play" }
+      { label: "Pregações", router: "all-sermons", icon: "bi bi-play" },
       // { label: "Pregações", router: "sermons", icon: "bi bi-play" },
       // { label: "Ministérios", router: "departments", icon: "bi bi-diagram-3" },
-      // { label: "Contato", router: "contact", icon: "bi bi-envelope-open-heart" },
+      { label: "Contato", router: "contact", icon: "bi bi-envelope-open-heart" },
     ]
   }
 

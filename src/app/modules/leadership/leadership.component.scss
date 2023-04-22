@@ -1,39 +1,27 @@
 .leadership {
     .image {
+        width: 500px;
+        height: 400px;
+        background-color: #1c1c1c;
+        background-position: center;
+        background-size: cover;
+        float: left;
+        margin-right: 20px;
         margin-bottom: 20px;
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
     }
 
-    .info {
-        display: flex;
-        flex-direction: column;
+    .sub-title {
+        margin-bottom: 20px;
+    }
 
-        .sub-title {
-            margin-bottom: 20px;
+    .text {
+        font-size: 20px;
+        text-align: justify;
+
+        p {
+            margin-bottom: 0;
+            margin-top: 0;
+            text-indent: 5rem;
         }
-
-        .description {
-            margin: auto;
-            text-align: justify;
-
-            p {
-                text-indent: 3ch;
-            }
-
-            h4 {
-                font-family: 'Montserrat', sans-serif;
-                margin-bottom: 10px;
-            }
-
-            span {
-                font-size: 20px;
-
-            }
-        }
-
-
     }
 }
