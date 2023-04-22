@@ -85,8 +85,8 @@ export class SermonsComponent implements OnInit {
     this.videoBanner = this.popularSermons[1]
   }
 
-  async __loadPopularSermons():Promise<void> {
-    this.popularSermons = await this.sermonService.getAll().toPromise().then((res) => res)
+  async __loadPopularSermons(): Promise<void> {
+    this.popularSermons = await this.sermonService.getAll()
   }
   
   __loadRecentSermons():void {

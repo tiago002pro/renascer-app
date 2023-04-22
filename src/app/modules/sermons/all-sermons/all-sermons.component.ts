@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Sermon } from '../assets/interface/link-sermons';
-
 import { SermonService } from '../service/sermon.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-all-sermons',
@@ -9,41 +8,38 @@ import { SermonService } from '../service/sermon.service';
   styleUrls: ['./all-sermons.component.scss']
 })
 export class AllSermonsComponent {
-  allSermons:any
-  speakers!:any
-  searchSpeakers!:any
+  allSermons: any
+  speakers!: any
+  searchSpeakers!: any
 
   constructor(
-    private sermonService:SermonService,
+    private sermonService: SermonService,
+    private router: Router,
   ) {}
 
-  async ngOnInit():Promise<void> {
-    this.__initializingVariables()
-    await this.__loadSermons()
-    await this.getSpeakers('')
+  async ngOnInit(): Promise<void> {
+    await this.__initializingVariables()
   }
 
-  __initializingVariables():void {
+  async __initializingVariables(): Promise<void> {
     this.searchSpeakers = []
-  }
-
-  async __loadSermons():Promise<void> {
     this.allSermons = await this.__getAllSermons()
+    this.speakers = await this.getSpeakers('')
   }
 
-  async __getAllSermons():Promise<any> {
-    return await this.sermonService.getAll().toPromise().then((res) => res)
+  async __getAllSermons(): Promise<any> {
+    return await this.sermonService.getAll()
   }
 
-  async getSpeakers(name:string):Promise<void> {
-    this.speakers = await this.__searchAllSpeaker(name)
+  async getSpeakers(name:string): Promise<void> {
+    return await this.__searchAllSpeaker(name)
   }
 
-  async __searchAllSpeaker(name:string):Promise<any> {
-    return await this.sermonService.searchSpeakers(name).toPromise().then((res) => res)
+  async __searchAllSpeaker(name:string): Promise<any> {
+    return await this.sermonService.searchSpeakers(name)
   }
 
-  async searchBySpeakers(name:string):Promise<void> {
+  async searchBySpeakers(name:string): Promise<void> {
     this.__createSpearkerListSearch(name)
     if (this.searchSpeakers.length > 0) {
       this.allSermons = await this.__searchBySpeakers()
@@ -52,8 +48,8 @@ export class AllSermonsComponent {
     }
   }
 
-  async __searchBySpeakers():Promise<any> {
-    return await this.sermonService.searchBySpeakers(this.searchSpeakers).toPromise().then((res:any) => res)
+  async __searchBySpeakers(): Promise<any> {
+    return await this.sermonService.searchBySpeakers(this.searchSpeakers)
   }
 
   __createSpearkerListSearch(speaker:string):void {
@@ -69,5 +65,9 @@ export class AllSermonsComponent {
 
   filterTheName(name:string):Boolean {
     return this.searchSpeakers.includes(name)
+  }
+
+  goToSermon(sermon: any) {
+    this.router.navigate([`/sermon/${sermon.id}`, sermon])
   }
 }

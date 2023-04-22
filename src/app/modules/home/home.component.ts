@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   }
 
   async __loadVideoBannner(){
-    this.videoBanner = await this.sermonService.getMostRecent(1).toPromise().then((res: any) => res[0])
+    this.videoBanner = await this.sermonService.getMostRecent()
   }
 
   __loadSchedule() {
@@ -82,10 +82,10 @@ export class HomeComponent implements OnInit {
   }
 
   goToSermon() {
-    this.router.navigate([`/sermon/${this.videoBanner.id}`])
+    this.router.navigate([`/sermon/${this.videoBanner.id}`, this.videoBanner])
   }
 
   goToSermons() {
-    this.router.navigate([`/sermons`])
+    this.router.navigate([`/all-sermons`])
   }
 }

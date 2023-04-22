@@ -29,6 +29,8 @@ import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx
 import { ComponentsModule } from './modules/components/components.module';
 import { SwiperModule } from 'swiper/angular';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import moment from 'moment';
+moment.locale('pt-br')
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig =
 {

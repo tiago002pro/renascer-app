@@ -2,8 +2,8 @@
     <div class="container">
         <section class="last-sermon">
             <div class="banner">
-                <div class="img" style="background-image: url({{videoBanner.img}});">
-                </div>
+                <div class="img" *ngIf="videoBanner.img" style="background-image: url({{videoBanner.img}});"></div>
+                <div class="img" *ngIf="videoBanner.urlImg" style="background-image: url(https://img.youtube.com/vi/{{videoBanner.urlImg}}/0.jpg);"></div>
                 <div class="description">
                     <div class="latest">
                         <span>Mais recente</span>

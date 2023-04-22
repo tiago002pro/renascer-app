@@ -22,12 +22,9 @@
     
             <div class="video-session">
                 <div class="area">
-                    <div class="box" 
-                         *ngFor="let sermon of allSermons" 
-                         routerLink="/sermon/{{sermon.id}}">
-                        <div class="img" 
-                             style="background-image: url('{{sermon.img}}');">
-                        </div>
+                    <div class="box" *ngFor="let sermon of allSermons" (click)="goToSermon(sermon)">
+                        <div class="img" *ngIf="sermon.img" style="background-image: url({{sermon.img}});"></div>
+                        <div class="img" *ngIf="sermon.urlImg" style="background-image: url(https://img.youtube.com/vi/{{sermon.urlImg}}/0.jpg);"></div>
                         <div class="description">
                             <span class="title-video">{{sermon.title}}</span>
                             <span class="speaker">{{sermon.speaker}}</span>

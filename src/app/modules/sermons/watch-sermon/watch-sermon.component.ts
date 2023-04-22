@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import moment from 'moment';
-import { SermonService } from '../service/sermon.service';
-
-moment.locale('pt-br')
 
 @Component({
   selector: 'app-watch-sermon',
@@ -17,14 +14,13 @@ export class WatchSermonComponent {
   videoDATE!:any
 
   constructor(
-    private sermonService:SermonService,
     private route:ActivatedRoute,
     private _sanitizer:DomSanitizer,
   ) {}
 
-  async ngOnInit():Promise<void> {
+  ngOnInit(): void {
     this.__initializingVariables()
-    await this.loadSermon()
+    this.loadSermon()
     this.loadVideo()
   }
 
@@ -49,9 +45,8 @@ export class WatchSermonComponent {
     this.videoDATE = null;
   }
 
-  async loadSermon():Promise<void> {
-    const id = this.route.snapshot.params['id']
-    this.sermon = await this.sermonService.getById(id).toPromise().then((res:any) => res)
+  loadSermon() {
+    this.sermon = this.route.snapshot.params
   }
 
   loadVideo():void {
