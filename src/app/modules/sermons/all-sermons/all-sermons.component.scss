@@ -1,26 +1,15 @@
 .all-sermons {
-    color: #1c1c1c;
-    background-color: #f4f5f7;
-
-    .title {
-        margin-bottom: 2vw;
-    }
-
-    .title, .sub-title {
-        font-family: Montserrat-Bold;
-        font-weight: 700;
-    }
-
     .session {
         display: flex;
         flex-direction: row;
     }
 
     .search-session {
-        width: 500px;
+        margin-right: 50px;
 
         .search {
-            padding: 2vw;
+            width: 300px;
+            padding: 20px;
             border-radius: 5px;
             background-color: #FFF;
             box-shadow: var(--box-shadow);
@@ -66,17 +55,17 @@
         .area {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .box {
             border-radius: 10px;
             background-color: #FFF;
-            width: 400px;
-            margin-bottom: 5%;
+            width: 350px;
+            margin-bottom: 50px;
             cursor: pointer;
             box-shadow: var(--box-shadow);
             transition: .3s ease;
-            margin: 0 0 2vw 2vw;
         }
 
         .box:hover {
@@ -85,7 +74,7 @@
 
         .img {
             position: relative;
-            height: 25vh;
+            height: 200px;
             display: flex;
             border-radius: 10px 10px 0 0;
             background-position: center;
@@ -106,16 +95,16 @@
             justify-content: center;
             text-align: center;
             padding: 2vh;
+            font-weight: 700;
             
             .title-video {
-                font-weight: 700;
                 text-align: initial;
-                font-size: 1.2rem;
+                font-size: 20px;
             }
         
             .speaker {
                 font-weight: 400;
-                font-size: .9rem;
+                font-size: 15px;
                 text-align: initial;
                 color: var(--netral-3);
             }
