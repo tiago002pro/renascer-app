@@ -12,11 +12,11 @@
         .name {
             display: flex;
             flex-direction: column;
-            font-size: 2rem;
+            font-size: --size-font-text;
             font-weight: 700;
             
             .address {
-                font-size: 1.2rem;
+                font-size: --size-font-text;
                 font-weight: 500;
             }
         }
@@ -27,7 +27,7 @@
             button {
                 background: #1c1c1c;
                 color: #FFF;
-                font-size: 1.2rem;
+                font-size: --size-font-text;
                 border-radius: 2px;
                 font-weight: 500;
             }
@@ -52,37 +52,6 @@
             
         #map {
             height: 100%;
-        }
-    }
-
-    .social-media {
-        display: flex;
-        justify-content: center;
-        padding: 2vw 0;
-        border-top: solid 2px #1c1c1c;
-        border-bottom: solid 2px #1c1c1c;
-
-        ul {
-            list-style: none;
-            display: flex;
-
-            li {
-                padding: 0 20px;
-                
-                a {
-                    cursor: pointer;
-                    text-decoration: none;
-                    color: #1c1c1c;
-
-                    i {
-                        font-size: 2rem;
-                    }
-
-                    &:hover {
-                        color: var(--secondary-color);
-                    }
-                }
-            }
         }
     }
 
