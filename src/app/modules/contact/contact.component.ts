@@ -30,6 +30,6 @@ export class ContactComponent implements OnInit {
   }
 
   async __loadImages():Promise<void> {
-    this.images = await this.sermonService.getAll().toPromise().then((res) => res)
+    this.images = await this.sermonService.getAll()
   }
 }
