@@ -1,65 +1,62 @@
-<div class="about module">
-    <div class="mission">
-        <div class="container">
-            <div class="title">
-                <h1>Missão</h1>
-            </div>
-            <div class="description">
-                <p>{{missionDescription}}</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="vision">
-        <div class="container">
-            <div class="title">
-                <h1>Visão</h1>
-            </div>
-            <div class="description">
-                <p>{{visionDescription}}</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="values">
-            <div class="title">
-                <h1>Valores</h1>
-            </div>
-            <div class="description">
-                <div class="data" *ngFor="let slide of slides">
-                    <h4>{{slide.title}}</h4>
-                    <p>{{slide.description}}</p>
+<!-- <app-title-module  [image]="imgTitle" [title]="'Bem-vindo a nossa casa'" ></app-title-module> -->
+<div class="about">  
+    <!-- <div class="container"> -->
+        <section>
+            <div class="mission">
+                <div class="container">
+                    <div class="title">Missão</div>
+                    <div class="description">
+                        <p>{{missionDescription}}</p>
+                    </div>
                 </div>
             </div>
-            <div class="video">
-                    <iframe src="https://www.youtube.com/embed/EOfjXWG9Gzc" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
+        </section>
+        <section>
+            <div class="vision">
+                <div class="container">
+                    <div class="title">Visão</div>
+                    <div class="description">
+                        <p>{{visionDescription}}</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <!-- <div class="values">
-        <div class="container">
-            <div class="title">
-                <h1>Valores</h1>
-            </div>
-            <owl-carousel-o [options]="customOptions">
-                <ng-container *ngFor="let slide of slides">
-                    <ng-template carouselSlide [id]="slide.id">
-                        <div class="slide">
-                            <div class="text">
-                                <h2>{{slide.title}}</h2>
-                                <span>{{slide.description}}</span>
+        </section>
+        
+        <section>
+            <div class="values">
+                <swiper [config]="swiperConfig" class="swiper">
+                    <ng-template swiperSlide *ngFor="let slide of slides">
+                        <div class="description">
+                            <div class="data">
+                                <div class="container">
+                                    <div class="title">Valores</div>
+                                    <div class="sub-title">{{slide.title}}</div>
+                                    <div>{{slide.description}}</div>
+                                </div>
                             </div>
-                            <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
                         </div>
                     </ng-template>
-                </ng-container>
-            </owl-carousel-o>
-        </div>
-    </div> -->
+                    <div class="swiper-button-prev">
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+                </swiper>
+            </div>
+        </section>
+
+        <!-- <section>
+            <div class="values">
+                <div class="title">Valores</div>
+                <div class="description">
+                    <ul  class="data">
+                        <li *ngFor="let slide of slides">
+                            <span>{{slide.title}}: </span>{{slide.description}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+    <!-- </div> -->
 </div>
