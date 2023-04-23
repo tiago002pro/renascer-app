@@ -35,7 +35,7 @@
                 font-weight: 400;
                 color: #FFF;
                 transition: 0.3s;
-                font-family: Montserrat-Bold;
+                font-family: Coco-Sharp-Light;
                 font-weight: 700;
                 font-size: 20px;
             }
@@ -80,14 +80,31 @@
                 text-transform: uppercase;
                 font-weight: 700;
                 color: #FFF;
-                font-family: BebasNeue-Regular;
+                font-family: Coco-Sharp-Light;
                 font-weight: 400;
                 font-style: normal;
-                font-size: 24px;
-                letter-spacing: 2px;
+                font-size: 15px;
                 line-height: 1em;
-            }:hover {
+                position: relative;
+            }
+            
+            a:hover {
                 color: var(--secondary-color);
+            }
+
+            a::after {
+                content: "";
+                position: absolute;
+                background-color: var(--secondary-color);
+                height: 3px;
+                width: 0;
+                left: 0;
+                bottom: -10px;
+                transition: 0.3s;
+            }
+
+            a:hover::after {
+                width: 50%;
             }
         }
 

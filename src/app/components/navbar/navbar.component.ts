@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
       { label: "Pregações", router: "all-sermons", icon: "bi bi-play" },
       // { label: "Pregações", router: "sermons", icon: "bi bi-play" },
       // { label: "Ministérios", router: "departments", icon: "bi bi-diagram-3" },
-      { label: "Contato", router: "contact", icon: "bi bi-envelope-open-heart" },
+      // { label: "Contato", router: "contact", icon: "bi bi-envelope-open-heart" },
     ]
   }
 
