@@ -78,6 +78,21 @@
 }
 
 @font-face {
+    font-family: "Coco-Sharp-Light";
+    src: url("../src/assets/fonts/Coco-Sharp-Light-trial.ttf");
+}
+
+@font-face {
+    font-family: "Coco-Sharp-Extralight";
+    src: url("../src/assets/fonts/Coco-Sharp-Extralight-trial.ttf");
+}
+
+@font-face {
+    font-family: "Coco-Sharp-Regular";
+    src: url("../src/assets/fonts/Coco-Sharp-Regular-trial.ttf");
+}
+
+@font-face {
     font-family: 'FontAwesome';
     src: url('/font-awesome/fontawesome-webfont.eot');
     src: url('/font-awesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
@@ -99,6 +114,7 @@
     --white: #FFF;
     --black: #000;
     --box-shadow: 5px 5px 5px var(--netral-2);
+    --size-font-text: 15px
 }
 
 *, *::before, *::after {
@@ -148,17 +164,17 @@ body {
     color: #000;
 }
 
-.title, .sub-title {
+.title-module, .sub-title-module {
     font-family: Montserrat-Bold;
     font-weight: 700;
 }
 
-.title {
+.title-module {
     font-size: 40px;
     margin-bottom: 20px;
 }
 
-.sub-title {
+.sub-title-module {
     font-size: 20px;
 }
 
