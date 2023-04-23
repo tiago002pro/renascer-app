@@ -12,21 +12,9 @@
         "icon": "bi bi-facebook"
     },
     {
-        "name": "Twitter", 
-        "link": "https://twitter.com/renascermaringa", 
-        "img": "./../../../assets/img/social-media-icon/twitter.png", 
-        "icon": "bi bi-twitter"
-    },
-    {
         "name": "YouTube", 
         "link": "https://www.youtube.com/c/RenascerMaring%C3%A1", 
         "img": "./../../../assets/img/social-media-icon/youtube.png", 
         "icon": "bi bi-youtube"
-    },
-    {
-        "name": "WhatsApp", 
-        "link": "http://api.whatsapp.com/send?1=pt_BR&phone=554430302570", 
-        "img": "./../../../assets/img/social-media-icon/whatsapp.png",
-        "icon": "bi bi-whatsapp"
     }
 ]
