@@ -3,19 +3,15 @@
         <section class="last-sermon">
             <div class="banner">
                 <div class="img" *ngIf="videoBanner.img" style="background-image: url({{videoBanner.img}});"></div>
-                <div class="img" *ngIf="videoBanner.urlImg" style="background-image: url(https://img.youtube.com/vi/{{videoBanner.urlImg}}/0.jpg);"></div>
+                <div class="img" *ngIf="!videoBanner.img" style="background-image: url(https://img.youtube.com/vi/{{videoBanner.urlImg}}/0.jpg);"></div>
                 <div class="description">
                     <div class="latest">
-                        <span>Mais recente</span>
+                        <span>Mais Recente</span>
                     </div>
                     <span class="title-video">{{videoBanner.title}}</span>
                     <div class="buttons">
-                        <button class="btn watch" (click)="goToSermon()">
-                            Assistir
-                        </button>
-                        <button class="btn more" (click)="goToSermons()">
-                            Mais pregações
-                        </button>
+                        <button class="btn watch" (click)="goToSermon()">Assistir pregação</button>
+                        <button class="btn more" (click)="goTo('all-sermons')">Mais pregações</button>
                     </div>
                 </div>
             </div>
@@ -26,14 +22,19 @@
                     <section>
                         <div class="our-home">
                             <div class="image" style="background-image: url('../../../assets/img/home.jpg');">
-                                <div class="text">Bem-vindo a nossa casa</div>
+                                <div class="text">
+                                    <div>Bem-vindo a nossa casa</div>
+                                    <div class="buttons">
+                                        <button class="btn about" (click)="goTo('about')">Conheça a Renascer</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
                     <section class="renascer-news">
                         <div class="title">Renascer News</div>
                         <div class="news-area">
-                            <div class="news" *ngFor="let new of news">
+                            <div class="news" *ngFor="let new of renascerNews">
                                 <div class="image" style="background-image: url({{new.image}});"></div>
                                 <div class="info">
                                     <span>{{new.title}}</span>
@@ -52,8 +53,10 @@
                         <div class="title">Agenda</div>
                         <div class="day" *ngFor="let day of schedule">
                             <span class="service">{{day.service}}</span>
-                            <span class="week">{{day.dayWeek}}</span>
-                            <span class="time">{{day.time}}</span>
+                            <div class="week-time">
+                                <span class="week">{{day.dayWeek}}</span>
+                                <span class="time">{{day.time}}</span>
+                            </div>
                         </div>
                     </div>
                     <div class="social-media">

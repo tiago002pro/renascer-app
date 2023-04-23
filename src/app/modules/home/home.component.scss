@@ -26,18 +26,16 @@
             font-weight: 700;
             position: absolute;
             text-align: initial;
-            padding: 2vw;
+            padding: 20px;
             bottom: 0vh;
             width: 100%;
 
             .latest {
-                margin-bottom: 1vh;
-
                 span {
-                    background-color: var(--netral);
+                    background-color: rgba(244,245,247,.3);
                     color: #FFF;
                     padding: 5px 15px;
-                    font-size: 15px;
+                    font-size: 13px;
                     border-radius: 20px;
                 }
             }
@@ -46,41 +44,31 @@
                 font-size: 2rem;
                 color: #FFF;
                 position: relative;
-            }
-        
-            .speaker {
-                font-size: 1rem;
-                color: var(--netral-3);
-                position: relative;
+                margin-bottom: 5px;
             }
         }
 
         .buttons {
             button {
-                font-size: 18px;
+                font-size: 15px;
                 text-transform: uppercase;
-                color: #FFF;
                 font-weight: 700;
-                margin-right: 1vh;
+                margin-right: 15px;
                 padding: 10px 20px;
                 transition: all .3s ease;
+                border-radius: 20px;
             }
-
+            
             .watch {
                 background-color: var(--primary-color);
+                color: #FFF;
             }
 
             .more {
-                border: 2px solid #FFF;
+                background-color: #FFF;
             }
 
-            .watch:hover {
-                transform: scale(1.05);
-            }
-
-            .more:hover {
-                border: 2px solid var(--secondary-color);
-                background-color: var(--secondary-color);
+            button:hover {
                 transform: scale(1.05);
             }
         }
@@ -113,36 +101,64 @@
                     color: #FFF;
                     padding: 20px;
                     bottom: 0;
-                    display: flex;
                     font-size: 30px;
                     font-weight: 700;
                     text-transform: uppercase;
                     border-radius: 5px;
                     height: 300px;
                     background-color: rgba(0, 0, 0, 0.377);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+
+                    button {
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        margin-right: 15px;
+                        padding: 10px 20px;
+                        transition: all .3s ease;
+                        border-radius: 20px;
+                        color: #000;
+                    }
+
+                    .about {
+                        background-color: #FFF;
+                    }
+
+                    button:hover {
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
 
         .renascer-news {
+            .title {
+                font-size: 30px;
+                font-weight: 700;
+                position: relative;
+                margin-bottom: 10px;
+            }
+
             .news-area {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-between;
             }
     
             .news {
                 background-color: #FFF;
-                width: 240px;
-                margin-bottom: 20px;
-                margin-right: 17px;
+                width: 270px;
+                margin-bottom: 40px;
                 box-shadow: var(--box-shadow);
                 border-radius: 5px;
                 cursor: pointer;
                 transition: all .3s ease;
     
                 .image {
-                    width: 240px;
-                    height: 170px;
+                    width: 270px;
+                    height: 190px;
                     background-color: black;
                     background-position: center;
                     background-size: cover;
@@ -152,7 +168,7 @@
                 }
     
                 .info {
-                    height: 110px;
+                    height: 150px;
                     padding: 0 20px;
                     font-weight: 700;
                     display: flex;
@@ -215,21 +231,29 @@
     
             .service {
                 font-size: 16px;
-                font-weight: 700;
+                font-weight: 600;
                 color: var(--primary-color);
-                font-family: Montserrat-Bold, sans-serif;
+                text-transform: uppercase;
+            }
+
+            .week-time {
+                display: flex;
+                justify-content: space-between;
             }
     
             .week {
                 font-size: 15px;
                 color: var(--netral-3);
                 font-weight: 500;
+                font-family: Coco-Sharp-Light;
             }
     
             .time {
-                font-size: 20px;
+                font-size: 25px;
                 font-weight: 700;
                 font-family: Montserrat-Bold, sans-serif;
+                display: flex;
+                justify-content: right;
             }
         }
     
@@ -249,9 +273,8 @@
             }
         
             .name {
-                font-size: 15px;
-                font-weight: 700;
-                font-family: Montserrat-Bold, sans-serif;
+                font-size: 16px;
+                font-weight: 600;
 
                 img {
                     width: 30px;
@@ -280,11 +303,12 @@
             width: calc(100% - 200px);
 
             .news-area {
+                justify-content: left !important;
             }
     
             .news {
                 width: 200px;
-                margin-right: 15px;
+                margin-right: 40px;
     
                 .image {
                     width: 200px;
@@ -338,7 +362,7 @@
                 }
         
                 .time {
-                    font-size: 20px;
+                    // font-size: 20px;
                 }
             }
         
