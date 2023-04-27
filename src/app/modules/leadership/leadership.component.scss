@@ -15,13 +15,28 @@
     }
 
     .text {
-        font-size: --size-font-text;
+        font-size: var(--size-font-text);
         text-align: justify;
 
         p {
             margin-bottom: 0;
             margin-top: 0;
             text-indent: 5rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .image {
+            width: 100%;
+            height: 30vh;
+        }
+
+        .text {
+            font-size: var(--font-size-mobile-subtitle);
+
+            p {
+                text-indent: 2rem;
+            }
         }
     }
 }

@@ -116,6 +116,10 @@
     --box-shadow: 5px 5px 5px var(--netral-2);
     --size-font-text: 15px;
     --border-radius: 10px;
+
+    --font-size-mobile-title: 1.3rem;
+    --font-size-mobile-subtitle: 1rem;
+    --font-size-mobile-text: .7rem;
 }
 
 *, *::before, *::after {
@@ -188,15 +192,28 @@ body {
 //Tablet
 @media (min-width: 768px) and (max-width: 1023px) {
     .container, .container-sm {
-        max-width: initial;
-        padding: 0 5vh;
+        // max-width: initial;
+        // padding: 0 5vh;
     }
 }
 
 //Smartphone
 @media (max-width: 767px) {
     .container, .container-sm {
-        max-width: initial;
-        padding: 0 5vh;
+        // max-width: initial;
+        // padding: 0 5vh;
+    }
+
+    .module {
+        padding: 10px 0;
+    }
+
+    .title-module {
+        font-size: var(--font-size-mobile-title);
+        margin-bottom: 10px;
+    }
+    
+    .sub-title-module {
+        font-size: var(--font-size-mobile-subtitle);
     }
 }

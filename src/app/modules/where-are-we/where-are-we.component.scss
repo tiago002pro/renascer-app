@@ -2,37 +2,38 @@
     .locations {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 5vh;
+        margin-bottom: 20px;
     }
 
     .city {
         align-items: center;
-        margin-right: 3vw;
+        margin-right: 20px;
         
         .name {
             display: flex;
             flex-direction: column;
-            font-size: --size-font-text;
+            font-size: var(--size-font-text);
             font-weight: 700;
             
             .address {
-                font-size: --size-font-text;
+                display: flex;
+                flex-direction: column;
+                font-size: var(--size-font-text);
                 font-weight: 500;
             }
         }
 
         .direction {
-            margin-top: 2vh;
+            margin: 20px 0;
 
             button {
                 background: #1c1c1c;
                 color: #FFF;
-                font-size: --size-font-text;
+                font-size: var(--size-font-text);
                 border-radius: 2px;
                 font-weight: 500;
             }
         }
-
     }
 
     .map {
@@ -62,7 +63,6 @@
         }
 
         .city {
-            margin-bottom: 3vh;
         }
 
         .map {
@@ -72,14 +72,25 @@
         }
     }
 
-    //Smartphone
     @media (max-width: 767px) {
         .locations {
             flex-direction: column;
         }
-
+    
         .city {
-            margin-bottom: 3vh;
+            .name {
+                font-size: var(--font-size-mobile-subtitle);
+                
+                .address {
+                    font-size: var(--font-size-mobile-subtitle);
+                }
+            }
+    
+            .direction {
+                button {
+                    font-size: var(--font-size-mobile-subtitle);
+                }
+            }
         }
 
         .map {

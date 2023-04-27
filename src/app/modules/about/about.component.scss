@@ -21,24 +21,20 @@
             font-size: 40px;
             text-transform: uppercase;
             margin-bottom: 20px;
-            font-family: Coco-Sharp-Extralight;
         }
 
         .sub-title {
             font-size: 18px;
             text-transform: uppercase; 
-            // font-family: Coco-Sharp-Light;
             margin-bottom: 10px;
             color: var(--secondary-color);
         }
         
         .description {
-            // font-family: Coco-Sharp-Light;
             font-size: 18px;
         }
 
         .data {
-            // text-align: left;
             height: 300px;
             padding: 50px 70px;
             align-items: center;
@@ -62,7 +58,5 @@
 
     @media (min-width: 768px) and (max-width: 1023px) {}
 
-    @media (min-width: 400px) and (max-width: 767px) {}
-
-    @media (max-width: 400px) {}
+    @media (max-width: 767px) {}
 }
