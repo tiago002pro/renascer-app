@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   schedule!: any
   socialMedia!: any
   renascerNews!:any
+  ourHomeImage!: string
 
   constructor(
     private sermonService: SermonService,
@@ -31,6 +32,7 @@ export class HomeComponent implements OnInit {
     this.schedule = []
     this.socialMedia = []
     this.renascerNews = []
+    this.ourHomeImage = 'https://firebasestorage.googleapis.com/v0/b/renascer-app.appspot.com/o/Home.jpg?alt=media&token=f90e08e2-33e7-44d5-9ec3-d59cebb46e0f'
   }
 
   __loadEnvironment() {

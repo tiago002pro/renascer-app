@@ -106,7 +106,6 @@
                     text-transform: uppercase;
                     border-radius: var(--border-radius);
                     height: 300px;
-                    background-color: rgba(0, 0, 0, 0.377);
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
@@ -209,7 +208,6 @@
             font-weight: 700;
             text-transform: capitalize;
             padding-bottom: 15px;
-            font-family: Montserrat-Bold, sans-serif;
             margin: 0;
         }
 
@@ -247,13 +245,11 @@
                 font-size: 15px;
                 color: var(--netral-3);
                 font-weight: 500;
-                font-family: Coco-Sharp-Light;
             }
     
             .time {
                 font-size: 25px;
                 font-weight: 700;
-                font-family: Montserrat-Bold, sans-serif;
                 display: flex;
                 justify-content: right;
             }
