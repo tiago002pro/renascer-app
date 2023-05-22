@@ -8,7 +8,10 @@
                         <span>Preletores</span>
                     </div>
                     <div class="input-search">
-                        <input class="form-control" type="text" (ngModelChange)="getSpeakers($event)" ngModel>
+                        <input class="form-control" type="text" (ngModelChange)="searchSpeaker($event)" placeholder="Pesquise o preletor" ngModel>
+                        <div class="icon">
+                            <i class="bi bi-search"></i>
+                        </div>
                     </div>
                     <div *ngFor="let speaker of speakers" [ngClass]="filterTheName(speaker) ? 'filter-speaker' : 'speakers'" >
                         <a (click)="searchBySpeakers(speaker)">

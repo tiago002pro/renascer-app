@@ -24,15 +24,15 @@ export class AllSermonsComponent {
   async __initializingVariables(): Promise<void> {
     this.searchSpeakers = []
     this.allSermons = await this.__getAllSermons()
-    this.speakers = await this.getSpeakers('')
+    await this.searchSpeaker('')
   }
 
   async __getAllSermons(): Promise<any> {
     return await this.sermonService.getAll()
   }
 
-  async getSpeakers(name:string): Promise<void> {
-    return await this.__searchAllSpeaker(name)
+  async searchSpeaker(search: string) {
+    this.speakers = await this.__searchAllSpeaker(search)
   }
 
   async __searchAllSpeaker(name:string): Promise<any> {

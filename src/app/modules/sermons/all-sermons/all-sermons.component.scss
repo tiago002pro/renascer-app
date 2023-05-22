@@ -18,6 +18,24 @@
 
         .input-search {
             padding: 20px 0;
+            display: flex;
+            position: relative;
+
+            input {
+                border-bottom: solid 1px !important;
+                border: none;
+                border-radius: 0;
+            }
+
+            .form-control:focus {
+                box-shadow: none;
+            }
+
+            .icon {
+                right: 5px;
+                padding: 5px;
+                border-bottom: solid 1px !important;
+            }
         }
 
         .speakers {
