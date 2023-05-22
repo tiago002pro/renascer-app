@@ -2,5 +2,6 @@
     { "dayWeek": "Segunda", "time": "20:00", "service": "Reunião de oração"   },
     { "dayWeek": "Quarta",  "time": "20:00", "service": "Culto de celebração" },
     { "dayWeek": "Sábado",  "time": "19:00", "service": "Culto de ensino"     },
+    { "dayWeek": "Domingo", "time": "18:00", "service": "Sala de oração"      },
     { "dayWeek": "Domingo", "time": "19:00", "service": "Culto da Família"    }
 ]

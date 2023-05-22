@@ -14,12 +14,12 @@ export class HomeComponent implements OnInit {
   videoBanner!: any
   schedule!: any
   socialMedia!: any
-  renascerNews!:any
+  renascerNews!: any
   ourHomeImage!: string
 
   constructor(
     private sermonService: SermonService,
-    private router:Router,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -27,30 +27,30 @@ export class HomeComponent implements OnInit {
     this.__loadEnvironment()
   }
 
-  __initializingVariables() {
+  __initializingVariables(): void {
     this.videoBanner = {}
     this.schedule = []
     this.socialMedia = []
     this.renascerNews = []
-    this.ourHomeImage = 'https://firebasestorage.googleapis.com/v0/b/renascer-app.appspot.com/o/Home.jpg?alt=media&token=f90e08e2-33e7-44d5-9ec3-d59cebb46e0f'
+    this.ourHomeImage = 'https://firebasestorage.googleapis.com/v0/b/renascer-app.appspot.com/o/about-header.jpg?alt=media&token=b6ff3b36-2034-4e21-af78-c227ca2a4380'
   }
 
-  __loadEnvironment() {
+  __loadEnvironment(): void {
     this.videoBanner = this.sermonService.getMostRecent()
     this.schedule = ScheduleJson
     this.socialMedia = SocialMediaJson
     this.renascerNews = RenascerNewsJson
   }
 
-  openLink(link: any) {
+  openLink(link: any): void {
     window.open(link)
   }
 
-  goToSermon() {
+  goToSermon(): void {
     this.router.navigate([`/sermon/${this.videoBanner.id}`, this.videoBanner])
   }
 
-  goTo(router: string) {
+  goTo(router: string): void {
     this.router.navigate([`/${router}`])
   }
 }

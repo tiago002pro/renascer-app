@@ -20,13 +20,10 @@
             <div class="data">
                 <div class="left-data">
                     <section>
-                        <div class="our-home">
+                        <div class="our-home" (click)="goTo('about')">
                             <div class="image" style="background-image: url('{{ourHomeImage}}');">
                                 <div class="text">
-                                    <div>Bem-vindo a nossa casa</div>
-                                    <div class="buttons">
-                                        <button class="btn about" (click)="goTo('about')">Conheça a Renascer</button>
-                                    </div>
+                                    <div>Conheça a nossa casa</div>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +64,7 @@
                                 <span class="name">{{media.name}}</span>
                             </div>
                             <div class="arrow">
-                                <i class="bi bi-box-arrow-up-right"></i>
+                                <i class="bi bi-arrow-up-right"></i>
                             </div>
                         </div>
                     </div>
