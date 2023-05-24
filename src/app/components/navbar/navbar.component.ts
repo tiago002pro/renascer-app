@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
     this.tabsNavigate = [
       { label: "Home", router: "home", icon: "bi bi-house" },
       { label: "A Renascer", router: "about", icon: "bi bi-building" },
-      { label: "Liderança", router: "leadership", icon: "bi bi-people" },
+      // { label: "Liderança", router: "leadership", icon: "bi bi-people" },
       { label: "Onde Estamos", router: "where-we-are", icon: "bi bi-geo-alt" },
       { label: "Pregações", router: "all-sermons", icon: "bi bi-play" },
       // { label: "Pregações", router: "sermons", icon: "bi bi-play" },

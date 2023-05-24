@@ -1,95 +1,47 @@
-//Import my scss files
-@import "./app//modules/components/progress-bar";
-
-//Bootstrap imports
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-
-//FontAwesome imports
-// @import '~@fortawesome/fontawesome-free/scss/fontawesome';
-// @import '~@fortawesome/fontawesome-free/scss/solid';
-// @import '~@fortawesome/fontawesome-free/scss/regular';
-// @import '~@fortawesome/fontawesome-free/scss/brands';
 
 @import 'swiper/scss';
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
+@import "swiper/css/thumbs";
 
-//ngx-owl-carousel-o
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
-
-//Fonts
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
-@font-face {
-    font-family: "proxima-nova";
-    src: url("../src/assets/fonts/Proxima\ Nova\ Font.otf");
+.swiper-button-prev::after {
+    font-family: "bootstrap-icons"; 
+    content: "\F284";
+    color: #FFF;
+    font-size: 25px;
 }
 
-@font-face {
-    font-family: "open-sans-hebrew-condensed-extra-bold";
-    src: url("../src/assets/fonts/open-sans-hebrew-condensed-extra-bold.ttf");
+.swiper-button-next::after {
+    font-family: "bootstrap-icons"; 
+    content: "\F285";
+    color: #FFF;
+    font-size: 25px;
 }
 
-@font-face {
-    font-family: "open-sans-hebrew-bold";
-    src: url("../src/assets/fonts/open-sans-hebrew-bold.ttf");
+.swiper-button-prev, 
+.swiper-button-next {
+    background-color: #00000052;
+    width: 50px;
+    height:  50px;
+    transition: all 0.1s ease;
 }
 
-@font-face {
-    font-family: "open-sans";
-    src: url("../src/assets/fonts/open-sans-hebrew.ttf");
+.swiper-button-prev {
+    left: 0;
 }
 
-@font-face {
-    font-family: "aktiv-grotesk-bd";
-    src: url("../src/assets/fonts/AktivGrotesk_Trial_Bd.ttf");
+.swiper-button-next {
+    right: 0;
 }
 
-@font-face {
-    font-family: "aktiv-grotesk-md";
-    src: url("../src/assets/fonts/AktivGrotesk_Trial_Md.ttf");
+.thumbsSwiper .swiper-slide {
+    opacity: 0.5;
 }
-
-@font-face {
-    font-family: "Montserrat-Bold";
-    src: url("../src/assets/fonts/Montserrat-Bold.ttf");
-}
-
-@font-face {
-    font-family: "BebasNeue-Regular";
-    src: url("../src/assets/fonts/BebasNeue-Regular.otf");
-}
-
-@font-face {
-    font-family: "Helvetica";
-    src: url("../src/assets/fonts/Helvetica/Helvetica.ttf");
-}
-
-@font-face {
-    font-family: "Helvetica-Bold";
-    src: url("../src/assets/fonts/Helvetica/Helvetica-Bold.ttf");
-}
-
-@font-face {
-    font-family: "Montserrat-Bold";
-    src: url("../src/assets/fonts/Montserrat-Bold.ttf");
-}
-
-@font-face {
-    font-family: "Coco-Sharp-Light";
-    src: url("../src/assets/fonts/Coco-Sharp-Light-trial.ttf");
-}
-
-@font-face {
-    font-family: "Coco-Sharp-Extralight";
-    src: url("../src/assets/fonts/Coco-Sharp-Extralight-trial.ttf");
-}
-
-@font-face {
-    font-family: "Coco-Sharp-Regular";
-    src: url("../src/assets/fonts/Coco-Sharp-Regular-trial.ttf");
+  
+.thumbsSwiper .swiper-slide-thumb-active {
+    opacity: 1;
 }
 
 @font-face {
@@ -135,7 +87,6 @@ body {
     // overflow: hidden;
     overflow-x: hidden !important;
     // overflow-y: auto !important;
-    font-family: proxima-nova;
     background-color: var(--background-color);
 }
 
@@ -170,7 +121,6 @@ body {
 }
 
 .title-module, .sub-title-module {
-    font-family: Montserrat-Bold;
     font-weight: 700;
 }
 

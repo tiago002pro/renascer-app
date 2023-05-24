@@ -1,65 +1,106 @@
 <!-- <app-title-module  [image]="imgTitle" [title]="'Bem-vindo a nossa casa'" ></app-title-module> -->
 <div class="about module">  
-    <!-- <div class="container"> -->
-        <section>
-            <div class="mission">
-                <div class="container">
-                    <div class="title">Missão</div>
-                    <div class="description">
-                        <p>{{missionDescription}}</p>
-                    </div>
+    <section class="introduction-area">
+        <div class="container">
+            <div class="title-module">Igreja Renascer, uma igreja, uma família!</div>
+            <div class="text" >
+                <p *ngFor="let paragraph of introduction">{{paragraph}}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="leadership">
+        <div class="container">
+            <div class="area">
+                <div class="image-area">
+                    <div class="image" style="background-image: url({{pastoresImg}});"></div>
+                </div>
+                <div class="text-area">
+                    <span class="sub-title">Pr. Marcio Ribeiro</span>
+                    <br/>
+                    <br/>
+                    <span>Bem-vindo à Igreja Renascer.</span>
+                    <br/>
+                    <span>É muito bom ter você aqui conosco!</span>
+                    <br/>
+                    <br/>
+                    <span>Aqui na Renascer nós prezamos por um relacionamento com Deus Pai, Filho e Espírito. Assim, nossa prioridade é passar tempo aprendendo a amar melhor a Deus e ao nosso próximo.</span>
+                    <br/>
+                    <br/>
+                    <span>Entendemos que isso é feito através dos momentos de louvor, adoração, estudo da Palavra e também aprendendo como desenvolver nossos dons. Desejamos que a Igreja Renascer seja um lugar onde todos que entrarem sejam instigados a um andar de intimidade com Deus!</span>
+                    <br/>
+                    <br/>
+                    <span class="name">Marcio Ribeiro</span>
+                    <br/>
+                    <span>Pastor Sênior</span>
                 </div>
             </div>
-        </section>
-        <section>
-            <div class="vision">
+            <div class="carousel-images">
                 <div class="container">
-                    <div class="title">Visão</div>
-                    <div class="description">
-                        <p>{{visionDescription}}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <div class="values">
-                <swiper [config]="swiperConfig" class="swiper">
-                    <ng-template swiperSlide *ngFor="let slide of slides">
-                        <div class="description">
-                            <div class="data">
-                                <div class="container">
-                                    <div class="title">Valores</div>
-                                    <div class="sub-title">{{slide.title}}</div>
-                                    <div>{{slide.description}}</div>
-                                </div>
-                            </div>
+                    <swiper [navigation]="true"
+                            [thumbs]="{ swiper: thumbsSwiper }"
+                            class="swiper-images">
+                        <ng-template swiperSlide *ngFor="let img of images">
+                            <div class="image" style="background-image: url({{img}});"></div>
+                        </ng-template>
+                        <div class="swiper-button-prev">
+                            <i class="bi bi-arrow-right"></i>
                         </div>
-                    </ng-template>
-                    <div class="swiper-button-prev">
-                        <i class="bi bi-arrow-right"></i>
-                    </div>
-                    <div class="swiper-button-next">
-                        <i class="bi bi-arrow-right"></i>
-                    </div>
-                </swiper>
-            </div>
-        </section>
-
-        <app-leadership></app-leadership>
-        <app-where-are-we></app-where-are-we>
-
-        <!-- <section>
-            <div class="values">
-                <div class="title">Valores</div>
-                <div class="description">
-                    <ul  class="data">
-                        <li *ngFor="let slide of slides">
-                            <span>{{slide.title}}: </span>{{slide.description}}
-                        </li>
-                    </ul>
+                        <div class="swiper-button-next">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </swiper>
+                    <swiper (swiper)="thumbsSwiper = $event"
+                            [spaceBetween]="0"
+                            [slidesPerView]="7"
+                            [freeMode]="true"
+                            [watchSlidesProgress]="true"
+                            class="thumbsSwiper">
+                        <ng-template swiperSlide *ngFor="let img of images">
+                            <div class="image-thumbs" style="background-image: url({{img}});"></div>
+                        </ng-template>
+                    </swiper>
                 </div>
             </div>
-        </section> -->
-    <!-- </div> -->
+        </div>
+    </section>
+
+    <!-- <section class="carousel-images">
+        <div class="container">
+            <swiper [navigation]="true"
+                    [thumbs]="{ swiper: thumbsSwiper }"
+                    class="swiper-images">
+                <ng-template swiperSlide *ngFor="let img of images">
+                    <div class="image" style="background-image: url({{img}});"></div>
+                </ng-template>
+                <div class="swiper-button-prev">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+            </swiper>
+            <swiper (swiper)="thumbsSwiper = $event"
+                    [spaceBetween]="0"
+                    [slidesPerView]="7"
+                    [freeMode]="true"
+                    [watchSlidesProgress]="true"
+                    class="thumbsSwiper">
+                <ng-template swiperSlide *ngFor="let img of images">
+                    <div class="image-thumbs" style="background-image: url({{img}});"></div>
+                </ng-template>
+            </swiper>
+        </div>
+    </section> -->
+
+    <section class="values-section">
+        <div class="container">
+            <div class="title-module">Nossos valores</div>
+            <div class="values" *ngFor="let value of values">
+                <span class="name">{{value.name}}</span>
+                <br>
+                <span class="description">{{value.description}}</span>
+            </div>
+        </div>
+    </section>
 </div>
