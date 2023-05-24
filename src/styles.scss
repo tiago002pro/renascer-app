@@ -56,6 +56,11 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url(./assets/fonts/Helvetica/Helvetica-Bold.ttf)
+}
+
 :root {
     --primary-color: #ff671f;
     --secondary-color: #fcbf49;
