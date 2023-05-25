@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
   }
 
   openLink(link: any): void {
-    window.open(link, "_blank")
+    window.open(link, "myWindow")
   }
 
   goToSermon(): void {
