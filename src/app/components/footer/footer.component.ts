@@ -23,6 +23,6 @@ export class FooterComponent implements OnInit {
   }
 
   openLink(link: any) {
-    window.open(link)
+    window.open(link, "_blank")
   }
 }
