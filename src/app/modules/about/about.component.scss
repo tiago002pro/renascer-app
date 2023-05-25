@@ -129,8 +129,9 @@
             }
 
             .image-area {
-                width: 100%;
+                width: 90%;
                 margin-right: 0px;
+                margin: auto;
                 margin-bottom: 30px;
         
                 .image {
@@ -147,16 +148,26 @@
                     font-size: 3rem;
                 }
             }
+
+            .carousel-images {
+                .image {
+                    height: 30vh;
+                }
+        
+                .image-thumbs {
+                    height: 5vh;
+                }
+            }
         }
 
-        .carousel-images {
-            .image {
-                height: 40vh;
-            }
+        // .carousel-images {
+        //     .image {
+        //         height: 40vh;
+        //     }
     
-            .image-thumbs {
-                height: 5vh;
-            }
-        }
+        //     .image-thumbs {
+        //         height: 5vh;
+        //     }
+        // }
     }
 }
