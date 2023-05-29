@@ -37,9 +37,9 @@ export class HomeComponent implements OnInit {
 
   __loadEnvironment(): void {
     this.videoBanner = this.sermonService.getMostRecent()
-    this.schedule = ScheduleJson
     this.socialMedia = SocialMediaJson
     this.renascerNews = RenascerNewsJson
+    this.__getSchedule()
   }
 
   openLink(link: any): void {
@@ -52,5 +52,30 @@ export class HomeComponent implements OnInit {
 
   goTo(router: string): void {
     this.router.navigate([`/${router}`])
+  }
+
+  __getSchedule() {
+    var dated = new Date();
+    var weekOfMonth = (0 | dated.getDate() / 7) + 1;
+
+    switch(weekOfMonth) {
+      case 1:
+        this.schedule = ScheduleJson.week_1
+        break
+      case 2:
+        this.schedule = ScheduleJson.week_2
+        break
+      case 3:
+        this.schedule = ScheduleJson.week_3
+        break
+      case 4:
+        this.schedule = ScheduleJson.week_4
+        break
+      case 5:
+        this.schedule = ScheduleJson.week_5
+        break
+      default:
+        this.schedule = ScheduleJson.week_1
+    }
   }
 }

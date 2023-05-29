@@ -12,13 +12,11 @@
         .name {
             display: flex;
             flex-direction: column;
-            font-size: var(--size-font-text);
             font-weight: 700;
             
             .address {
                 display: flex;
                 flex-direction: column;
-                font-size: var(--size-font-text);
                 font-weight: 500;
             }
         }
@@ -29,7 +27,6 @@
             button {
                 background: #1c1c1c;
                 color: #FFF;
-                font-size: var(--size-font-text);
                 border-radius: 2px;
                 font-weight: 500;
             }

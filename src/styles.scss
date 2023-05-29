@@ -6,44 +6,6 @@
 @import 'swiper/scss/pagination';
 @import "swiper/css/thumbs";
 
-.swiper-button-prev::after {
-    font-family: "bootstrap-icons"; 
-    content: "\F284";
-    color: #FFF;
-    font-size: 25px;
-}
-
-.swiper-button-next::after {
-    font-family: "bootstrap-icons"; 
-    content: "\F285";
-    color: #FFF;
-    font-size: 25px;
-}
-
-.swiper-button-prev, 
-.swiper-button-next {
-    background-color: #00000052;
-    width: 50px;
-    height:  50px;
-    transition: all 0.1s ease;
-}
-
-.swiper-button-prev {
-    left: 0;
-}
-
-.swiper-button-next {
-    right: 0;
-}
-
-.thumbsSwiper .swiper-slide {
-    opacity: 0.5;
-}
-  
-.thumbsSwiper .swiper-slide-thumb-active {
-    opacity: 1;
-}
-
 @font-face {
     font-family: 'FontAwesome';
     src: url('/font-awesome/fontawesome-webfont.eot');
@@ -71,9 +33,8 @@
     --white: #FFF;
     --black: #000;
     --box-shadow: 5px 5px 5px var(--netral-2);
-    --size-font-text: 15px;
+    --size-font-text: 20px;
     --border-radius: 10px;
-
     --font-size-mobile-title: 1.3rem;
     --font-size-mobile-subtitle: 1rem;
     --font-size-mobile-text: .7rem;
@@ -86,16 +47,12 @@
 }
 
 body {
-    // width: calc(100vw - 1.5vw); // Subtraindo o scrooll
     width: 100vw; // Subtraindo o scrooll
     height: 100vh;
-    // overflow: hidden;
     overflow-x: hidden !important;
-    // overflow-y: auto !important;
     background-color: var(--background-color);
+    font-size: var(--size-font-text);
 }
-
-
 
 //style scroll bar
 ::-webkit-scrollbar {
@@ -138,6 +95,44 @@ body {
     font-size: 20px;
 }
 
+.swiper-button-prev::after {
+    font-family: "bootstrap-icons"; 
+    content: "\F284";
+    color: #FFF;
+    font-size: 25px;
+}
+
+.swiper-button-next::after {
+    font-family: "bootstrap-icons"; 
+    content: "\F285";
+    color: #FFF;
+    font-size: 25px;
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+    background-color: #00000052;
+    width: 50px;
+    height:  50px;
+    transition: all 0.1s ease;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.thumbsSwiper .swiper-slide {
+    opacity: 0.5;
+}
+  
+.thumbsSwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1140px;
@@ -146,23 +141,24 @@ body {
 
 //Tablet
 @media (min-width: 768px) and (max-width: 1023px) {
-    .container, .container-sm {
-        // max-width: initial;
-        // padding: 0 5vh;
+    .module {
+        padding: 30px 0;
+        background-color: #f4f5f7;
+        color: #000;
+    }
+    
+    .title-module, .sub-title-module {
+        font-weight: 700;
+    }
+    
+    .title-module {
+        font-size: 40px;
+        margin-bottom: 20px;
     }
 }
 
 //Smartphone
 @media (max-width: 767px) {
-    .container, .container-sm {
-        // max-width: initial;
-        // padding: 0 5vh;
-    }
-
-    .module {
-        padding: 10px 0;
-    }
-
     .title-module {
         font-size: var(--font-size-mobile-title);
         margin-bottom: 10px;
