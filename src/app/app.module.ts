@@ -30,6 +30,8 @@ import { ComponentsModule } from './modules/components/components.module';
 import { SwiperModule } from 'swiper/angular';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import moment from 'moment';
+import { VideosComponent } from './pages/video/video-list/video-list.component';
+import { WatchVideoComponent } from './pages/video/watch-video/watch-video.component';
 moment.locale('pt-br')
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig =
@@ -79,6 +81,8 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
     ContactComponent,
     AllSermonsComponent,
     WatchSermonComponent,
+    VideosComponent,
+    WatchVideoComponent
   ],
   imports: [
     BrowserModule,

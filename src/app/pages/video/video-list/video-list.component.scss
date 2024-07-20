@@ -1,0 +1,134 @@
+.video-list {
+  .session {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .search-session {
+    margin-right: 50px;
+    margin-bottom: 20px;
+
+    .search {
+      width: 300px;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #FFF;
+      box-shadow: var(--box-shadow);
+    }
+
+    .input-search {
+      padding: 20px 0;
+      display: flex;
+      position: relative;
+
+      input {
+        border-bottom: solid 1px !important;
+        border: none;
+        border-radius: 0;
+      }
+
+      .form-control:focus {
+        box-shadow: none;
+      }
+
+      .icon {
+        right: 5px;
+        padding: 5px;
+        border-bottom: solid 1px !important;
+      }
+    }
+  }
+
+  .video-session {
+    width: 100%;
+
+    .area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .box {
+      border-radius: var(--border-radius);
+      background-color: #FFF;
+      width: 350px;
+      margin-bottom: 50px;
+      cursor: pointer;
+      box-shadow: var(--box-shadow);
+      transition: .3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+    }
+
+    .img {
+      position: relative;
+      height: 20vh;
+      display: flex;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      background-position: center;
+      background-size: cover;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .description {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      font-weight: 700;
+        
+      .title-video {
+        text-align: initial;
+        font-size: 20px;
+      }
+    
+      .speaker {
+        font-weight: 400;
+        font-size: 15px;
+        text-align: initial;
+        color: var(--netral-3);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .session {
+      flex-direction: column;
+    }
+
+    .search-session {
+      margin-right: 0px;
+
+      .search {
+        width: 100%;
+        box-shadow: var(--box-shadow);
+      }
+    }
+
+    .video-session {   
+      .box {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+          
+      .description {               
+        .title-video {
+          font-size: var(--font-size-mobile-title);
+        }
+      
+        .speaker {
+          font-size: var(--font-size-mobile-subtitle);
+        }
+      }
+    }
+  }
+}
