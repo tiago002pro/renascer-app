@@ -1,34 +1,29 @@
 {
     "week_1":  [
-        { "dayWeek": "Domingo", "time": "18:00", "service": "Sala de oração"      },
         { "dayWeek": "Domingo", "time": "19:00", "service": "Culto da Família"    },
         { "dayWeek": "Segunda", "time": "20:00", "service": "Reunião de oração"   },
         { "dayWeek": "Quarta",  "time": "20:00", "service": "Culto de celebração" },
         { "dayWeek": "Sábado",  "time": "19:00", "service": "Culto Jovem"         }
     ],
     "week_2":  [
-        { "dayWeek": "Domingo", "time": "18:00", "service": "Sala de oração"      },
         { "dayWeek": "Domingo", "time": "19:00", "service": "Culto da Família"    },
         { "dayWeek": "Segunda", "time": "20:00", "service": "Reunião de oração"   },
         { "dayWeek": "Quarta",  "time": "20:00", "service": "Culto de celebração" },
         { "dayWeek": "Sábado",  "time": "19:00", "service": "Culto de mulheres"   }
     ],
     "week_3":  [
-        { "dayWeek": "Domingo", "time": "18:00", "service": "Sala de oração"      },
         { "dayWeek": "Domingo", "time": "19:00", "service": "Culto da Família"    },
         { "dayWeek": "Segunda", "time": "20:00", "service": "Reunião de oração"   },
         { "dayWeek": "Quarta",  "time": "20:00", "service": "Culto de celebração" },
         { "dayWeek": "Sábado",  "time": "19:00", "service": "Culto de homens"     }
     ],
     "week_4":  [
-        { "dayWeek": "Domingo", "time": "18:00", "service": "Sala de oração"      },
         { "dayWeek": "Domingo", "time": "19:00", "service": "Culto da Família"    },
         { "dayWeek": "Segunda", "time": "20:00", "service": "Reunião de oração"   },
         { "dayWeek": "Quarta",  "time": "20:00", "service": "Culto de celebração" },
         { "dayWeek": "Sábado",  "time": "19:00", "service": "Culto de ensino"     }
     ],
     "week_5":  [
-        { "dayWeek": "Domingo", "time": "18:00", "service": "Sala de oração"      },
         { "dayWeek": "Domingo", "time": "19:00", "service": "Culto da Família"    },
         { "dayWeek": "Segunda", "time": "20:00", "service": "Reunião de oração"   },
         { "dayWeek": "Quarta",  "time": "20:00", "service": "Culto de celebração" },

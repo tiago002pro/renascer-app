@@ -2,16 +2,16 @@
     <div class="container">
         <section class="last-sermon">
             <div class="banner">
-                <div class="img" *ngIf="videoBanner.img" style="background-image: url({{videoBanner.img}});"></div>
-                <div class="img" *ngIf="!videoBanner.img" style="background-image: url(https://img.youtube.com/vi/{{videoBanner.urlImg}}/0.jpg);"></div>
+                <div class="img" *ngIf="videoBanner.coverImage" style="background-image: url({{videoBanner.coverImage}});"></div>
+                <div class="img" *ngIf="!videoBanner.coverImage" style="background-image: url(https://img.youtube.com/vi/{{videoBanner.videoId}}/0.jpg);"></div>
                 <div class="description">
                     <div class="latest">
                         <span>Mais Recente</span>
                     </div>
                     <span class="title-video">{{videoBanner.title}}</span>
                     <div class="buttons">
-                        <button class="btn watch" (click)="goToSermon()">Assistir pregação</button>
-                        <button class="btn more" (click)="goTo('all-sermons')">Mais pregações</button>
+                        <button class="btn watch" (click)="goToSermon()">Assistir vídeo</button>
+                        <button class="btn more" (click)="goTo('videos')">Mais vídeos</button>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="renascer-news">
+                    <!-- <section class="renascer-news">
                         <div class="title">Renascer News</div>
                         <div class="news-area">
                             <div class="news" *ngFor="let new of renascerNews">
@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> -->
                 </div>
                 <div class="right-data">
                     <div class="schedule">

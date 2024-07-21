@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { SermonService } from '../sermons/service/sermon.service';
 import { Router } from '@angular/router';
 import ScheduleJson from '../../../assets/json/schedule.json';
 import SocialMediaJson from '../../../assets/json/social-media.json';
 import RenascerNewsJson from '../../../assets/json/renascer-news.json';
+import { VideosService } from 'src/app/pages/video/service/videos.service';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +11,7 @@ import RenascerNewsJson from '../../../assets/json/renascer-news.json';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  latestVideos!:any[]
   videoBanner!: any
   schedule!: any
   socialMedia!: any
@@ -18,25 +19,25 @@ export class HomeComponent implements OnInit {
   ourHomeImage!: string
 
   constructor(
-    private sermonService: SermonService,
+    private videosService:VideosService,
     private router: Router,
   ) { }
 
-  ngOnInit(): void {
-    this.__initializingVariables()
+  async ngOnInit() {
+    await this.__initializingVariables()
     this.__loadEnvironment()
   }
 
-  __initializingVariables(): void {
-    this.videoBanner = {}
+  async __initializingVariables() {
+    this.latestVideos = await this.videosService.getLatest().toPromise().then((response:any) => response)
+    this.videoBanner = this.latestVideos[0]
     this.schedule = []
     this.socialMedia = []
     this.renascerNews = []
-    this.ourHomeImage = 'https://firebasestorage.googleapis.com/v0/b/renascer-app.appspot.com/o/about-header.jpg?alt=media&token=b6ff3b36-2034-4e21-af78-c227ca2a4380'
+    this.ourHomeImage = 'https://firebasestorage.googleapis.com/v0/b/renascer-app.appspot.com/o/Site%2FCONF-40.jpg?alt=media&token=89543b4a-c1c2-4bd6-a533-a2f1728af249'
   }
 
   __loadEnvironment(): void {
-    this.videoBanner = this.sermonService.getMostRecent()
     this.socialMedia = SocialMediaJson
     this.renascerNews = RenascerNewsJson
     this.__getSchedule()
@@ -47,7 +48,7 @@ export class HomeComponent implements OnInit {
   }
 
   goToSermon(): void {
-    this.router.navigate([`/sermon/${this.videoBanner.id}`, this.videoBanner])
+    this.router.navigate([`/video/${this.videoBanner.id}`])
   }
 
   goTo(router: string): void {
