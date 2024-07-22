@@ -19,8 +19,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { environment } from '../environments/environment';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app'
 import { provideAuth, getAuth } from '@angular/fire/auth'
 import { provideFirestore, getFirestore } from '@angular/fire/firestore'
 import { provideFunctions, getFunctions } from '@angular/fire/functions'
@@ -91,7 +89,6 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig =
     FormsModule,
     BrowserAnimationsModule,
     RouterModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideFunctions(() => getFunctions()),
