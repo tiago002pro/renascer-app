@@ -24,11 +24,11 @@
             <div class="video-session">
                 <div class="area">
                     <div class="box" *ngFor="let sermon of allSermons" (click)="goToSermon(sermon)">
-                        <div class="img" *ngIf="sermon.img" style="background-image: url({{sermon.img}});"></div>
-                        <div class="img" *ngIf="!sermon.img" style="background-image: url(https://img.youtube.com/vi/{{sermon.urlImg}}/0.jpg);"></div>
+                        <div class="img" *ngIf="sermon.cover_image" style="background-image: url({{sermon.cover_image}});"></div>
+                        <div class="img" *ngIf="!sermon.cover_image" style="background-image: url(https://img.youtube.com/vi/{{sermon.video_id}}/0.jpg);"></div>
                         <div class="description">
                             <span class="title-video">{{sermon.title}}</span>
-                            <span class="speaker">{{sermon.speaker}}</span>
+                            <span class="speaker">{{sermon.author}}</span>
                         </div>
                     </div>
                 </div>

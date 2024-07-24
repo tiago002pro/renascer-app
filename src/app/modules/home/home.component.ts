@@ -4,6 +4,7 @@ import ScheduleJson from '../../../assets/json/schedule.json';
 import SocialMediaJson from '../../../assets/json/social-media.json';
 import RenascerNewsJson from '../../../assets/json/renascer-news.json';
 import { VideosService } from 'src/app/pages/video/service/videos.service';
+import { SermonService } from '../sermons/service/sermon.service';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private videosService:VideosService,
+    private sermonService:SermonService,
     private router: Router,
   ) { }
 
@@ -29,8 +31,8 @@ export class HomeComponent implements OnInit {
   }
 
   async __initializingVariables() {
-    this.latestVideos = await this.videosService.getLatest().toPromise().then((response:any) => response)
-    this.videoBanner = this.latestVideos[0]
+    // this.latestVideos = await this.videosService.getLatest().toPromise().then((response:any) => response)
+    this.videoBanner = this.sermonService.getMostRecent()
     this.schedule = []
     this.socialMedia = []
     this.renascerNews = []

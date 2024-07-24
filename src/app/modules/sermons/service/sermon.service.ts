@@ -11,6 +11,10 @@ export class SermonService {
     getAll() {
         const list = sermonJson
 
+        for (var i = 0; i <= list.length; i++) {
+            list[0].id = (i+1).toString()
+        }
+
         const sermonsOrderDesc = list.sort((a, b) => {
             if (a.id > b.id) { return -1; }
             if (a.id < b.id) { return 1; }
@@ -26,7 +30,7 @@ export class SermonService {
         
         list.forEach((sermon) => {
             speakers.forEach((speaker) => {
-                if (sermon.speaker == speaker) {
+                if (sermon.author == speaker) {
                     sermonList.push(sermon)
                 }
             })
@@ -35,7 +39,7 @@ export class SermonService {
     }
 
     searchSpeakers(name:string) {
-        const list = sermonJson.map((sermon) => sermon.speaker)
+        const list = sermonJson.map((sermon) => sermon.author)
         let speakerList: string[] = []
 
         list.forEach((speaker) => {

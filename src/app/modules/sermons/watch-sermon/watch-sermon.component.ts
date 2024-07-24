@@ -32,12 +32,15 @@ export class WatchSermonComponent {
   __initializeSermon():void {
     this.sermon = {
       id: null,
-      url: null,
-      img: null,
-      title: null, 
-      speaker: null,
+      video_id: null,
+      youtube_frame: null,
+      title: null,
+      author: null,
       description: null,
       date: null,
+      cover_image: null,
+      category: null,
+      notified: null,
     }
   }
   __initializeVideo():void {
@@ -50,7 +53,7 @@ export class WatchSermonComponent {
   }
 
   loadVideo():void {
-    this.videoURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.sermon.url)
+    this.videoURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.sermon.youtube_frame)
     this.videoDATE = moment(this.sermon.date).format("LL");   
   }
 }
